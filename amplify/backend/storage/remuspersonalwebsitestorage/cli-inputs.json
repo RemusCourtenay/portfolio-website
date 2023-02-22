@@ -1,0 +1,14 @@
+{
+  "resourceName": "remuspersonalwebsitestorage",
+  "policyUUID": "3f80c12b",
+  "bucketName": "remuspersonalwebsitestorage",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

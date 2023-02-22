@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-remuspersonalwebsite-dev-131737-authRole",
+      "UnauthRoleArn": "arn:aws:iam::587671861382:role/amplify-remuspersonalwebsite-dev-131737-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::587671861382:role/amplify-remuspersonalwebsite-dev-131737-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-remuspersonalwebsite-dev-131737-deployment",
+      "UnauthRoleName": "amplify-remuspersonalwebsite-dev-131737-unauthRole",
+      "StackName": "amplify-remuspersonalwebsite-dev-131737",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:587671861382:stack/amplify-remuspersonalwebsite-dev-131737/50c0a250-b246-11ed-839a-022eeed86a0e",
+      "AmplifyAppId": "d2hgpwuc9kamoc"
+    },
+    "categories": {
+      "auth": {
+        "remuspersonalwebsitef097a1ca": {}
+      },
+      "storage": {
+        "remuspersonalwebsitestorage": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2hgpwuc9kamoc",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
