@@ -6,16 +6,14 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { HeaderNameProps } from "./HeaderName";
-import { NavigationLinksProps } from "./NavigationLinks";
-import { FlexProps } from "@aws-amplify/ui-react";
+import { FlexProps, IconProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type HeaderOverridesProps = {
-    Header?: PrimitiveOverrideProps<FlexProps>;
-    HeaderName?: HeaderNameProps;
-    NavigationLinks?: NavigationLinksProps;
+export declare type HeaderNameOverridesProps = {
+    HeaderName?: PrimitiveOverrideProps<FlexProps>;
+    HeaderNameText?: PrimitiveOverrideProps<TextProps>;
+    "Red Dot"?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
-export declare type HeaderProps = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: HeaderOverridesProps | undefined | null;
+export declare type HeaderNameProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: HeaderNameOverridesProps | undefined | null;
 }>;
-export default function Header(props: HeaderProps): React.ReactElement;
+export default function HeaderName(props: HeaderNameProps): React.ReactElement;

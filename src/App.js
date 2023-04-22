@@ -1,12 +1,12 @@
 import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
-import { Home } from './ui-components';
+import { Header } from './ui-components';
  
 
 function App() {
   return (
-    <Home />
+    <Header />
   );
 }
 
