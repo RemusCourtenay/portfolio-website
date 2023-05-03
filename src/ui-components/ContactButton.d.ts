@@ -7,7 +7,6 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { TextProps, ViewProps } from "@aws-amplify/ui-react";
-import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ContactButtonOverridesProps = {
     ContactButton?: PrimitiveOverrideProps<ViewProps>;
@@ -15,9 +14,8 @@ export declare type ContactButtonOverridesProps = {
     "Get In Touch"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type ContactButtonProps = React.PropsWithChildren<Partial<ViewProps> & {
-    onClickHandler?: (event: SyntheticEvent) => void;
-} & {
-    hover?: "False" | "True";
+    bold?: "False" | "True";
+    state?: "Click" | "Default" | "Hover";
 } & {
     overrides?: ContactButtonOverridesProps | undefined | null;
 }>;

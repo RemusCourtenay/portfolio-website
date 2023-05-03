@@ -13,19 +13,55 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Text, View } from "@aws-amplify/ui-react";
 export default function ContactButton(props) {
-  const { onClickHandler, overrides: overridesProp, ...rest } = props;
+  const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: {
-        Border: {},
-        "Get In Touch": { color: "rgba(197,0,0,1)" },
-        ContactButton: {},
+        Border: { border: "2px SOLID rgba(74,73,73,1)" },
+        "Get In Touch": { color: "rgba(34,34,34,1)" },
+        ContactButton: {
+          boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.6000000238418579)",
+        },
       },
-      variantValues: { hover: "True" },
+      variantValues: { state: "Hover", bold: "False" },
     },
     {
       overrides: { Border: {}, "Get In Touch": {}, ContactButton: {} },
-      variantValues: { hover: "False" },
+      variantValues: { state: "Default", bold: "False" },
+    },
+    {
+      overrides: {
+        Border: { border: "2px SOLID rgba(90,90,90,1)" },
+        "Get In Touch": {},
+        ContactButton: {},
+      },
+      variantValues: { state: "Default", bold: "True" },
+    },
+    {
+      overrides: {
+        Border: { border: "2px SOLID rgba(0,0,0,1)" },
+        "Get In Touch": {},
+        ContactButton: {
+          boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.6000000238418579)",
+        },
+      },
+      variantValues: { state: "Hover", bold: "True" },
+    },
+    {
+      overrides: {
+        Border: { border: "2px SOLID rgba(50,50,50,1)" },
+        "Get In Touch": {},
+        ContactButton: {},
+      },
+      variantValues: { state: "Click", bold: "False" },
+    },
+    {
+      overrides: {
+        Border: { border: "2px SOLID rgba(0,0,0,1)" },
+        "Get In Touch": {},
+        ContactButton: {},
+      },
+      variantValues: { state: "Click", bold: "True" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(
@@ -41,8 +77,8 @@ export default function ContactButton(props) {
       alignItems="unset"
       justifyContent="unset"
       position="relative"
+      boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
-      onClick={onClickHandler}
       {...getOverrideProps(overrides, "ContactButton")}
       {...rest}
     >

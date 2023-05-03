@@ -8,8 +8,7 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import HeaderName from "./HeaderName";
-import NavigationLinks from "./NavigationLinks";
-import { Flex } from "@aws-amplify/ui-react";
+import { Flex, Text } from "@aws-amplify/ui-react";
 export default function Header(props) {
   const { overrides, ...rest } = props;
   return (
@@ -40,8 +39,7 @@ export default function Header(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "HeaderName")}
       ></HeaderName>
-      <NavigationLinks
-        display="flex"
+      <Flex
         gap="0"
         direction="row"
         width="473px"
@@ -52,7 +50,178 @@ export default function Header(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "NavigationLinks")}
-      ></NavigationLinks>
+      >
+        <Flex
+          gap="10px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          padding="10px 10px 10px 10px"
+          {...getOverrideProps(overrides, "Home")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(255,0,0,1)"
+            lineHeight="23.479999542236328px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Home"
+            {...getOverrideProps(overrides, "Link Text451209")}
+          ></Text>
+        </Flex>
+        <Flex
+          gap="10px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          padding="10px 10px 10px 10px"
+          {...getOverrideProps(overrides, "Skills")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(0,0,0,1)"
+            lineHeight="23.479999542236328px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Skills"
+            {...getOverrideProps(overrides, "Link Text451241")}
+          ></Text>
+        </Flex>
+        <Flex
+          gap="10px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          padding="10px 10px 10px 10px"
+          {...getOverrideProps(overrides, "Projects")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(0,0,0,1)"
+            lineHeight="23.479999542236328px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Projects"
+            {...getOverrideProps(overrides, "Link Text451273")}
+          ></Text>
+        </Flex>
+        <Flex
+          gap="10px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          padding="10px 10px 10px 10px"
+          {...getOverrideProps(overrides, "Experience")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(0,0,0,1)"
+            lineHeight="23.479999542236328px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Experience"
+            {...getOverrideProps(overrides, "Link Text451305")}
+          ></Text>
+        </Flex>
+        <Flex
+          gap="10px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          padding="10px 10px 10px 10px"
+          {...getOverrideProps(overrides, "Contact")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(0,0,0,1)"
+            lineHeight="23.479999542236328px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Contact"
+            {...getOverrideProps(overrides, "Link Text451337")}
+          ></Text>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

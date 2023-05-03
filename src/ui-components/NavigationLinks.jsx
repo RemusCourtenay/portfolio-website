@@ -7,8 +7,8 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import { Flex, Text } from "@aws-amplify/ui-react";
 import TextLink from "./TextLink";
-import { Flex } from "@aws-amplify/ui-react";
 export default function NavigationLinks(props) {
   const { overrides, ...rest } = props;
   return (
@@ -24,8 +24,7 @@ export default function NavigationLinks(props) {
       {...getOverrideProps(overrides, "NavigationLinks")}
       {...rest}
     >
-      <TextLink
-        display="flex"
+      <Flex
         gap="10px"
         direction="row"
         width="unset"
@@ -35,10 +34,30 @@ export default function NavigationLinks(props) {
         shrink="0"
         position="relative"
         padding="10px 10px 10px 10px"
-        hover="False"
-        focus="True"
         {...getOverrideProps(overrides, "Home")}
-      ></TextLink>
+      >
+        <Text
+          fontFamily="Raleway"
+          fontSize="20px"
+          fontWeight="700"
+          color="rgba(255,0,0,1)"
+          lineHeight="23.479999542236328px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Home"
+          {...getOverrideProps(overrides, "Link Text")}
+        ></Text>
+      </Flex>
       <TextLink
         display="flex"
         gap="10px"

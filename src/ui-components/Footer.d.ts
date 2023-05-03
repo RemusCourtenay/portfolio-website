@@ -6,13 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { ContactButtonProps } from "./ContactButton";
+import { FooterLinksProps } from "./FooterLinks";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type FooterOverridesProps = {
     Footer?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 113"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 102"?: PrimitiveOverrideProps<ViewProps>;
-    "bg pattern"?: PrimitiveOverrideProps<ViewProps>;
+    FooterBackground?: PrimitiveOverrideProps<ViewProps>;
     "Line 12"?: PrimitiveOverrideProps<IconProps>;
     "Line 14"?: PrimitiveOverrideProps<IconProps>;
     "Line 16"?: PrimitiveOverrideProps<IconProps>;
@@ -25,14 +25,18 @@ export declare type FooterOverridesProps = {
     "Ellipse 14"?: PrimitiveOverrideProps<IconProps>;
     "Polygon 1"?: PrimitiveOverrideProps<IconProps>;
     "Polygon 2"?: PrimitiveOverrideProps<IconProps>;
-    "\u00A9 2021 Templates Jungle. All rights reserved"?: PrimitiveOverrideProps<TextProps>;
-    "\uF231\uF243\uF350\uF2B1\uF22D\uF24D"?: PrimitiveOverrideProps<TextProps>;
-    "Line 11"?: PrimitiveOverrideProps<IconProps>;
-    "contact me btn"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 38"?: PrimitiveOverrideProps<ViewProps>;
-    "Contact me"?: PrimitiveOverrideProps<TextProps>;
-    "I\u2019m available for freelance work. Have any projects in your mind? Just feel free to contact me"?: PrimitiveOverrideProps<TextProps>;
+    Vector?: PrimitiveOverrideProps<IconProps>;
+    FooterContent?: PrimitiveOverrideProps<FlexProps>;
+    FooterContentText?: PrimitiveOverrideProps<FlexProps>;
     "Let\u2019s work together"?: PrimitiveOverrideProps<TextProps>;
+    "I\u2019m available for freelance work. Have any projects in your mind? Just feel free to contact me"?: PrimitiveOverrideProps<TextProps>;
+    ContactButton?: ContactButtonProps;
+    FooterBottom?: PrimitiveOverrideProps<FlexProps>;
+    FooterDividerLine?: PrimitiveOverrideProps<IconProps>;
+    FooterContentBottom?: PrimitiveOverrideProps<FlexProps>;
+    "Credit to TemplateJungle/FlatIcon"?: PrimitiveOverrideProps<TextProps>;
+    FooterLinks?: FooterLinksProps;
+    "Made with Figma, AWS Amplify Studio, and React"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type FooterProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: FooterOverridesProps | undefined | null;

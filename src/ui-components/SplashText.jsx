@@ -177,8 +177,10 @@ export default function SplashText(props) {
           justifyContent="unset"
           shrink="0"
           position="relative"
+          boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
           padding="0px 0px 0px 0px"
-          hover="False"
+          state="Default"
+          bold="False"
           {...getOverrideProps(overrides, "ContactButton")}
         ></ContactButton>
       </Flex>

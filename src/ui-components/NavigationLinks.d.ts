@@ -6,12 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 import { TextLinkProps } from "./TextLink";
-import { FlexProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavigationLinksOverridesProps = {
     NavigationLinks?: PrimitiveOverrideProps<FlexProps>;
-    Home?: TextLinkProps;
+    Home?: PrimitiveOverrideProps<FlexProps>;
+    "Link Text"?: PrimitiveOverrideProps<TextProps>;
     Skills?: TextLinkProps;
     Projects?: TextLinkProps;
     Experience?: TextLinkProps;

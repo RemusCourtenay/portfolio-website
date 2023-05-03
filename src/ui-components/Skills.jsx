@@ -7,60 +7,86 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Icon, Text, View } from "@aws-amplify/ui-react";
+import SkillsText from "./SkillsText";
+import SkillsGraph from "./SkillsGraph";
+import { Flex, Icon, View } from "@aws-amplify/ui-react";
 export default function Skills(props) {
   const { overrides, ...rest } = props;
   return (
     <View
       width="1920px"
-      height="629px"
+      height="630px"
       display="block"
       gap="unset"
       alignItems="unset"
       justifyContent="unset"
+      overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
+      backgroundColor="rgba(229,233,237,1)"
       {...getOverrideProps(overrides, "Skills")}
       {...rest}
     >
-      <View
+      <Flex
+        gap="258px"
+        direction="row"
         width="1920px"
-        height="629px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        height="630px"
+        justifyContent="flex-start"
+        alignItems="center"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="0%"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(229,233,237,1)"
-        {...getOverrideProps(overrides, "Rectangle 112")}
-      ></View>
+        top="0px"
+        left="0px"
+        padding="60px 250px 60px 250px"
+        {...getOverrideProps(overrides, "SkillsSplash")}
+      >
+        <SkillsText
+          display="flex"
+          gap="33px"
+          direction="column"
+          width="500px"
+          height="350px"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "SkillsText")}
+        ></SkillsText>
+        <SkillsGraph
+          display="flex"
+          gap="0"
+          direction="column"
+          width="500px"
+          height="350px"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "SkillsGraph")}
+        ></SkillsGraph>
+      </Flex>
       <View
         padding="0px 0px 0px 0px"
-        width="1631.17px"
-        height="541.04px"
+        width="1562px"
+        height="473px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="8.27%"
-        bottom="5.72%"
-        left="8.18%"
-        right="6.87%"
-        {...getOverrideProps(overrides, "bg pattern")}
+        top="78.5px"
+        left="179px"
+        {...getOverrideProps(overrides, "SkillsBackground")}
       >
         <Icon
-          width="28.75px"
+          width="25.14px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 1, height: 28.75341796875 }}
+          viewBox={{ minX: 0, minY: 0, width: 1, height: 25.137451171875 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM26.7534 0C27.858 0 28.7534 -0.895431 28.7534 -2C28.7534 -3.10457 27.858 -4 26.7534 -4L26.7534 0ZM2 0L26.7534 0L26.7534 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM23.1375 0C24.2421 0 25.1375 -0.895431 25.1375 -2C25.1375 -3.10457 24.2421 -4 23.1375 -4L23.1375 0ZM2 0L23.1375 0L23.1375 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -71,26 +97,24 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="20.33%"
-          bottom="79.67%"
-          left="0.73%"
-          right="97.5%"
+          top="calc(50% - 0px - 140.33px)"
+          left="calc(50% - 12.57px - 756.96px)"
           transformOrigin="top left"
           transform="rotate(90deg)"
           {...getOverrideProps(overrides, "Line 12")}
         ></Icon>
         <Icon
-          width="23.96px"
+          width="21.09px"
           height="0px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 6.20166015625,
-            height: 23.144775390625,
+            width: 5.938629150390625,
+            height: 20.234130859375,
           }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM21.9612 0C23.0657 0 23.9612 -0.895431 23.9612 -2C23.9612 -3.10457 23.0657 -4 21.9612 -4L21.9612 0ZM2 0L21.9612 0L21.9612 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM19.0876 0C20.1922 0 21.0876 -0.895431 21.0876 -2C21.0876 -3.10457 20.1922 -4 19.0876 -4L19.0876 0ZM2 0L19.0876 0L19.0876 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -101,21 +125,19 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="88.16%"
-          bottom="11.84%"
-          left="7.97%"
-          right="90.56%"
+          top="calc(50% - 0px - -180.51px)"
+          left="calc(50% - 10.54px - 645.98px)"
           transformOrigin="top left"
-          transform="rotate(105deg)"
+          transform="rotate(106.36deg)"
           {...getOverrideProps(overrides, "Line 14")}
         ></Icon>
         <Icon
-          width="19.17px"
+          width="16.76px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 1, height: 19.1689453125 }}
+          viewBox={{ minX: 0, minY: 0, width: 1, height: 16.75830078125 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM17.1689 0C18.2735 0 19.1689 -0.895431 19.1689 -2C19.1689 -3.10457 18.2735 -4 17.1689 -4L17.1689 0ZM2 0L17.1689 0L17.1689 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM14.7583 0C15.8629 0 16.7583 -0.895431 16.7583 -2C16.7583 -3.10457 15.8629 -4 14.7583 -4L14.7583 0ZM2 0L14.7583 0L14.7583 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -126,21 +148,19 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="37.89%"
-          bottom="62.11%"
-          left="99.27%"
-          right="-0.44%"
+          top="calc(50% - 0px - 57.28px)"
+          left="calc(50% - 8.38px - -777.91px)"
           transformOrigin="top left"
           transform="rotate(90deg)"
           {...getOverrideProps(overrides, "Line 16")}
         ></Icon>
         <Icon
-          width="24px"
+          width="20.98px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 1, height: 24 }}
+          viewBox={{ minX: 0, minY: 0, width: 1, height: 20.9818115234375 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM22 0C23.1046 0 24 -0.895431 24 -2C24 -3.10457 23.1046 -4 22 -4L22 0ZM2 0L22 0L22 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM18.9819 0C20.0864 0 20.9819 -0.895431 20.9819 -2C20.9819 -3.10457 20.0864 -4 18.9819 -4L18.9819 0ZM2 0L18.9819 0L18.9819 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -151,21 +171,19 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="92.41%"
-          bottom="7.59%"
-          left="96.07%"
-          right="2.46%"
+          top="calc(50% - 0px - -200.62px)"
+          left="calc(50% - 10.49px - -730.04px)"
           transformOrigin="top left"
           transform="rotate(90deg)"
           {...getOverrideProps(overrides, "Line 18")}
         ></Icon>
         <Icon
-          width="28.75px"
+          width="27.53px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 28.75341796875, height: 1 }}
+          viewBox={{ minX: 0, minY: 0, width: 27.53411865234375, height: 1 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM26.7534 0C27.858 0 28.7534 -0.895431 28.7534 -2C28.7534 -3.10457 27.858 -4 26.7534 -4L26.7534 0ZM2 0L26.7534 0L26.7534 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM25.5341 0C26.6387 0 27.5341 -0.895431 27.5341 -2C27.5341 -3.10457 26.6387 -4 25.5341 -4L25.5341 0ZM2 0L25.5341 0L25.5341 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -176,26 +194,24 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="23.43%"
-          bottom="76.57%"
-          left="0%"
-          right="98.24%"
+          top="calc(50% - 0px - 125.67px)"
+          left="calc(50% - 13.77px - 767.23px)"
           transformOrigin="top left"
           transform="rotate(0deg)"
           {...getOverrideProps(overrides, "Line 13")}
         ></Icon>
         <Icon
-          width="23.96px"
+          width="22.82px"
           height="0px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 23.1446533203125,
-            height: 6.20166015625,
+            width: 22.16326904296875,
+            height: 5.4217529296875,
           }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM21.9612 0C23.0657 0 23.9612 -0.895431 23.9612 -2C23.9612 -3.10457 23.0657 -4 21.9612 -4L21.9612 0ZM2 0L21.9612 0L21.9612 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM20.8168 0C21.9213 0 22.8168 -0.895431 22.8168 -2C22.8168 -3.10457 21.9213 -4 20.8168 -4L20.8168 0ZM2 0L20.8168 0L20.8168 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -206,21 +222,19 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="90.27%"
-          bottom="9.73%"
-          left="7.17%"
-          right="91.36%"
+          top="calc(50% - 0px - -190.49px)"
+          left="calc(50% - 11.41px - 657.55px)"
           transformOrigin="top left"
-          transform="rotate(15deg)"
+          transform="rotate(13.75deg)"
           {...getOverrideProps(overrides, "Line 15")}
         ></Icon>
         <Icon
-          width="19.17px"
+          width="18.36px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 19.1689453125, height: 1 }}
+          viewBox={{ minX: 0, minY: 0, width: 18.3560791015625, height: 1 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM17.1689 0C18.2735 0 19.1689 -0.895431 19.1689 -2C19.1689 -3.10457 18.2735 -4 17.1689 -4L17.1689 0ZM2 0L17.1689 0L17.1689 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM16.3561 0C17.4607 0 18.3561 -0.895431 18.3561 -2C18.3561 -3.10457 17.4607 -4 16.3561 -4L16.3561 0ZM2 0L16.3561 0L16.3561 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -231,21 +245,19 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="40.1%"
-          bottom="59.9%"
-          left="98.82%"
-          right="0%"
+          top="calc(50% - 0px - 46.81px)"
+          left="calc(50% - 9.18px - -771.82px)"
           transformOrigin="top left"
           transform="rotate(0deg)"
           {...getOverrideProps(overrides, "Line 17")}
         ></Icon>
         <Icon
-          width="24px"
+          width="22.98px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 24, height: 1 }}
+          viewBox={{ minX: 0, minY: 0, width: 22.9822998046875, height: 1 }}
           paths={[
             {
-              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM22 0C23.1046 0 24 -0.895431 24 -2C24 -3.10457 23.1046 -4 22 -4L22 0ZM2 0L22 0L22 -4L2 -4L2 0Z",
+              d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM20.9823 0C22.0869 0 22.9823 -0.895431 22.9823 -2C22.9823 -3.10457 22.0869 -4 20.9823 -4L20.9823 0ZM2 0L20.9823 0L20.9823 -4L2 -4L2 0Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -256,26 +268,24 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="95%"
-          bottom="5%"
-          left="95.45%"
-          right="3.08%"
+          top="calc(50% - 0px - -212.86px)"
+          left="calc(50% - 11.49px - -721.47px)"
           transformOrigin="top left"
           transform="rotate(0deg)"
           {...getOverrideProps(overrides, "Line 19")}
         ></Icon>
         <Icon
-          width="17.97px"
-          height="17.97px"
+          width="17.21px"
+          height="15.71px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 17.970947265625,
-            height: 17.970947265625,
+            width: 17.20880126953125,
+            height: 15.7109375,
           }}
           paths={[
             {
-              d: "M13.9709 8.98544C13.9709 11.7388 11.7388 13.9709 8.98544 13.9709L8.98544 21.9709C16.1571 21.9709 21.9709 16.1571 21.9709 8.98544L13.9709 8.98544ZM8.98544 13.9709C6.23206 13.9709 4 11.7388 4 8.98544L-4 8.98544C-4 16.1571 1.81378 21.9709 8.98544 21.9709L8.98544 13.9709ZM4 8.98544C4 6.23206 6.23206 4 8.98544 4L8.98544 -4C1.81378 -4 -4 1.81378 -4 8.98544L4 8.98544ZM8.98544 4C11.7388 4 13.9709 6.23206 13.9709 8.98544L21.9709 8.98544C21.9709 1.81378 16.1571 -4 8.98544 -4L8.98544 4Z",
+              d: "M13.2088 7.85546C13.2088 9.64974 11.498 11.7109 8.60441 11.7109L8.60441 19.7109C15.215 19.7109 21.2088 14.7381 21.2088 7.85546L13.2088 7.85546ZM8.60441 11.7109C5.71083 11.7109 4 9.64974 4 7.85546L-4 7.85546C-4 14.7381 1.99382 19.7109 8.60441 19.7109L8.60441 11.7109ZM4 7.85546C4 6.06119 5.71083 4 8.60441 4L8.60441 -4C1.99382 -4 -4 0.972829 -4 7.85546L4 7.85546ZM8.60441 4C11.498 4 13.2088 6.06119 13.2088 7.85546L21.2088 7.85546C21.2088 0.972829 15.215 -4 8.60441 -4L8.60441 4Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -286,24 +296,22 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="96.68%"
-          bottom="0%"
-          left="52.79%"
-          right="46.11%"
+          top="calc(50% - 7.86px - -228.64px)"
+          left="calc(50% - 8.6px - -52.22px)"
           {...getOverrideProps(overrides, "Ellipse 13")}
         ></Icon>
         <Icon
-          width="23.96px"
-          height="23.96px"
+          width="22.95px"
+          height="20.95px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 23.961181640625,
-            height: 23.961181640625,
+            width: 22.945068359375,
+            height: 20.9478759765625,
           }}
           paths={[
             {
-              d: "M19.9612 11.9806C19.9612 16.3881 16.3881 19.9612 11.9806 19.9612L11.9806 27.9612C20.8064 27.9612 27.9612 20.8064 27.9612 11.9806L19.9612 11.9806ZM11.9806 19.9612C7.57303 19.9612 4 16.3881 4 11.9806L-4 11.9806C-4 20.8064 3.15475 27.9612 11.9806 27.9612L11.9806 19.9612ZM4 11.9806C4 7.57303 7.57303 4 11.9806 4L11.9806 -4C3.15475 -4 -4 3.15475 -4 11.9806L4 11.9806ZM11.9806 4C16.3881 4 19.9612 7.57303 19.9612 11.9806L27.9612 11.9806C27.9612 3.15475 20.8064 -4 11.9806 -4L11.9806 4Z",
+              d: "M18.9451 10.474C18.9451 13.7144 15.9502 16.9479 11.4726 16.9479L11.4726 24.9479C19.6672 24.9479 26.9451 18.8027 26.9451 10.474L18.9451 10.474ZM11.4726 16.9479C6.99494 16.9479 4 13.7144 4 10.474L-4 10.474C-4 18.8027 3.27793 24.9479 11.4726 24.9479L11.4726 16.9479ZM4 10.474C4 7.23353 6.99494 4 11.4726 4L11.4726 -4C3.27793 -4 -4 2.14517 -4 10.474L4 10.474ZM11.4726 4C15.9502 4 18.9451 7.23353 18.9451 10.474L26.9451 10.474C26.9451 2.14517 19.6672 -4 11.4726 -4L11.4726 4Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -314,24 +322,22 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="0%"
-          bottom="95.57%"
-          left="80.25%"
-          right="18.28%"
+          top="calc(50% - 10.47px - 226.03px)"
+          left="calc(50% - 11.47px - -483.96px)"
           {...getOverrideProps(overrides, "Ellipse 14")}
         ></Icon>
         <Icon
-          width="32.35px"
-          height="32.35px"
+          width="30.98px"
+          height="28.28px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 32.3475341796875,
-            height: 32.34765625,
+            width: 30.97589111328125,
+            height: 28.2796630859375,
           }}
           paths={[
             {
-              d: "M3.89893 21.2607L0.434826 19.2607L3.89893 21.2607ZM17.9058 3L14.4417 5L17.9058 3ZM14.4417 3L17.9058 5L14.4417 3ZM14.4417 5L24.9845 23.2607L31.9127 19.2607L21.3699 1L14.4417 5ZM26.7166 20.2607L5.63098 20.2607L5.63098 28.2607L26.7166 28.2607L26.7166 20.2607ZM7.36303 23.2607L17.9058 5L10.9776 1L0.434826 19.2607L7.36303 23.2607ZM5.63098 20.2607C7.17057 20.2607 8.13283 21.9273 7.36303 23.2607L0.434826 19.2607C-1.87458 23.2607 1.01219 28.2607 5.63098 28.2607L5.63098 20.2607ZM24.9845 23.2607C24.2147 21.9274 25.177 20.2607 26.7166 20.2607L26.7166 28.2607C31.3354 28.2607 34.2221 23.2607 31.9127 19.2607L24.9845 23.2607ZM21.3699 1C19.0605 -3.00001 13.287 -2.99999 10.9776 1L17.9058 5C17.136 6.33333 15.2115 6.33334 14.4417 5L21.3699 1Z",
+              d: "M26.9601 18.1408L23.5794 20.2787L26.9601 18.1408ZM13.7976 2.67294L10.4169 0.534995L13.7976 2.67294ZM13.7976 4.81088L23.5794 20.2787L30.3408 16.0028L20.559 0.534994L13.7976 4.81088ZM25.2697 17.2098L5.70615 17.2098L5.70615 25.2098L25.2697 25.2098L25.2697 17.2098ZM7.3965 20.2787L17.1783 4.81088L10.4169 0.534995L0.635087 16.0028L7.3965 20.2787ZM5.70615 17.2098C7.28179 17.2098 8.23866 18.947 7.3965 20.2787L0.635087 16.0028C-1.89137 19.9979 0.979236 25.2098 5.70615 25.2098L5.70615 17.2098ZM23.5794 20.2787C22.7372 18.947 23.6941 17.2098 25.2697 17.2098L25.2697 25.2098C29.9966 25.2098 32.8673 19.9979 30.3408 16.0028L23.5794 20.2787ZM20.559 0.534994C18.2039 -3.18912 12.772 -3.18911 10.4169 0.534995L17.1783 4.81088C16.3933 6.05225 14.5826 6.05226 13.7976 4.81088L20.559 0.534994Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -342,24 +348,22 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="1.48%"
-          bottom="92.54%"
-          left="21.89%"
-          right="76.13%"
+          top="calc(50% - 14.14px - 215.37px)"
+          left="calc(50% - 15.49px - 423.65px)"
           {...getOverrideProps(overrides, "Polygon 1")}
         ></Icon>
         <Icon
-          width="29.95px"
-          height="29.95px"
+          width="28.68px"
+          height="26.18px"
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 29.951416015625,
-            height: 29.951416015625,
+            width: 28.681396484375,
+            height: 26.1849365234375,
           }}
           paths={[
             {
-              d: "M3.73842 19.4636L0.274316 17.4636L3.73842 19.4636ZM26.213 19.4636L29.6771 17.4636L26.213 19.4636ZM16.7078 3L20.1719 1L16.7078 3ZM13.2437 3L9.77958 1L13.2437 3ZM13.2437 5L22.7489 21.4636L29.6771 17.4636L20.1719 1L13.2437 5ZM24.481 18.4636L5.47047 18.4636L5.47047 26.4636L24.481 26.4636L24.481 18.4636ZM7.20252 21.4636L16.7078 5L9.77958 1L0.274316 17.4636L7.20252 21.4636ZM5.47047 18.4636C7.01007 18.4636 7.97232 20.1303 7.20252 21.4636L0.274316 17.4636C-2.03509 21.4636 0.851669 26.4636 5.47047 26.4636L5.47047 18.4636ZM22.7489 21.4636C21.9791 20.1303 22.9414 18.4636 24.481 18.4636L24.481 26.4636C29.0998 26.4636 31.9865 21.4636 29.6771 17.4636L22.7489 21.4636ZM20.1719 1C17.8625 -3 12.089 -3 9.77958 1L16.7078 5C15.938 6.33333 14.0135 6.33334 13.2437 5L20.1719 1Z",
+              d: "M16.031 2.67294L12.6503 4.81088L16.031 2.67294ZM12.6503 4.81088L21.4386 18.7076L28.2 14.4317L19.4118 0.534993L12.6503 4.81088ZM23.1289 15.6387L5.55244 15.6387L5.55244 23.6387L23.1289 23.6387L23.1289 15.6387ZM7.2428 18.7076L16.031 4.81088L9.26963 0.534992L0.481383 14.4317L7.2428 18.7076ZM5.55244 15.6387C7.12808 15.6387 8.08495 17.3759 7.2428 18.7076L0.481383 14.4317C-2.04508 18.4268 0.825536 23.6387 5.55244 23.6387L5.55244 15.6387ZM21.4386 18.7076C20.5964 17.3759 21.5533 15.6387 23.1289 15.6387L23.1289 23.6387C27.8558 23.6387 30.7265 18.4268 28.2 14.4317L21.4386 18.7076ZM19.4118 0.534993C17.0566 -3.18911 11.6247 -3.18912 9.26963 0.534992L16.031 4.81088C15.246 6.05226 13.4354 6.05225 12.6503 4.81088L19.4118 0.534993Z",
               stroke: "rgba(240,240,240,1)",
               fillRule: "nonzero",
               strokeWidth: 4,
@@ -370,596 +374,10 @@ export default function Skills(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="25.32%"
-          bottom="69.14%"
-          left="49.23%"
-          right="48.94%"
+          top="calc(50% - 13.09px - 103.64px)"
+          left="calc(50% - 14.34px - -2.29px)"
           {...getOverrideProps(overrides, "Polygon 2")}
         ></Icon>
-      </View>
-      <View
-        padding="0px 0px 0px 0px"
-        width="537px"
-        height="346px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="20.51%"
-        bottom="24.48%"
-        left="53.07%"
-        right="18.96%"
-        {...getOverrideProps(overrides, "my skills")}
-      >
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="28.03%"
-          bottom="66.47%"
-          left="0%"
-          right="74.12%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Adobe Photoshop"
-          {...getOverrideProps(overrides, "Adobe Photoshop")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="48.84%"
-          bottom="45.66%"
-          left="0%"
-          right="75.61%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Adobe Illustrator"
-          {...getOverrideProps(overrides, "Adobe Illustrator")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="69.65%"
-          bottom="24.86%"
-          left="0%"
-          right="73.37%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Adobe After Effect"
-          {...getOverrideProps(overrides, "Adobe After Effect")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="90.46%"
-          bottom="4.05%"
-          left="0%"
-          right="76.91%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Adobe InDesign"
-          {...getOverrideProps(overrides, "Adobe InDesign")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="28.03%"
-          bottom="66.47%"
-          left="93.48%"
-          right="0.56%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="96%"
-          {...getOverrideProps(overrides, "96%")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="48.84%"
-          bottom="45.66%"
-          left="89.57%"
-          right="4.66%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="92%"
-          {...getOverrideProps(overrides, "92%")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="69.65%"
-          bottom="24.86%"
-          left="82.68%"
-          right="11.55%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="85%"
-          {...getOverrideProps(overrides, "85%")}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(45,45,45,1)"
-          lineHeight="18.784000396728516px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.17px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="90.46%"
-          bottom="4.05%"
-          left="91.43%"
-          right="2.79%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="94%"
-          {...getOverrideProps(overrides, "94%")}
-        ></Text>
-        <View
-          width="537px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="36.71%"
-          bottom="62.43%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(234,234,234,1)"
-          {...getOverrideProps(overrides, "Rectangle 57")}
-        ></View>
-        <View
-          width="537px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="57.51%"
-          bottom="41.62%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(234,234,234,1)"
-          {...getOverrideProps(overrides, "Rectangle 59")}
-        ></View>
-        <View
-          width="537px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="78.32%"
-          bottom="20.81%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(234,234,234,1)"
-          {...getOverrideProps(overrides, "Rectangle 61")}
-        ></View>
-        <View
-          width="537px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="99.13%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(234,234,234,1)"
-          {...getOverrideProps(overrides, "Rectangle 63")}
-        ></View>
-        <View
-          width="518px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="36.71%"
-          bottom="62.43%"
-          left="0%"
-          right="3.54%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(230,57,70,1)"
-          {...getOverrideProps(overrides, "Rectangle 58")}
-        ></View>
-        <View
-          width="496px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="57.51%"
-          bottom="41.62%"
-          left="0%"
-          right="7.64%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(230,57,70,1)"
-          {...getOverrideProps(overrides, "Rectangle 60")}
-        ></View>
-        <View
-          width="459px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="78.32%"
-          bottom="20.81%"
-          left="0%"
-          right="14.53%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(230,57,70,1)"
-          {...getOverrideProps(overrides, "Rectangle 62")}
-        ></View>
-        <View
-          width="506px"
-          height="3px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="99.13%"
-          bottom="0%"
-          left="0%"
-          right="5.77%"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(230,57,70,1)"
-          {...getOverrideProps(overrides, "Rectangle 64")}
-        ></View>
-        <Text
-          fontFamily="Raleway"
-          fontSize="48px"
-          fontWeight="700"
-          color="rgba(45,45,45,1)"
-          textTransform="capitalize"
-          lineHeight="56.35200119018555px"
-          textAlign="center"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="-0.33px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="0%"
-          bottom="83.82%"
-          left="0%"
-          right="63.13%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="My Skills"
-          {...getOverrideProps(overrides, "My Skills")}
-        ></Text>
-      </View>
-      <View
-        padding="0px 0px 0px 0px"
-        width="494px"
-        height="351px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="20.51%"
-        bottom="23.69%"
-        left="19.11%"
-        right="55.16%"
-        {...getOverrideProps(overrides, "why hire me")}
-      >
-        <View
-          padding="0px 0px 0px 0px"
-          width="206px"
-          height="56px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="84.05%"
-          bottom="0%"
-          left="33%"
-          right="25.3%"
-          {...getOverrideProps(overrides, "download cv btn")}
-        >
-          <View
-            width="206px"
-            height="56px"
-            display="block"
-            gap="unset"
-            alignItems="unset"
-            justifyContent="unset"
-            position="absolute"
-            top="0%"
-            bottom="0%"
-            left="0%"
-            right="0%"
-            border="2px SOLID rgba(225,225,225,1)"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Rectangle 56")}
-          ></View>
-          <Text
-            fontFamily="Raleway"
-            fontSize="16px"
-            fontWeight="500"
-            color="rgba(45,45,45,1)"
-            textTransform="uppercase"
-            lineHeight="18.784000396728516px"
-            textAlign="left"
-            display="block"
-            direction="column"
-            justifyContent="unset"
-            letterSpacing="0.33px"
-            width="126px"
-            height="19.35px"
-            gap="unset"
-            alignItems="unset"
-            position="absolute"
-            top="32.73%"
-            bottom="32.73%"
-            left="19.42%"
-            right="19.42%"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Download CV"
-            {...getOverrideProps(overrides, "Download CV")}
-          ></Text>
-        </View>
-        <View
-          padding="0px 0px 0px 0px"
-          width="138px"
-          height="56px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="84.05%"
-          bottom="0%"
-          left="0%"
-          right="72.06%"
-          {...getOverrideProps(overrides, "hire me btn")}
-        >
-          <View
-            width="138px"
-            height="56px"
-            display="block"
-            gap="unset"
-            alignItems="unset"
-            justifyContent="unset"
-            position="absolute"
-            top="0%"
-            bottom="0%"
-            left="0%"
-            right="0%"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(45,45,45,1)"
-            {...getOverrideProps(overrides, "Rectangle 55")}
-          ></View>
-          <Text
-            fontFamily="Raleway"
-            fontSize="16px"
-            fontWeight="500"
-            color="rgba(255,255,255,1)"
-            textTransform="uppercase"
-            lineHeight="18.784000396728516px"
-            textAlign="left"
-            display="block"
-            direction="column"
-            justifyContent="unset"
-            letterSpacing="0.33px"
-            width="unset"
-            height="unset"
-            gap="unset"
-            alignItems="unset"
-            position="absolute"
-            top="32.14%"
-            bottom="33.93%"
-            left="25.36%"
-            right="25.36%"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Hire Me"
-            {...getOverrideProps(overrides, "Hire Me")}
-          ></Text>
-        </View>
-        <Text
-          fontFamily="Lato"
-          fontSize="16px"
-          fontWeight="400"
-          color="rgba(146,146,146,1)"
-          lineHeight="29.62906265258789px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.01px"
-          width="494px"
-          height="55px"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="55.84%"
-          bottom="28.49%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Vulputate pulvinar cursus suspendisse risus vulputate  enim pharetra eu. Tetur adipiscing elit eu placera."
-          {...getOverrideProps(
-            overrides,
-            "Vulputate pulvinar cursus suspendisse risus vulputate enim pharetra eu. Tetur adipiscing elit eu placera."
-          )}
-        ></Text>
-        <Text
-          fontFamily="Lato"
-          fontSize="16px"
-          fontWeight="400"
-          color="rgba(146,146,146,1)"
-          lineHeight="29.62906265258789px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="0.01px"
-          width="494px"
-          height="87px"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="27.07%"
-          bottom="48.15%"
-          left="0%"
-          right="0%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus."
-          {...getOverrideProps(
-            overrides,
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus."
-          )}
-        ></Text>
-        <Text
-          fontFamily="Raleway"
-          fontSize="48px"
-          fontWeight="700"
-          color="rgba(45,45,45,1)"
-          textTransform="capitalize"
-          lineHeight="56.35200119018555px"
-          textAlign="center"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          letterSpacing="-0.33px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          position="absolute"
-          top="0%"
-          bottom="84.05%"
-          left="0%"
-          right="34.82%"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Why Hire Me ?"
-          {...getOverrideProps(overrides, "Why Hire Me ?")}
-        ></Text>
       </View>
     </View>
   );
