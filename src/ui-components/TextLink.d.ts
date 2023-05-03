@@ -7,12 +7,16 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type TextLinkOverridesProps = {
     TextLink?: PrimitiveOverrideProps<FlexProps>;
     "Link Text"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type TextLinkProps = React.PropsWithChildren<Partial<FlexProps> & {
+    TextContent?: String;
+    onClickHandler?: (event: SyntheticEvent) => void;
+} & {
     focus?: "False" | "True";
     hover?: "False" | "True";
 } & {

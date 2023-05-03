@@ -1,24 +1,36 @@
 import { useState } from "react";
 import { TextLink } from "../ui-components";
 
-function ResponsiveTextLink(focus, anchor) {
+function ResponsiveTextLink(props) {
 
-    const [hover, setHover] = useState("false")
+    const content = props.content
+    const focus = props.focus
+    // const anchor
+
+    const [hover, setHover] = useState('False')
 
     function clickHandler() {
-        // TODO... goto anchor
+        window.alert("click handled")
     }
 
-    function setHover() {
-        // TODO... link hovering to value idk
+    function mouseOverHandler() {
+        setHover('True')
+    }
+
+    function mouseExitHandler() {
+        setHover('False')
     }
 
 
     return (
-        <TextLink 
-            onClickHandler={clickHandler}
+        <TextLink
+            TextContent={content} 
             hover={hover}
-            focus={focus}    
+            focus={focus}
+            
+            onClickHandler={clickHandler}
+            onMouseEnter={mouseOverHandler}
+            onMouseLeave={mouseExitHandler}
         />
     )
 }

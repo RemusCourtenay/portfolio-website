@@ -13,7 +13,12 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function TextLink(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const {
+    TextContent,
+    onClickHandler,
+    overrides: overridesProp,
+    ...rest
+  } = props;
   const variants = [
     {
       overrides: { "Link Text": { textDecoration: "underline" }, TextLink: {} },
@@ -71,7 +76,8 @@ export default function TextLink(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Link Text"
+        children={TextContent}
+        onClick={onClickHandler}
         {...getOverrideProps(overrides, "Link Text")}
       ></Text>
     </Flex>

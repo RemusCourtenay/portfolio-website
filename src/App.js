@@ -1,12 +1,16 @@
 import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
-import { Header } from './ui-components';
+import { Header, TextLink } from './ui-components';
+import ResponsiveTextLink from './logic-components/ResponsiveTextLink';
  
 
 function App() {
   return (
-    <Header />
+    <ResponsiveTextLink 
+      content='Hello World 2'
+      focus='True'
+    />
   );
 }
 
