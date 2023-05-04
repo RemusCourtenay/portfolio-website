@@ -19,9 +19,12 @@ export declare type SplashTextOverridesProps = {
     "Remus Courtenay"?: PrimitiveOverrideProps<TextProps>;
     Bottom?: PrimitiveOverrideProps<FlexProps>;
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et. Non semper blandit vitae semper blandit. Tellus dignissim a dui turpis arcu, nulla ullamcorper tincidunt."?: PrimitiveOverrideProps<TextProps>;
+    ContactButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     ContactButton?: ContactButtonProps;
 } & EscapeHatchProps;
 export declare type SplashTextProps = React.PropsWithChildren<Partial<FlexProps> & {
+    contactButtonGroup?: React.ReactNode;
+} & {
     overrides?: SplashTextOverridesProps | undefined | null;
 }>;
 export default function SplashText(props: SplashTextProps): React.ReactElement;

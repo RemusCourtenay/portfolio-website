@@ -17,11 +17,12 @@ export default function ContactButton(props) {
   const variants = [
     {
       overrides: {
-        Border: { border: "2px SOLID rgba(74,73,73,1)" },
-        "Get In Touch": { color: "rgba(34,34,34,1)" },
-        ContactButton: {
+        Border: {
+          border: "2px SOLID rgba(74,73,73,1)",
           boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.6000000238418579)",
         },
+        "Get In Touch": { color: "rgba(34,34,34,1)" },
+        ContactButton: {},
       },
       variantValues: { state: "Hover", bold: "False" },
     },
@@ -39,11 +40,12 @@ export default function ContactButton(props) {
     },
     {
       overrides: {
-        Border: { border: "2px SOLID rgba(0,0,0,1)" },
-        "Get In Touch": {},
-        ContactButton: {
+        Border: {
+          border: "2px SOLID rgba(0,0,0,1)",
           boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.6000000238418579)",
         },
+        "Get In Touch": {},
+        ContactButton: {},
       },
       variantValues: { state: "Hover", bold: "True" },
     },
@@ -57,9 +59,9 @@ export default function ContactButton(props) {
     },
     {
       overrides: {
-        Border: { border: "2px SOLID rgba(0,0,0,1)" },
-        "Get In Touch": {},
-        ContactButton: {},
+        Border: { bottom: "1.39%", border: "2px SOLID rgba(0,0,0,1)" },
+        "Get In Touch": { top: "33.95%", bottom: "35.34%" },
+        ContactButton: { height: "62px" },
       },
       variantValues: { state: "Click", bold: "True" },
     },
@@ -77,7 +79,6 @@ export default function ContactButton(props) {
       alignItems="unset"
       justifyContent="unset"
       position="relative"
-      boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
       {...getOverrideProps(overrides, "ContactButton")}
       {...rest}
@@ -95,6 +96,7 @@ export default function ContactButton(props) {
         left="0%"
         right="0%"
         border="2px SOLID rgba(158,158,158,1)"
+        boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
         borderRadius="30.5px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Border")}

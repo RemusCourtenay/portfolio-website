@@ -42,6 +42,7 @@ export { default as ProjectLink } from "./ProjectLink";
 export { default as SkillsGraph } from "./SkillsGraph";
 export { default as JSIcon } from "./JSIcon";
 export { default as Header } from "./Header";
+export { default as Introduction } from "./Introduction";
 export { default as FacebookFooterLink } from "./FacebookFooterLink";
 export { default as CSharpIcon } from "./CSharpIcon";
 export { default as Skills } from "./Skills";

@@ -447,7 +447,6 @@ export default function Footer(props) {
           justifyContent="unset"
           shrink="0"
           position="relative"
-          boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
           padding="0px 0px 0px 0px"
           state="Default"
           bold="True"

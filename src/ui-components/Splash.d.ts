@@ -11,6 +11,7 @@ import { SplashTextProps } from "./SplashText";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type SplashOverridesProps = {
     Splash?: PrimitiveOverrideProps<ViewProps>;
+    "Mask Group"?: PrimitiveOverrideProps<ViewProps>;
     "Background Pattern"?: PrimitiveOverrideProps<ViewProps>;
     "Line 12"?: PrimitiveOverrideProps<IconProps>;
     "Line 14"?: PrimitiveOverrideProps<IconProps>;
@@ -26,15 +27,17 @@ export declare type SplashOverridesProps = {
     "Ellipse 14"?: PrimitiveOverrideProps<IconProps>;
     "Polygon 1"?: PrimitiveOverrideProps<IconProps>;
     "Polygon 2"?: PrimitiveOverrideProps<IconProps>;
-    "Ellipse 21"?: PrimitiveOverrideProps<IconProps>;
-    "Mask Group"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 36"?: PrimitiveOverrideProps<ViewProps>;
-    Face?: PrimitiveOverrideProps<ImageProps>;
+    "Ellipse Middle"?: PrimitiveOverrideProps<IconProps>;
     "Ellipse Top Right"?: PrimitiveOverrideProps<IconProps>;
     "Ellipse Bottom Left"?: PrimitiveOverrideProps<IconProps>;
+    Face?: PrimitiveOverrideProps<ImageProps>;
+    SplashTextGroup?: PrimitiveOverrideProps<ViewProps>;
     SplashText?: SplashTextProps;
 } & EscapeHatchProps;
 export declare type SplashProps = React.PropsWithChildren<Partial<ViewProps> & {
+    splashTextGroup?: React.ReactNode;
+    faceImage?: String;
+} & {
     overrides?: SplashOverridesProps | undefined | null;
 }>;
 export default function Splash(props: SplashProps): React.ReactElement;

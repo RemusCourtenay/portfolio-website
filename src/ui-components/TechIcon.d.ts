@@ -13,6 +13,8 @@ export declare type TechIconOverridesProps = {
     ColorIcon?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type TechIconProps = React.PropsWithChildren<Partial<FlexProps> & {
+    techImage?: String;
+} & {
     focus?: "False" | "True";
 } & {
     overrides?: TechIconOverridesProps | undefined | null;

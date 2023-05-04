@@ -5,12 +5,12 @@ function ResponsiveTextLink(props) {
 
     const content = props.content
     const focus = props.focus
-    // const anchor
+    const anchor = props.anchor
 
     const [hover, setHover] = useState('False')
 
     function clickHandler() {
-        window.alert("click handled")
+        window.alert("anchor: " + anchor)
     }
 
     function mouseEnterHandler() {

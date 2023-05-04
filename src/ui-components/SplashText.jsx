@@ -8,9 +8,8 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-import ContactButton from "./ContactButton";
 export default function SplashText(props) {
-  const { overrides, ...rest } = props;
+  const { contactButtonGroup, overrides, ...rest } = props;
   return (
     <Flex
       gap="27px"
@@ -168,7 +167,8 @@ export default function SplashText(props) {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et. Non semper blandit vitae semper blandit. Tellus dignissim a dui turpis arcu, nulla ullamcorper tincidunt."
           )}
         ></Text>
-        <ContactButton
+        <Flex
+          padding="0px 0px 0px 0px"
           width="215px"
           height="61.14px"
           display="block"
@@ -177,12 +177,9 @@ export default function SplashText(props) {
           justifyContent="unset"
           shrink="0"
           position="relative"
-          boxShadow="2px 2px 4px rgba(0, 0, 0, 0.25)"
-          padding="0px 0px 0px 0px"
-          state="Default"
-          bold="False"
-          {...getOverrideProps(overrides, "ContactButton")}
-        ></ContactButton>
+          children={contactButtonGroup}
+          {...getOverrideProps(overrides, "ContactButtonGroup")}
+        ></Flex>
       </Flex>
     </Flex>
   );

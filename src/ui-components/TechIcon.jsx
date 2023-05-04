@@ -13,7 +13,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Image } from "@aws-amplify/ui-react";
 export default function TechIcon(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { techImage, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: { ColorIcon: {}, TechIcon: {} },
@@ -53,6 +53,7 @@ export default function TechIcon(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={techImage}
         {...getOverrideProps(overrides, "ColorIcon")}
       ></Image>
     </Flex>
