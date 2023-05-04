@@ -13,7 +13,7 @@ function ResponsiveTextLink(props) {
         window.alert("click handled")
     }
 
-    function mouseOverHandler() {
+    function mouseEnterHandler() {
         setHover('True')
     }
 
@@ -29,7 +29,7 @@ function ResponsiveTextLink(props) {
             focus={focus}
             
             onClickHandler={clickHandler}
-            onMouseEnter={mouseOverHandler}
+            onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseExitHandler}
         />
     )
