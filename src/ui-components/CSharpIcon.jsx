@@ -16,12 +16,12 @@ export default function CSharpIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, CSharpIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, CSharpIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, CSharpIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, CSharpIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

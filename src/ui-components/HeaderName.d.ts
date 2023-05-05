@@ -14,6 +14,8 @@ export declare type HeaderNameOverridesProps = {
     "Red Dot"?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
 export declare type HeaderNameProps = React.PropsWithChildren<Partial<FlexProps> & {
+    firstName?: String;
+} & {
     overrides?: HeaderNameOverridesProps | undefined | null;
 }>;
 export default function HeaderName(props: HeaderNameProps): React.ReactElement;

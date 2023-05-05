@@ -16,12 +16,12 @@ export default function TerraformIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, TerraformIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, TerraformIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, TerraformIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, TerraformIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

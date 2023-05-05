@@ -16,12 +16,12 @@ export default function TSIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, TSIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, TSIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, TSIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, TSIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

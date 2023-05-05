@@ -11,8 +11,12 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type CommercialIconOverridesProps = {
     CommercialIcon?: PrimitiveOverrideProps<ViewProps>;
     "paid-work-icon"?: PrimitiveOverrideProps<ImageProps>;
+    "paid-work-icon-red"?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type CommercialIconProps = React.PropsWithChildren<Partial<ViewProps> & {
+    iconSource?: String;
+    focusIconSource?: String;
+} & {
     focus?: "False" | "True";
 } & {
     overrides?: CommercialIconOverridesProps | undefined | null;

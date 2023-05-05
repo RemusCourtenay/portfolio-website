@@ -16,12 +16,12 @@ export default function TechIcon(props) {
   const { techImage, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, TechIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, TechIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, TechIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, TechIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

@@ -6,14 +6,16 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { FlexProps, IconProps, ViewProps } from "@aws-amplify/ui-react";
 import { SkillsTextProps } from "./SkillsText";
 import { SkillsGraphProps } from "./SkillsGraph";
-import { FlexProps, IconProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type SkillsOverridesProps = {
     Skills?: PrimitiveOverrideProps<ViewProps>;
     SkillsSplash?: PrimitiveOverrideProps<FlexProps>;
+    SkillsTextGroup?: PrimitiveOverrideProps<FlexProps>;
     SkillsText?: SkillsTextProps;
+    SkillsGraphGroup?: PrimitiveOverrideProps<FlexProps>;
     SkillsGraph?: SkillsGraphProps;
     SkillsBackground?: PrimitiveOverrideProps<ViewProps>;
     "Line 12"?: PrimitiveOverrideProps<IconProps>;
@@ -30,6 +32,9 @@ export declare type SkillsOverridesProps = {
     "Polygon 2"?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
 export declare type SkillsProps = React.PropsWithChildren<Partial<ViewProps> & {
+    skillsGraphGroup?: React.ReactNode;
+    skillsTextGroup?: React.ReactNode;
+} & {
     overrides?: SkillsOverridesProps | undefined | null;
 }>;
 export default function Skills(props: SkillsProps): React.ReactElement;

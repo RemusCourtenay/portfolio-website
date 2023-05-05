@@ -21,23 +21,23 @@ export default function TextLink(props) {
   } = props;
   const variants = [
     {
-      overrides: { "Link Text": { textDecoration: "underline" }, TextLink: {} },
       variantValues: { hover: "True", focus: "False" },
+      overrides: { "Link Text": { textDecoration: "underline" }, TextLink: {} },
     },
     {
+      variantValues: { hover: "True", focus: "True" },
       overrides: {
         "Link Text": { color: "rgba(255,0,0,1)", textDecoration: "underline" },
         TextLink: {},
       },
-      variantValues: { hover: "True", focus: "True" },
     },
     {
-      overrides: { "Link Text": {}, TextLink: {} },
       variantValues: { hover: "False", focus: "False" },
+      overrides: { "Link Text": {}, TextLink: {} },
     },
     {
-      overrides: { "Link Text": { color: "rgba(255,0,0,1)" }, TextLink: {} },
       variantValues: { hover: "False", focus: "True" },
+      overrides: { "Link Text": { color: "rgba(255,0,0,1)" }, TextLink: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

@@ -16,29 +16,29 @@ export default function SkillsButton(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { SkillsButtonText: {}, ButtonGroup: {}, SkillsButton: {} },
       variantValues: { state: "Default" },
+      overrides: { SkillsButtonText: {}, ButtonGroup: {}, SkillsButton: {} },
     },
     {
-      overrides: {
-        SkillsButtonText: {},
-        ButtonGroup: {},
-        SkillsButton: { boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)" },
-      },
       variantValues: { state: "Hover" },
+      overrides: {
+        SkillsButtonText: { color: "rgba(255,0,0,1)" },
+        ButtonGroup: {},
+        SkillsButton: {},
+      },
     },
     {
-      overrides: {
-        SkillsButtonText: {},
-        ButtonGroup: { backgroundColor: "rgba(58,58,58,1)" },
-        SkillsButton: {
-          width: "196px",
-          height: "55px",
-          padding: "0px 0px 0px 0px",
-          boxShadow: "-4px -4px 5px rgba(0, 0, 0, 0.25)",
-        },
-      },
       variantValues: { state: "Click" },
+      overrides: {
+        SkillsButtonText: { color: "rgba(255,0,0,1)" },
+        ButtonGroup: {
+          width: "191px",
+          height: "50px",
+          backgroundColor: "rgba(58,58,58,1)",
+          boxShadow: "-5px -5px 4px rgba(0, 0, 0, 0.25)",
+        },
+        SkillsButton: {},
+      },
     },
   ];
   const overrides = mergeVariantsAndOverrides(
@@ -48,15 +48,14 @@ export default function SkillsButton(props) {
   return (
     <Flex
       gap="10px"
-      direction="row"
-      width="unset"
-      height="unset"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      direction="column"
+      width="196px"
+      height="55px"
+      justifyContent="flex-end"
+      alignItems="flex-end"
       overflow="hidden"
       position="relative"
-      padding="18px 35px 18px 35px"
-      backgroundColor="rgba(45,45,45,1)"
+      padding="0px 0px 0px 0px"
       display="flex"
       {...getOverrideProps(overrides, "SkillsButton")}
       {...rest}
@@ -70,7 +69,6 @@ export default function SkillsButton(props) {
         alignItems="center"
         shrink="0"
         position="relative"
-        boxShadow="-4px -4px 6px rgba(0, 0, 0, 0.5)"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(45,45,45,1)"
         display="flex"

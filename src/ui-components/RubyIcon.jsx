@@ -16,12 +16,12 @@ export default function RubyIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, RubyIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, RubyIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, RubyIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, RubyIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

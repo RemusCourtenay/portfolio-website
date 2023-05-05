@@ -16,6 +16,7 @@ export default function ProjectCircleView(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
+      variantValues: { state: "Default" },
       overrides: {
         EllipseMask: {},
         ProjectImage: {},
@@ -26,9 +27,9 @@ export default function ProjectCircleView(props) {
         LinkArrow: {},
         ProjectCircleView: {},
       },
-      variantValues: { state: "Default" },
     },
     {
+      variantValues: { state: "Hover" },
       overrides: {
         EllipseMask: {
           viewBox: {
@@ -58,9 +59,9 @@ export default function ProjectCircleView(props) {
         LinkArrow: { display: "block" },
         ProjectCircleView: {},
       },
-      variantValues: { state: "Hover" },
     },
     {
+      variantValues: { state: "Click" },
       overrides: {
         EllipseMask: {},
         ProjectImage: {},
@@ -71,7 +72,6 @@ export default function ProjectCircleView(props) {
         LinkArrow: { display: "block", left: "305px" },
         ProjectCircleView: {},
       },
-      variantValues: { state: "Click" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

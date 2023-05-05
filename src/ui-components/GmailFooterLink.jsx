@@ -16,12 +16,12 @@ export default function GmailFooterLink(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { FacebookLogo: {}, GmailFooterLink: {} },
       variantValues: { state: "Default" },
+      overrides: { FacebookLogo: {}, GmailFooterLink: {} },
     },
     {
-      overrides: { FacebookLogo: {}, GmailFooterLink: {} },
       variantValues: { state: "Hover" },
+      overrides: { FacebookLogo: {}, GmailFooterLink: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

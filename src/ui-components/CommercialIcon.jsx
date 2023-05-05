@@ -13,15 +13,28 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function CommercialIcon(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const {
+    iconSource,
+    focusIconSource,
+    overrides: overridesProp,
+    ...rest
+  } = props;
   const variants = [
     {
-      overrides: { "paid-work-icon": {}, CommercialIcon: {} },
       variantValues: { focus: "False" },
+      overrides: {
+        "paid-work-icon": {},
+        "paid-work-icon-red": {},
+        CommercialIcon: {},
+      },
     },
     {
-      overrides: { "paid-work-icon": {}, CommercialIcon: {} },
       variantValues: { focus: "True" },
+      overrides: {
+        "paid-work-icon": {},
+        "paid-work-icon-red": {},
+        CommercialIcon: {},
+      },
     },
   ];
   const overrides = mergeVariantsAndOverrides(
@@ -55,7 +68,25 @@ export default function CommercialIcon(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={iconSource}
         {...getOverrideProps(overrides, "paid-work-icon")}
+      ></Image>
+      <Image
+        width="100%"
+        height="100%"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="0%"
+        bottom="0%"
+        left="0%"
+        right="0%"
+        padding="0px 0px 0px 0px"
+        objectFit="cover"
+        src={focusIconSource}
+        {...getOverrideProps(overrides, "paid-work-icon-red")}
       ></Image>
     </View>
   );

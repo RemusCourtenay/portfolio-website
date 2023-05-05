@@ -16,12 +16,12 @@ export default function GithubIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, GithubIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, GithubIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, GithubIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, GithubIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

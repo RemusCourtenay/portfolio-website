@@ -16,12 +16,12 @@ export default function JSIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, JSIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, JSIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, JSIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, JSIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

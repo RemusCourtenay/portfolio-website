@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function HeaderName(props) {
-  const { overrides, ...rest } = props;
+  const { firstName, overrides, ...rest } = props;
   return (
     <Flex
       gap="5px"
@@ -41,7 +41,7 @@ export default function HeaderName(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Remus/Zoey"
+        children={firstName}
         {...getOverrideProps(overrides, "HeaderNameText")}
       ></Text>
       <Icon

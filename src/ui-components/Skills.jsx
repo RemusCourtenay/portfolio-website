@@ -7,11 +7,9 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import SkillsText from "./SkillsText";
-import SkillsGraph from "./SkillsGraph";
 import { Flex, Icon, View } from "@aws-amplify/ui-react";
 export default function Skills(props) {
-  const { overrides, ...rest } = props;
+  const { skillsGraphGroup, skillsTextGroup, overrides, ...rest } = props;
   return (
     <View
       width="1920px"
@@ -40,32 +38,32 @@ export default function Skills(props) {
         padding="60px 250px 60px 250px"
         {...getOverrideProps(overrides, "SkillsSplash")}
       >
-        <SkillsText
-          display="flex"
-          gap="33px"
-          direction="column"
+        <Flex
+          padding="0px 0px 0px 0px"
           width="500px"
           height="350px"
-          justifyContent="space-between"
-          alignItems="flex-start"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
+          children={skillsTextGroup}
+          {...getOverrideProps(overrides, "SkillsTextGroup")}
+        ></Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "SkillsText")}
-        ></SkillsText>
-        <SkillsGraph
-          display="flex"
-          gap="0"
-          direction="column"
           width="500px"
           height="350px"
-          justifyContent="space-between"
-          alignItems="flex-start"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "SkillsGraph")}
-        ></SkillsGraph>
+          children={skillsGraphGroup}
+          {...getOverrideProps(overrides, "SkillsGraphGroup")}
+        ></Flex>
       </Flex>
       <View
         padding="0px 0px 0px 0px"

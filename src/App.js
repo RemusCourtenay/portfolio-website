@@ -1,9 +1,12 @@
 import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
-import ResponsiveNavigationLinks from './logic-components/ResponsiveNavigationLinks';
-import { ContactButton, Header, HeaderName, Introduction, Splash, SplashText } from './ui-components';
- 
+import { resources } from './resources/remus';
+import { Introduction, Skills, SkillsText } from './ui-components';
+import ResponsiveHeader from './logic-components/ResponsiveHeader'
+import ResponsiveSplash from './logic-components/ResponsiveSplash'
+import ResponsiveCVButton from './logic-components/ResponsiveCVButton'  
+import ResponsiveSkillsGraph from './logic-components/ResponsiveSkillsGraph';
 
 function App() {
 
@@ -16,25 +19,16 @@ function App() {
   }
 
   return (
-    <Introduction 
-      headerGroup={<Header 
-                    nameGroup={<HeaderName />}
-                    navigationLinksGroup={<ResponsiveNavigationLinks 
-                                            anchors={anchors}
-                                          />}
-                  />}
-      splashGroup={<Splash
-                    splashTextGroup={<SplashText 
-                                        contactButtonGroup={<ContactButton 
-                                                               state='Click'
-                                                               bold='False' 
-                                                            />}
-                                    />} 
-                    faceImage="resources/face.png"
-                  />}
-    />
-
-
+    <div>
+      <Introduction 
+        headerGroup={<ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>}
+        splashGroup={<ResponsiveSplash />}
+      />
+      <Skills 
+        skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton />}/>}
+        skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}  
+      />
+    </div>
   );
 }
 

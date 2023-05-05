@@ -8,15 +8,15 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ImageProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type EducationIconOverridesProps = {
-    EducationIcon?: PrimitiveOverrideProps<ViewProps>;
-    "education-icon"?: PrimitiveOverrideProps<ImageProps>;
+export declare type SkillIconOverridesProps = {
+    SkillIcon?: PrimitiveOverrideProps<ViewProps>;
+    icon?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
-export declare type EducationIconProps = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type SkillIconProps = React.PropsWithChildren<Partial<ViewProps> & {
+    focus?: Boolean;
     iconSource?: String;
     focusIconSource?: String;
-    focus?: Boolean;
 } & {
-    overrides?: EducationIconOverridesProps | undefined | null;
+    overrides?: SkillIconOverridesProps | undefined | null;
 }>;
-export default function EducationIcon(props: EducationIconProps): React.ReactElement;
+export default function SkillIcon(props: SkillIconProps): React.ReactElement;

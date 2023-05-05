@@ -16,12 +16,12 @@ export default function JavaIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, JavaIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, JavaIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, JavaIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, JavaIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

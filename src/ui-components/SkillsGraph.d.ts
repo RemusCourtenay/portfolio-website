@@ -13,13 +13,24 @@ export declare type SkillsGraphOverridesProps = {
     SkillsGraph?: PrimitiveOverrideProps<FlexProps>;
     "My Skills"?: PrimitiveOverrideProps<TextProps>;
     SkillsGroup?: PrimitiveOverrideProps<FlexProps>;
-    SpecificSkill55651?: SpecificSkillProps;
-    SpecificSkill56694?: SpecificSkillProps;
-    SpecificSkill55663?: SpecificSkillProps;
-    SpecificSkill55675?: SpecificSkillProps;
-    SpecificSkill55687?: SpecificSkillProps;
+    skill1Group?: PrimitiveOverrideProps<FlexProps>;
+    SpecificSkill1791995?: SpecificSkillProps;
+    skill2Group?: PrimitiveOverrideProps<FlexProps>;
+    SpecificSkill1792031?: SpecificSkillProps;
+    skill3Group?: PrimitiveOverrideProps<FlexProps>;
+    SpecificSkill1792091?: SpecificSkillProps;
+    skill4Group?: PrimitiveOverrideProps<FlexProps>;
+    SpecificSkill1792175?: SpecificSkillProps;
+    skill5Group?: PrimitiveOverrideProps<FlexProps>;
+    SpecificSkill1792283?: SpecificSkillProps;
 } & EscapeHatchProps;
 export declare type SkillsGraphProps = React.PropsWithChildren<Partial<FlexProps> & {
+    skill1Group?: React.ReactNode;
+    skill2Group?: React.ReactNode;
+    skill3Group?: React.ReactNode;
+    skill4Group?: React.ReactNode;
+    skill5Group?: React.ReactNode;
+} & {
     overrides?: SkillsGraphOverridesProps | undefined | null;
 }>;
 export default function SkillsGraph(props: SkillsGraphProps): React.ReactElement;

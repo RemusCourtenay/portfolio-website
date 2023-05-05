@@ -16,12 +16,12 @@ export default function PhoneFooterLink(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { FacebookLogo: {}, PhoneFooterLink: {} },
       variantValues: { state: "Default" },
+      overrides: { FacebookLogo: {}, PhoneFooterLink: {} },
     },
     {
-      overrides: { FacebookLogo: {}, PhoneFooterLink: {} },
       variantValues: { state: "Hover" },
+      overrides: { FacebookLogo: {}, PhoneFooterLink: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

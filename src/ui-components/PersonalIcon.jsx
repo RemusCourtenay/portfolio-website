@@ -16,12 +16,12 @@ export default function PersonalIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { "personal-icon": {}, PersonalIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { "personal-icon": {}, PersonalIcon: {} },
     },
     {
-      overrides: { "personal-icon": {}, PersonalIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { "personal-icon": {}, PersonalIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

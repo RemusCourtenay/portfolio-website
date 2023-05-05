@@ -8,9 +8,16 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-import SpecificSkill from "./SpecificSkill";
 export default function SkillsGraph(props) {
-  const { overrides, ...rest } = props;
+  const {
+    skill1Group,
+    skill2Group,
+    skill3Group,
+    skill4Group,
+    skill5Group,
+    overrides,
+    ...rest
+  } = props;
   return (
     <Flex
       gap="0"
@@ -60,76 +67,71 @@ export default function SkillsGraph(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "SkillsGroup")}
       >
-        <SpecificSkill
-          display="flex"
-          gap="0"
-          direction="row"
+        <Flex
+          padding="0px 0px 0px 0px"
           width="500px"
           height="40px"
-          justifyContent="flex-start"
-          alignItems="center"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
+          children={skill1Group}
+          {...getOverrideProps(overrides, "skill1Group")}
+        ></Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          state="Education"
-          {...getOverrideProps(overrides, "SpecificSkill55651")}
-        ></SpecificSkill>
-        <SpecificSkill
-          display="flex"
-          gap="0"
-          direction="row"
           width="500px"
           height="40px"
-          justifyContent="flex-start"
-          alignItems="center"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
+          children={skill2Group}
+          {...getOverrideProps(overrides, "skill2Group")}
+        ></Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          state="Education"
-          {...getOverrideProps(overrides, "SpecificSkill56694")}
-        ></SpecificSkill>
-        <SpecificSkill
-          display="flex"
-          gap="0"
-          direction="row"
           width="500px"
           height="40px"
-          justifyContent="flex-start"
-          alignItems="center"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
+          children={skill3Group}
+          {...getOverrideProps(overrides, "skill3Group")}
+        ></Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          state="Personal"
-          {...getOverrideProps(overrides, "SpecificSkill55663")}
-        ></SpecificSkill>
-        <SpecificSkill
-          display="flex"
-          gap="0"
-          direction="row"
           width="500px"
           height="40px"
-          justifyContent="flex-start"
-          alignItems="center"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
+          children={skill4Group}
+          {...getOverrideProps(overrides, "skill4Group")}
+        ></Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          state="Commercial"
-          {...getOverrideProps(overrides, "SpecificSkill55675")}
-        ></SpecificSkill>
-        <SpecificSkill
-          display="flex"
-          gap="0"
-          direction="row"
           width="500px"
           height="40px"
-          justifyContent="flex-start"
-          alignItems="center"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
-          padding="0px 0px 0px 0px"
-          state="Education"
-          {...getOverrideProps(overrides, "SpecificSkill55687")}
-        ></SpecificSkill>
+          children={skill5Group}
+          {...getOverrideProps(overrides, "skill5Group")}
+        ></Flex>
       </Flex>
     </Flex>
   );

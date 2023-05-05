@@ -16,6 +16,7 @@ export default function ContactButton(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
+      variantValues: { state: "Hover", bold: "False" },
       overrides: {
         Border: {
           border: "2px SOLID rgba(74,73,73,1)",
@@ -24,21 +25,21 @@ export default function ContactButton(props) {
         "Get In Touch": { color: "rgba(34,34,34,1)" },
         ContactButton: {},
       },
-      variantValues: { state: "Hover", bold: "False" },
     },
     {
-      overrides: { Border: {}, "Get In Touch": {}, ContactButton: {} },
       variantValues: { state: "Default", bold: "False" },
+      overrides: { Border: {}, "Get In Touch": {}, ContactButton: {} },
     },
     {
+      variantValues: { state: "Default", bold: "True" },
       overrides: {
         Border: { border: "2px SOLID rgba(90,90,90,1)" },
         "Get In Touch": {},
         ContactButton: {},
       },
-      variantValues: { state: "Default", bold: "True" },
     },
     {
+      variantValues: { state: "Hover", bold: "True" },
       overrides: {
         Border: {
           border: "2px SOLID rgba(0,0,0,1)",
@@ -47,23 +48,22 @@ export default function ContactButton(props) {
         "Get In Touch": {},
         ContactButton: {},
       },
-      variantValues: { state: "Hover", bold: "True" },
     },
     {
+      variantValues: { state: "Click", bold: "False" },
       overrides: {
         Border: { border: "2px SOLID rgba(50,50,50,1)" },
         "Get In Touch": {},
         ContactButton: {},
       },
-      variantValues: { state: "Click", bold: "False" },
     },
     {
+      variantValues: { state: "Click", bold: "True" },
       overrides: {
         Border: { bottom: "1.39%", border: "2px SOLID rgba(0,0,0,1)" },
         "Get In Touch": { top: "33.95%", bottom: "35.34%" },
         ContactButton: { height: "62px" },
       },
-      variantValues: { state: "Click", bold: "True" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

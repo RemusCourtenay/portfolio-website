@@ -16,12 +16,12 @@ export default function AngularIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, AngularIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, AngularIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, AngularIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, AngularIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

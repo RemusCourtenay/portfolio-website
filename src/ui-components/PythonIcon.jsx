@@ -16,12 +16,12 @@ export default function PythonIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, PythonIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, PythonIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, PythonIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, PythonIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

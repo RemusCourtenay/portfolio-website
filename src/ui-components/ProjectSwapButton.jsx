@@ -16,28 +16,28 @@ export default function ProjectSwapButton(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Default", direction: "Left" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Default", direction: "Right" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Hover", direction: "Right" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Click", direction: "Right" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Hover", direction: "Left" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
       variantValues: { state: "Click", direction: "Left" },
+      overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

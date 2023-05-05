@@ -16,23 +16,23 @@ export default function ProjectLink(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { Kibo: {}, ProjectLink: {} },
       variantValues: { state: "Default", focus: "True" },
+      overrides: { Kibo: {}, ProjectLink: {} },
     },
     {
-      overrides: { Kibo: { textDecoration: "underline" }, ProjectLink: {} },
       variantValues: { state: "Hover", focus: "True" },
+      overrides: { Kibo: { textDecoration: "underline" }, ProjectLink: {} },
     },
     {
-      overrides: { Kibo: { color: "rgba(182,182,182,1)" }, ProjectLink: {} },
       variantValues: { state: "Default", focus: "False" },
+      overrides: { Kibo: { color: "rgba(182,182,182,1)" }, ProjectLink: {} },
     },
     {
+      variantValues: { state: "Hover", focus: "False" },
       overrides: {
         Kibo: { color: "rgba(182,182,182,1)", textDecoration: "underline" },
         ProjectLink: {},
       },
-      variantValues: { state: "Hover", focus: "False" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

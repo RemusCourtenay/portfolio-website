@@ -7,20 +7,24 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
-import { PersonalIconProps } from "./PersonalIcon";
-import { EducationIconProps } from "./EducationIcon";
-import { CommercialIconProps } from "./CommercialIcon";
+import { SkillIconProps } from "./SkillIcon";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type SpecificSkillOverridesProps = {
     SpecificSkill?: PrimitiveOverrideProps<FlexProps>;
     SkillName?: PrimitiveOverrideProps<TextProps>;
     Icons?: PrimitiveOverrideProps<FlexProps>;
-    PersonalIcon?: PersonalIconProps;
-    EducationIcon?: EducationIconProps;
-    CommercialIcon?: CommercialIconProps;
+    PersonalGroup?: PrimitiveOverrideProps<FlexProps>;
+    SkillIcon1791059?: SkillIconProps;
+    EducationGroup?: PrimitiveOverrideProps<FlexProps>;
+    SkillIcon1791061?: SkillIconProps;
+    CommercialGroup?: PrimitiveOverrideProps<FlexProps>;
+    SkillIcon1791063?: SkillIconProps;
 } & EscapeHatchProps;
 export declare type SpecificSkillProps = React.PropsWithChildren<Partial<FlexProps> & {
-    state?: "Commercial" | "Education" | "None" | "Personal";
+    personalGroup?: React.ReactNode;
+    educationGroup?: React.ReactNode;
+    commercialGroup?: React.ReactNode;
+    skillName?: String;
 } & {
     overrides?: SpecificSkillOverridesProps | undefined | null;
 }>;

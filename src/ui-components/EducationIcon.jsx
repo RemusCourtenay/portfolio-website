@@ -6,28 +6,10 @@
 
 /* eslint-disable */
 import * as React from "react";
-import {
-  getOverrideProps,
-  getOverridesFromVariants,
-  mergeVariantsAndOverrides,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function EducationIcon(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const variants = [
-    {
-      overrides: { "education-icon": {}, EducationIcon: {} },
-      variantValues: { focus: "False" },
-    },
-    {
-      overrides: { "education-icon": {}, EducationIcon: {} },
-      variantValues: { focus: "True" },
-    },
-  ];
-  const overrides = mergeVariantsAndOverrides(
-    getOverridesFromVariants(variants, props),
-    overridesProp || {}
-  );
+  const { iconSource, focusIconSource, focus, overrides, ...rest } = props;
   return (
     <View
       width="40px"
@@ -55,6 +37,7 @@ export default function EducationIcon(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={focus == true ? focusIconSource : iconSource}
         {...getOverrideProps(overrides, "education-icon")}
       ></Image>
     </View>

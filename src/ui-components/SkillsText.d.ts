@@ -13,9 +13,12 @@ export declare type SkillsTextOverridesProps = {
     SkillsText?: PrimitiveOverrideProps<FlexProps>;
     "Why Hire Me ?"?: PrimitiveOverrideProps<TextProps>;
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus. Vulputate pulvinar cursus suspendisse risus vulputate enim pharetra eu. Tetur adipiscing elit eu placera."?: PrimitiveOverrideProps<TextProps>;
+    CvButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     SkillsButton?: SkillsButtonProps;
 } & EscapeHatchProps;
 export declare type SkillsTextProps = React.PropsWithChildren<Partial<FlexProps> & {
+    cvButtonGroup?: React.ReactNode;
+} & {
     overrides?: SkillsTextOverridesProps | undefined | null;
 }>;
 export default function SkillsText(props: SkillsTextProps): React.ReactElement;

@@ -6,39 +6,21 @@
 
 /* eslint-disable */
 import * as React from "react";
-import {
-  getOverrideProps,
-  getOverridesFromVariants,
-  mergeVariantsAndOverrides,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
-export default function LinkedInFooterLink(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const variants = [
-    {
-      variantValues: { state: "Default" },
-      overrides: { FacebookLogo: {}, LinkedInFooterLink: {} },
-    },
-    {
-      variantValues: { state: "Hover" },
-      overrides: { FacebookLogo: {}, LinkedInFooterLink: {} },
-    },
-  ];
-  const overrides = mergeVariantsAndOverrides(
-    getOverridesFromVariants(variants, props),
-    overridesProp || {}
-  );
+export default function SkillIcon(props) {
+  const { focus, iconSource, focusIconSource, overrides, ...rest } = props;
   return (
     <View
-      width="15px"
-      height="15px"
+      width="40px"
+      height="40px"
       display="block"
       gap="unset"
       alignItems="unset"
       justifyContent="unset"
       position="relative"
       padding="0px 0px 0px 0px"
-      {...getOverrideProps(overrides, "LinkedInFooterLink")}
+      {...getOverrideProps(overrides, "SkillIcon")}
       {...rest}
     >
       <Image
@@ -55,7 +37,8 @@ export default function LinkedInFooterLink(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        {...getOverrideProps(overrides, "FacebookLogo")}
+        src={focus == true ? focusIconSource : iconSource}
+        {...getOverrideProps(overrides, "icon")}
       ></Image>
     </View>
   );

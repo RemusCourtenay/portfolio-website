@@ -16,12 +16,12 @@ export default function VueIcon(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { ColorIcon: {}, VueIcon: {} },
       variantValues: { focus: "False" },
+      overrides: { ColorIcon: {}, VueIcon: {} },
     },
     {
-      overrides: { ColorIcon: {}, VueIcon: {} },
       variantValues: { focus: "True" },
+      overrides: { ColorIcon: {}, VueIcon: {} },
     },
   ];
   const overrides = mergeVariantsAndOverrides(
