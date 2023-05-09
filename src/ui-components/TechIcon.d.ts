@@ -10,12 +10,12 @@ import { FlexProps, ImageProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type TechIconOverridesProps = {
     TechIcon?: PrimitiveOverrideProps<FlexProps>;
-    ColorIcon?: PrimitiveOverrideProps<ImageProps>;
+    IconImage?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type TechIconProps = React.PropsWithChildren<Partial<FlexProps> & {
-    techImage?: String;
-} & {
-    focus?: "False" | "True";
+    iconImageSource?: String;
+    IconHoverImageSource?: String;
+    hover?: Boolean;
 } & {
     overrides?: TechIconOverridesProps | undefined | null;
 }>;

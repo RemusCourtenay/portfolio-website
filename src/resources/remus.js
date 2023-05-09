@@ -44,5 +44,21 @@ export const resources = {
                 "Commercial": false
             }
         }
+    ],
+    TECH: [
+        "java",
+        "python",
+        "ruby",
+        "angular",
+        "vue",
+        "typescript",
+        "git",
+        "docker",
+        "terraform",
+        "react",
+        "csharp",
+        "amplify"
     ]
+
+
 }

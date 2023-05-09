@@ -7,22 +7,25 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import TechDivider from "./TechDivider";
-import JavaIcon from "./JavaIcon";
-import AngularIcon from "./AngularIcon";
-import VueIcon from "./VueIcon";
-import TSIcon from "./TSIcon";
-import CSharpIcon from "./CSharpIcon";
-import GitIcon from "./GitIcon";
 import { Flex, View } from "@aws-amplify/ui-react";
-import PythonIcon from "./PythonIcon";
-import ReactIcon from "./ReactIcon";
-import RubyIcon from "./RubyIcon";
-import GithubIcon from "./GithubIcon";
-import JSIcon from "./JSIcon";
-import TerraformIcon from "./TerraformIcon";
 export default function TechSquares(props) {
-  const { overrides, ...rest } = props;
+  const {
+    techDividerGroup,
+    iconGroup1,
+    iconGroup2,
+    iconGroup3,
+    iconGroup4,
+    iconGroup5,
+    iconGroup6,
+    iconGroup7,
+    iconGroup8,
+    iconGroup9,
+    iconGroup10,
+    iconGroup11,
+    iconGroup12,
+    overrides,
+    ...rest
+  } = props;
   return (
     <View
       width="1440px"
@@ -36,7 +39,8 @@ export default function TechSquares(props) {
       {...getOverrideProps(overrides, "TechSquares")}
       {...rest}
     >
-      <TechDivider
+      <View
+        padding="0px 0px 0px 0px"
         width="1440px"
         height="480px"
         display="block"
@@ -44,11 +48,11 @@ export default function TechSquares(props) {
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="calc(50% - 240px - 0px)"
-        left="calc(50% - 720px - 0px)"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "TechDivider")}
-      ></TechDivider>
+        top="0px"
+        left="0px"
+        children={techDividerGroup}
+        {...getOverrideProps(overrides, "TechDividerGroup")}
+      ></View>
       <Flex
         gap="0"
         direction="column"
@@ -74,90 +78,84 @@ export default function TechSquares(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "TopSquares")}
         >
-          <JavaIcon
-            display="flex"
-            gap="0"
-            direction="column"
+          <Flex
+            padding="0px 0px 0px 0px"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup1}
+            {...getOverrideProps(overrides, "IconGroup1")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "JavaIcon")}
-          ></JavaIcon>
-          <AngularIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup2}
+            {...getOverrideProps(overrides, "IconGroup2")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="True"
-            {...getOverrideProps(overrides, "AngularIcon")}
-          ></AngularIcon>
-          <VueIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup3}
+            {...getOverrideProps(overrides, "IconGroup3")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="True"
-            {...getOverrideProps(overrides, "VueIcon")}
-          ></VueIcon>
-          <TSIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup4}
+            {...getOverrideProps(overrides, "IconGroup4")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="True"
-            {...getOverrideProps(overrides, "TSIcon")}
-          ></TSIcon>
-          <CSharpIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup5}
+            {...getOverrideProps(overrides, "IconGroup5")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "CSharpIcon")}
-          ></CSharpIcon>
-          <GitIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
-            padding="0px 0px 0px 0px"
-            focus="True"
-            {...getOverrideProps(overrides, "GitIcon")}
-          ></GitIcon>
+            children={iconGroup6}
+            {...getOverrideProps(overrides, "IconGroup6")}
+          ></Flex>
         </Flex>
         <Flex
           gap="0"
@@ -171,90 +169,84 @@ export default function TechSquares(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "BottomSquares")}
         >
-          <PythonIcon
-            display="flex"
-            gap="0"
-            direction="column"
+          <Flex
+            padding="0px 0px 0px 0px"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup7}
+            {...getOverrideProps(overrides, "IconGroup7")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "PythonIcon")}
-          ></PythonIcon>
-          <ReactIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup8}
+            {...getOverrideProps(overrides, "IconGroup8")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "ReactIcon")}
-          ></ReactIcon>
-          <RubyIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup9}
+            {...getOverrideProps(overrides, "IconGroup9")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "RubyIcon")}
-          ></RubyIcon>
-          <GithubIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup10}
+            {...getOverrideProps(overrides, "IconGroup10")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "GithubIcon")}
-          ></GithubIcon>
-          <JSIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
+            children={iconGroup11}
+            {...getOverrideProps(overrides, "IconGroup11")}
+          ></Flex>
+          <Flex
             padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "JSIcon")}
-          ></JSIcon>
-          <TerraformIcon
-            display="flex"
-            gap="0"
-            direction="column"
             width="240px"
             height="240px"
-            justifyContent="center"
-            alignItems="center"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             shrink="0"
             position="relative"
-            padding="0px 0px 0px 0px"
-            focus="False"
-            {...getOverrideProps(overrides, "TerraformIcon")}
-          ></TerraformIcon>
+            children={iconGroup12}
+            {...getOverrideProps(overrides, "IconGroup12")}
+          ></Flex>
         </Flex>
       </Flex>
     </View>

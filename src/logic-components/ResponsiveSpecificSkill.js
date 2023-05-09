@@ -5,7 +5,7 @@ function ResponsiveSpecificSkill(props) {
     const skillName = props.skill["SKILL_NAME"]
     const focusValues = props.skill["FOCUS_VALUES"]
 
-    return(
+    return (
         <SpecificSkill 
             skillName={skillName}
             personalGroup={<SkillIcon focus={focusValues["Personal"]} iconSource="assets/icons/personal-icon.png" focusIconSource="assets/icons/personal-icon-red.png"/>}
@@ -15,4 +15,4 @@ function ResponsiveSpecificSkill(props) {
     );
 }
 
-export default ResponsiveSpecificSkill
+export default ResponsiveSpecificSkill;

@@ -6,28 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import {
-  getOverrideProps,
-  getOverridesFromVariants,
-  mergeVariantsAndOverrides,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image } from "@aws-amplify/ui-react";
 export default function TechIcon(props) {
-  const { techImage, overrides: overridesProp, ...rest } = props;
-  const variants = [
-    {
-      variantValues: { focus: "False" },
-      overrides: { ColorIcon: {}, TechIcon: {} },
-    },
-    {
-      variantValues: { focus: "True" },
-      overrides: { ColorIcon: {}, TechIcon: {} },
-    },
-  ];
-  const overrides = mergeVariantsAndOverrides(
-    getOverridesFromVariants(variants, props),
-    overridesProp || {}
-  );
+  const { iconImageSource, IconHoverImageSource, hover, overrides, ...rest } =
+    props;
   return (
     <Flex
       gap="0"
@@ -38,7 +21,6 @@ export default function TechIcon(props) {
       alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
-      display="flex"
       {...getOverrideProps(overrides, "TechIcon")}
       {...rest}
     >
@@ -53,8 +35,8 @@ export default function TechIcon(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        src={techImage}
-        {...getOverrideProps(overrides, "ColorIcon")}
+        src={hover == true ? IconHoverImageSource : iconImageSource}
+        {...getOverrideProps(overrides, "IconImage")}
       ></Image>
     </Flex>
   );

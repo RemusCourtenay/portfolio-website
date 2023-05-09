@@ -6,12 +6,16 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { IconProps } from "@aws-amplify/ui-react";
+import { ImageProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type TechDividerOverridesProps = {
-    TechDivider?: PrimitiveOverrideProps<IconProps>;
+    TechDivider?: PrimitiveOverrideProps<ViewProps>;
+    "TechDivider-Background"?: PrimitiveOverrideProps<ViewProps>;
+    "techdivider-transparent"?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
-export declare type TechDividerProps = React.PropsWithChildren<Partial<IconProps> & {
+export declare type TechDividerProps = React.PropsWithChildren<Partial<ViewProps> & {
+    dividerImageSource?: String;
+} & {
     overrides?: TechDividerOverridesProps | undefined | null;
 }>;
 export default function TechDivider(props: TechDividerProps): React.ReactElement;

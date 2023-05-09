@@ -8,9 +8,8 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-import TechSquares from "./TechSquares";
 export default function Tech(props) {
-  const { overrides, ...rest } = props;
+  const { techSquaresGroup, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -87,7 +86,8 @@ export default function Tech(props) {
           )}
         ></Text>
       </Flex>
-      <TechSquares
+      <Flex
+        padding="0px 0px 0px 0px"
         width="1440px"
         height="480px"
         display="block"
@@ -96,9 +96,9 @@ export default function Tech(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "TechSquares")}
-      ></TechSquares>
+        children={techSquaresGroup}
+        {...getOverrideProps(overrides, "TechSquaresGroup")}
+      ></Flex>
     </Flex>
   );
 }

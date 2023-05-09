@@ -16,4 +16,4 @@ function ResponsiveSkillsGraph(props) {
     );
 }
 
-export default ResponsiveSkillsGraph
+export default ResponsiveSkillsGraph;
