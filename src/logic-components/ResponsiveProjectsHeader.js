@@ -1,11 +1,11 @@
-import { ProjectLink, ProjectLinks, ProjectsHeader } from "../ui-components";
+import { ProjectLinks, ProjectsHeader } from "../ui-components";
 import ResponsiveProjectLink from "./ResponsiveProjectLink";
 
 function ResponsiveProjectsHeader(props) {
 
     const projects = props.projects 
-    const activeProjectIndex = props.activeProjectIndex
     const clickHandlers = props.clickHandlers
+    const activeProjectIndex = props.activeProjectIndex
     
     const projectLinks = []
 
