@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ResponsiveProjectsHeader from "./ResponsiveProjectsHeader";
+import { Projects, ProjectsBackground } from "../ui-components";
 
 function ResponsiveProjects(props) {
 
@@ -19,11 +20,19 @@ function ResponsiveProjects(props) {
 
     return(      
         // TODO.. Add rest of projects view
-        <ResponsiveProjectsHeader
-            activeProjectIndex={activeProjectIndex}
-            projects={projects}  
-            clickHandlers={setActiveProjectIndex}
+
+        <Projects
+            projectsHeaderGroup={<ResponsiveProjectsHeader
+                                    activeProjectIndex={activeProjectIndex}
+                                    projects={projects}  
+                                    clickHandlers={setActiveProjectIndex}
+                                />}
+            projectsInnerGroup={<ProjectsAllView />}
+            projectsBackgroundGroup={<ProjectsBackground projectbackgroundimgsrc={"assets/backgrounds/projects-shapes.png"}/>}
         />
+
+
+
     )
 }
 
