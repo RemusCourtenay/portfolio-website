@@ -22,15 +22,15 @@ export default function SkillsButton(props) {
     {
       variantValues: { state: "Hover" },
       overrides: {
-        SkillsButtonText: { color: "rgba(255,0,0,1)" },
-        ButtonGroup: {},
+        SkillsButtonText: {},
+        ButtonGroup: { backgroundColor: "rgba(58,58,58,1)" },
         SkillsButton: {},
       },
     },
     {
       variantValues: { state: "Click" },
       overrides: {
-        SkillsButtonText: { color: "rgba(255,0,0,1)" },
+        SkillsButtonText: {},
         ButtonGroup: {
           width: "191px",
           height: "50px",

@@ -20,11 +20,11 @@ export default function SkillsGraph(props) {
   } = props;
   return (
     <Flex
-      gap="0"
+      gap="25px"
       direction="column"
-      width="500px"
-      height="350px"
-      justifyContent="space-between"
+      width="550px"
+      height="unset"
+      justifyContent="flex-start"
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -44,7 +44,7 @@ export default function SkillsGraph(props) {
         justifyContent="unset"
         letterSpacing="-0.33px"
         width="unset"
-        height="unset"
+        height="60px"
         gap="unset"
         alignItems="unset"
         shrink="0"
@@ -56,20 +56,136 @@ export default function SkillsGraph(props) {
         {...getOverrideProps(overrides, "My Skills")}
       ></Text>
       <Flex
-        gap="0"
+        gap="15px"
         direction="column"
         width="unset"
-        height="265px"
-        justifyContent="space-between"
-        alignItems="flex-start"
+        height="unset"
+        justifyContent="flex-start"
+        alignItems="flex-end"
         shrink="0"
+        alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "SkillsGroup")}
       >
         <Flex
+          gap="0"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="space-between"
+          alignItems="center"
+          shrink="0"
+          alignSelf="stretch"
+          position="relative"
+          padding="0px 10px 0px 0px"
+          {...getOverrideProps(overrides, "LabelTextGroup")}
+        >
+          <Text
+            fontFamily="Raleway"
+            fontSize="16px"
+            fontWeight="500"
+            color="rgba(45,45,45,1)"
+            lineHeight="18.784000396728516px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            letterSpacing="0.17px"
+            width="100px"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Python"
+            {...getOverrideProps(overrides, "HiddenPaddingText")}
+          ></Text>
+          <Flex
+            gap="47px"
+            direction="row"
+            width="399.08px"
+            height="unset"
+            justifyContent="space-between"
+            alignItems="center"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            {...getOverrideProps(overrides, "ExperienceTitles")}
+          >
+            <Text
+              fontFamily="Raleway"
+              fontSize="16px"
+              fontWeight="500"
+              color="rgba(0,0,0,1)"
+              lineHeight="18.784000396728516px"
+              textAlign="center"
+              display="block"
+              direction="column"
+              justifyContent="unset"
+              letterSpacing="0.17px"
+              width="101.69px"
+              height="20px"
+              gap="unset"
+              alignItems="unset"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children="Personal"
+              {...getOverrideProps(overrides, "Personal")}
+            ></Text>
+            <Text
+              fontFamily="Raleway"
+              fontSize="16px"
+              fontWeight="500"
+              color="rgba(0,0,0,1)"
+              lineHeight="18.784000396728516px"
+              textAlign="center"
+              display="block"
+              direction="column"
+              justifyContent="unset"
+              letterSpacing="0.17px"
+              width="101.69px"
+              height="20px"
+              gap="unset"
+              alignItems="unset"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children="Educational"
+              {...getOverrideProps(overrides, "Educational")}
+            ></Text>
+            <Text
+              fontFamily="Raleway"
+              fontSize="16px"
+              fontWeight="500"
+              color="rgba(0,0,0,1)"
+              lineHeight="18.784000396728516px"
+              textAlign="center"
+              display="block"
+              direction="column"
+              justifyContent="unset"
+              letterSpacing="0.17px"
+              width="101.69px"
+              height="20px"
+              gap="unset"
+              alignItems="unset"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children="Commercial"
+              {...getOverrideProps(overrides, "Commercial")}
+            ></Text>
+          </Flex>
+        </Flex>
+        <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
+          width="550px"
           height="40px"
           display="block"
           gap="unset"
@@ -82,7 +198,7 @@ export default function SkillsGraph(props) {
         ></Flex>
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
+          width="550px"
           height="40px"
           display="block"
           gap="unset"
@@ -95,7 +211,7 @@ export default function SkillsGraph(props) {
         ></Flex>
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
+          width="550px"
           height="40px"
           display="block"
           gap="unset"
@@ -108,7 +224,7 @@ export default function SkillsGraph(props) {
         ></Flex>
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
+          width="550px"
           height="40px"
           display="block"
           gap="unset"
@@ -121,7 +237,7 @@ export default function SkillsGraph(props) {
         ></Flex>
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
+          width="550px"
           height="40px"
           display="block"
           gap="unset"

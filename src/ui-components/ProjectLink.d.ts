@@ -7,12 +7,16 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectLinkOverridesProps = {
     ProjectLink?: PrimitiveOverrideProps<FlexProps>;
-    Kibo?: PrimitiveOverrideProps<TextProps>;
+    Honours?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type ProjectLinkProps = React.PropsWithChildren<Partial<FlexProps> & {
+    projectName?: String;
+    projectLinkClickHandler?: (event: SyntheticEvent) => void;
+} & {
     focus?: "False" | "True";
     state?: "Default" | "Hover";
 } & {

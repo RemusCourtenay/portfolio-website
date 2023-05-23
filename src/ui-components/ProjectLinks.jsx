@@ -7,15 +7,21 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import ProjectLink from "./ProjectLink";
 import { Flex } from "@aws-amplify/ui-react";
 export default function ProjectLinks(props) {
-  const { overrides, ...rest } = props;
+  const {
+    allLinkGroup,
+    project1LinkGroup,
+    project3LinkGroup,
+    project2LinkGroup,
+    overrides,
+    ...rest
+  } = props;
   return (
     <Flex
       gap="10px"
       direction="row"
-      width="300px"
+      width="400px"
       height="25px"
       justifyContent="space-between"
       alignItems="flex-start"
@@ -24,66 +30,58 @@ export default function ProjectLinks(props) {
       {...getOverrideProps(overrides, "ProjectLinks")}
       {...rest}
     >
-      <ProjectLink
-        display="flex"
-        gap="10px"
-        direction="row"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+      <Flex
+        padding="0px 0px 0px 0px"
+        width="100px"
+        height="25px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         shrink="0"
         position="relative"
+        children={allLinkGroup}
+        {...getOverrideProps(overrides, "AllLinkGroup")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        focus="True"
-        {...getOverrideProps(overrides, "ProjectLink132811")}
-      ></ProjectLink>
-      <ProjectLink
-        display="flex"
-        gap="10px"
-        direction="row"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        width="100px"
+        height="25px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         shrink="0"
         position="relative"
+        children={project1LinkGroup}
+        {...getOverrideProps(overrides, "Project1LinkGroup")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        focus="False"
-        {...getOverrideProps(overrides, "ProjectLink74823")}
-      ></ProjectLink>
-      <ProjectLink
-        display="flex"
-        gap="10px"
-        direction="row"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        width="100px"
+        height="25px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         shrink="0"
         position="relative"
+        children={project2LinkGroup}
+        {...getOverrideProps(overrides, "Project2LinkGroup")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        focus="False"
-        {...getOverrideProps(overrides, "ProjectLink74827")}
-      ></ProjectLink>
-      <ProjectLink
-        display="flex"
-        gap="10px"
-        direction="row"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        width="100px"
+        height="25px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
-        state="Default"
-        focus="False"
-        {...getOverrideProps(overrides, "ProjectLink74829")}
-      ></ProjectLink>
+        children={project3LinkGroup}
+        {...getOverrideProps(overrides, "Project3LinkGroup")}
+      ></Flex>
     </Flex>
   );
 }

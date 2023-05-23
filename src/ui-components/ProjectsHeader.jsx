@@ -8,9 +8,8 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-import ProjectLinks from "./ProjectLinks";
 export default function ProjectsHeader(props) {
-  const { overrides, ...rest } = props;
+  const { projectLinksGroup, overrides, ...rest } = props;
   return (
     <Flex
       gap="20px"
@@ -47,19 +46,19 @@ export default function ProjectsHeader(props) {
         children="Projects"
         {...getOverrideProps(overrides, "Projects")}
       ></Text>
-      <ProjectLinks
-        display="flex"
-        gap="10px"
-        direction="row"
-        width="300px"
+      <Flex
+        padding="0px 0px 0px 0px"
+        width="400px"
         height="25px"
-        justifyContent="space-between"
-        alignItems="flex-start"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "ProjectLinks")}
-      ></ProjectLinks>
+        children={projectLinksGroup}
+        {...getOverrideProps(overrides, "ProjectLinksGroup")}
+      ></Flex>
     </Flex>
   );
 }

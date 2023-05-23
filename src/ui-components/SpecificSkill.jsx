@@ -19,14 +19,14 @@ export default function SpecificSkill(props) {
   } = props;
   return (
     <Flex
-      gap="0"
+      gap="120px"
       direction="row"
-      width="500px"
+      width="550px"
       height="40px"
-      justifyContent="flex-start"
+      justifyContent="space-between"
       alignItems="center"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="0px 40px 0px 0px"
       {...getOverrideProps(overrides, "SpecificSkill")}
       {...rest}
     >
@@ -53,17 +53,15 @@ export default function SpecificSkill(props) {
         {...getOverrideProps(overrides, "SkillName")}
       ></Text>
       <Flex
-        gap="0"
+        gap="110px"
         direction="row"
-        width="unset"
+        width="340px"
         height="unset"
         justifyContent="space-between"
         alignItems="center"
-        grow="1"
-        shrink="1"
-        basis="0"
+        shrink="0"
         position="relative"
-        padding="0px 50px 0px 50px"
+        padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Icons")}
       >
         <Flex

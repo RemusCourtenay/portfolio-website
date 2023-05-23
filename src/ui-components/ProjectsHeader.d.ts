@@ -12,9 +12,12 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type ProjectsHeaderOverridesProps = {
     ProjectsHeader?: PrimitiveOverrideProps<FlexProps>;
     Projects?: PrimitiveOverrideProps<TextProps>;
+    ProjectLinksGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectLinks?: ProjectLinksProps;
 } & EscapeHatchProps;
 export declare type ProjectsHeaderProps = React.PropsWithChildren<Partial<FlexProps> & {
+    projectLinksGroup?: React.ReactNode;
+} & {
     overrides?: ProjectsHeaderOverridesProps | undefined | null;
 }>;
 export default function ProjectsHeader(props: ProjectsHeaderProps): React.ReactElement;

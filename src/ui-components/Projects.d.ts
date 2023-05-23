@@ -6,20 +6,24 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { FlexProps, ViewProps } from "@aws-amplify/ui-react";
+import { ProjectsBackgroundProps } from "./ProjectsBackground";
 import { ProjectsHeaderProps } from "./ProjectsHeader";
-import { ProjectSwapButtonProps } from "./ProjectSwapButton";
-import { PortfolioInnerProps } from "./PortfolioInner";
-import { FlexProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectsOverridesProps = {
-    Projects?: PrimitiveOverrideProps<FlexProps>;
+    Projects?: PrimitiveOverrideProps<ViewProps>;
+    ProjectsBackgroundGroup?: PrimitiveOverrideProps<ViewProps>;
+    ProjectsBackground?: ProjectsBackgroundProps;
+    ProjectsMainGroup?: PrimitiveOverrideProps<FlexProps>;
+    ProjectsHeaderGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectsHeader?: ProjectsHeaderProps;
-    ProjectsMain?: PrimitiveOverrideProps<FlexProps>;
-    ProjectSwapButton131727?: ProjectSwapButtonProps;
-    PortfolioInner?: PortfolioInnerProps;
-    ProjectSwapButton131729?: ProjectSwapButtonProps;
+    ProjectsInnerGroup?: PrimitiveOverrideProps<FlexProps>;
 } & EscapeHatchProps;
-export declare type ProjectsProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type ProjectsProps = React.PropsWithChildren<Partial<ViewProps> & {
+    projectsHeaderGroup?: React.ReactNode;
+    projectsInnerGroup?: React.ReactNode;
+    projectsBackgroundGroup?: React.ReactNode;
+} & {
     overrides?: ProjectsOverridesProps | undefined | null;
 }>;
 export default function Projects(props: ProjectsProps): React.ReactElement;

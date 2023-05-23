@@ -14,8 +14,8 @@ export default function HeaderName(props) {
     <Flex
       gap="5px"
       direction="row"
-      width="unset"
-      height="unset"
+      width="248px"
+      height="30px"
       justifyContent="flex-start"
       alignItems="flex-end"
       position="relative"

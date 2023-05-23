@@ -58,7 +58,11 @@ export const resources = {
         "react",
         "csharp",
         "amplify"
+    ],
+    PROJECTS:[
+        {Name: "Kibo"},
+        {Name: "AWS"},
+        {Name: "Honours"}
     ]
-
 
 }

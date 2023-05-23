@@ -13,24 +13,29 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function ProjectLink(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const {
+    projectName,
+    projectLinkClickHandler,
+    overrides: overridesProp,
+    ...rest
+  } = props;
   const variants = [
     {
       variantValues: { state: "Default", focus: "True" },
-      overrides: { Kibo: {}, ProjectLink: {} },
+      overrides: { Honours: {}, ProjectLink: {} },
     },
     {
       variantValues: { state: "Hover", focus: "True" },
-      overrides: { Kibo: { textDecoration: "underline" }, ProjectLink: {} },
+      overrides: { Honours: { textDecoration: "underline" }, ProjectLink: {} },
     },
     {
       variantValues: { state: "Default", focus: "False" },
-      overrides: { Kibo: { color: "rgba(182,182,182,1)" }, ProjectLink: {} },
+      overrides: { Honours: { color: "rgba(182,182,182,1)" }, ProjectLink: {} },
     },
     {
       variantValues: { state: "Hover", focus: "False" },
       overrides: {
-        Kibo: { color: "rgba(182,182,182,1)", textDecoration: "underline" },
+        Honours: { color: "rgba(182,182,182,1)", textDecoration: "underline" },
         ProjectLink: {},
       },
     },
@@ -43,13 +48,14 @@ export default function ProjectLink(props) {
     <Flex
       gap="10px"
       direction="row"
-      width="unset"
+      width="100px"
       height="unset"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      justifyContent="center"
+      alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
       display="flex"
+      onClick={projectLinkClickHandler}
       {...getOverrideProps(overrides, "ProjectLink")}
       {...rest}
     >
@@ -72,8 +78,8 @@ export default function ProjectLink(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Kibo"
-        {...getOverrideProps(overrides, "Kibo")}
+        children={projectName}
+        {...getOverrideProps(overrides, "Honours")}
       ></Text>
     </Flex>
   );

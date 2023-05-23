@@ -20,7 +20,7 @@ export default function Header(props) {
     <Flex
       gap="361px"
       direction="row"
-      width="1920px"
+      width="1914px"
       height="100px"
       justifyContent="space-between"
       alignItems="center"
@@ -33,8 +33,8 @@ export default function Header(props) {
     >
       <Flex
         padding="0px 0px 0px 0px"
-        width="254px"
-        height="27px"
+        width="248px"
+        height="30px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -46,7 +46,7 @@ export default function Header(props) {
       ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
-        width="473px"
+        width="467px"
         height="43px"
         display="block"
         gap="unset"

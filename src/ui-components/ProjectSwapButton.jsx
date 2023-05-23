@@ -13,7 +13,12 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function ProjectSwapButton(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const {
+    arrowimgsrc,
+    projectSwapClickHandler,
+    overrides: overridesProp,
+    ...rest
+  } = props;
   const variants = [
     {
       variantValues: { state: "Default", direction: "Left" },
@@ -46,8 +51,8 @@ export default function ProjectSwapButton(props) {
   );
   return (
     <View
-      width="100px"
-      height="100px"
+      width="75px"
+      height="75px"
       display="block"
       gap="unset"
       alignItems="unset"
@@ -71,6 +76,8 @@ export default function ProjectSwapButton(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={arrowimgsrc}
+        onClick={projectSwapClickHandler}
         {...getOverrideProps(overrides, "ArrowImage")}
       ></Image>
     </View>

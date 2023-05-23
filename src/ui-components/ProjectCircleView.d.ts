@@ -7,18 +7,24 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectCircleViewOverridesProps = {
     ProjectCircleView?: PrimitiveOverrideProps<ViewProps>;
     "Mask group"?: PrimitiveOverrideProps<ViewProps>;
     EllipseMask?: PrimitiveOverrideProps<IconProps>;
     ProjectImage?: PrimitiveOverrideProps<ImageProps>;
-    BorderEllipse?: PrimitiveOverrideProps<IconProps>;
     ReadMore?: PrimitiveOverrideProps<TextProps>;
     ProjectTitle?: PrimitiveOverrideProps<TextProps>;
     LinkArrow?: PrimitiveOverrideProps<IconProps>;
+    RedBorderCircle?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type ProjectCircleViewProps = React.PropsWithChildren<Partial<ViewProps> & {
+    projectTitle?: String;
+    circleViewBorderSource?: String;
+    projectImageSource?: String;
+    circleViewClickHandler?: (event: SyntheticEvent) => void;
+} & {
     state?: "Click" | "Default" | "Hover";
 } & {
     overrides?: ProjectCircleViewOverridesProps | undefined | null;

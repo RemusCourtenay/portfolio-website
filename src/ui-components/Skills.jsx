@@ -64,18 +64,18 @@ export default function Skills(props) {
         direction="row"
         width="1920px"
         height="630px"
-        justifyContent="flex-start"
+        justifyContent="space-between"
         alignItems="center"
         position="absolute"
         top="0px"
         left="0px"
-        padding="60px 250px 60px 250px"
+        padding="60px 270px 60px 270px"
         {...getOverrideProps(overrides, "SkillsSplash")}
       >
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
-          height="350px"
+          width="550px"
+          height="380px"
           display="block"
           gap="unset"
           alignItems="unset"
@@ -87,8 +87,8 @@ export default function Skills(props) {
         ></Flex>
         <Flex
           padding="0px 0px 0px 0px"
-          width="500px"
-          height="350px"
+          width="550px"
+          height="380px"
           display="block"
           gap="unset"
           alignItems="unset"

@@ -13,6 +13,12 @@ export declare type SkillsGraphOverridesProps = {
     SkillsGraph?: PrimitiveOverrideProps<FlexProps>;
     "My Skills"?: PrimitiveOverrideProps<TextProps>;
     SkillsGroup?: PrimitiveOverrideProps<FlexProps>;
+    LabelTextGroup?: PrimitiveOverrideProps<FlexProps>;
+    HiddenPaddingText?: PrimitiveOverrideProps<TextProps>;
+    ExperienceTitles?: PrimitiveOverrideProps<FlexProps>;
+    Personal?: PrimitiveOverrideProps<TextProps>;
+    Educational?: PrimitiveOverrideProps<TextProps>;
+    Commercial?: PrimitiveOverrideProps<TextProps>;
     skill1Group?: PrimitiveOverrideProps<FlexProps>;
     SpecificSkill1791995?: SpecificSkillProps;
     skill2Group?: PrimitiveOverrideProps<FlexProps>;

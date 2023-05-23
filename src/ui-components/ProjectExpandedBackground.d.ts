@@ -8,14 +8,13 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, ImageProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type ProjectsBackgroundOverridesProps = {
-    ProjectsBackground?: PrimitiveOverrideProps<FlexProps>;
-    BackgroundPattern?: PrimitiveOverrideProps<FlexProps>;
-    ProjectsBackgroundPattern?: PrimitiveOverrideProps<ImageProps>;
+export declare type ProjectExpandedBackgroundOverridesProps = {
+    ProjectExpandedBackground?: PrimitiveOverrideProps<FlexProps>;
+    BackgroundImage?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
-export declare type ProjectsBackgroundProps = React.PropsWithChildren<Partial<FlexProps> & {
-    projectbackgroundimgsrc?: String;
+export declare type ProjectExpandedBackgroundProps = React.PropsWithChildren<Partial<FlexProps> & {
+    projectExpandedBackgroundSource?: String;
 } & {
-    overrides?: ProjectsBackgroundOverridesProps | undefined | null;
+    overrides?: ProjectExpandedBackgroundOverridesProps | undefined | null;
 }>;
-export default function ProjectsBackground(props: ProjectsBackgroundProps): React.ReactElement;
+export default function ProjectExpandedBackground(props: ProjectExpandedBackgroundProps): React.ReactElement;

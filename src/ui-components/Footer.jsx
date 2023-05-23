@@ -68,7 +68,7 @@ export default function Footer(props) {
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 6.20159912109375,
+            width: 6.201606750488281,
             height: 23.654296875,
           }}
           paths={[
@@ -139,7 +139,7 @@ export default function Footer(props) {
         <Icon
           width="28.75px"
           height="0px"
-          viewBox={{ minX: 0, minY: 0, width: 28.753387451171875, height: 1 }}
+          viewBox={{ minX: 0, minY: 0, width: 28.753398895263672, height: 1 }}
           paths={[
             {
               d: "M2 -4C0.895431 -4 0 -3.10457 0 -2C0 -0.895431 0.895431 0 2 0L2 -4ZM26.7534 0C27.858 0 28.7534 -0.895431 28.7534 -2C28.7534 -3.10457 27.858 -4 26.7534 -4L26.7534 0ZM2 0L26.7534 0L26.7534 -4L2 -4L2 0Z",
@@ -165,7 +165,7 @@ export default function Footer(props) {
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 23.14471435546875,
+            width: 23.14470672607422,
             height: 6.337890625,
           }}
           paths={[
@@ -239,7 +239,7 @@ export default function Footer(props) {
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 17.9708251953125,
+            width: 17.97088623046875,
             height: 18.36669921875,
           }}
           paths={[
@@ -291,7 +291,7 @@ export default function Footer(props) {
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 32.34759521484375,
+            width: 32.347572326660156,
             height: 33.0595703125,
           }}
           paths={[
@@ -317,7 +317,7 @@ export default function Footer(props) {
           viewBox={{
             minX: 0,
             minY: 0,
-            width: 29.95147705078125,
+            width: 29.951446533203125,
             height: 30.61083984375,
           }}
           paths={[

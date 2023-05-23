@@ -14,7 +14,7 @@ export default function NavigationLinks(props) {
     <Flex
       gap="0"
       direction="row"
-      width="unset"
+      width="467px"
       height="unset"
       justifyContent="flex-start"
       alignItems="flex-start"
