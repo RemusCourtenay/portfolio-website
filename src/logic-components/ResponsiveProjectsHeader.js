@@ -4,15 +4,27 @@ import ResponsiveProjectLink from "./ResponsiveProjectLink";
 function ResponsiveProjectsHeader(props) {
 
     const projects = props.projects 
+    const activeProjectIndex = props.activeProjectIndex
+    const clickHandlers = props.clickHandlers
+    
+    const projectLinks = []
+
+    for ((index, project) of projects.entries()) {
+        projectLinks.push(<ResponsiveProjectLink 
+            project={projects[index]} 
+            clickHandler={clickHandlers[index]}
+            focus={index === activeProjectIndex? "True": "False"}
+            />)
+    }
 
     return(      
         <ProjectsHeader 
             projectLinksGroup = {<ProjectLinks 
-                                    allLinkGroup      = {<ResponsiveProjectLink project={projects[0]} />}
-                                    project1LinkGroup = {<ResponsiveProjectLink project={projects[1]} />}
-                                    project2LinkGroup = {<ResponsiveProjectLink project={projects[2]} />}
-                                    project3LinkGroup = {<ResponsiveProjectLink project={projects[3]} />}
-                                    />}
+                                    allLinkGroup      = {projectLinks[0]}
+                                    project1LinkGroup = {projectLinks[1]}
+                                    project2LinkGroup = {projectLinks[2]}
+                                    project3LinkGroup = {projectLinks[3]}
+                                />}
         />
     )
 }

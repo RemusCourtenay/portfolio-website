@@ -3,51 +3,27 @@ import ResponsiveProjectsHeader from "./ResponsiveProjectsHeader";
 
 function ResponsiveProjects(props) {
 
-    const projectsResources = props.projectResources
+    const [activeProjectIndex, setActiveProjectIndex] = useState(0)
 
-    const tempProjects = [
-        //create "all" project in first slot
-        {
-            "Name": "All",
-            "Focus": "True",
-        }
-    ]
-
-    // Pull remaining projects from json resources file and add a false Focus value to each
-    actualProjectValues = projectsResources.map((resource) => {
-        resource["Focus"] = "False"
-        return resource
-    })
-
-    // Add those projects to our project array
-    tempProjects.concat(actualProjectValues)
-
-    // Set project array to state value
-    const [projects, setProjects] = useState(tempProjects)
-
-    function changeActiveProject(projectIndex) {
-        
-        // Using map in order to generate a completely new array as per: https://react.dev/learn/updating-arrays-in-state
-        const newProjects = projects.map((project, index) => {
-            //set one project focus to true and others to false based on projectIndex
-            project["Focus"] = (index === projectIndex ? "True": "False")
-            return project
-        }) 
-        // Update state variable to force component refresh
-        setProjects(newProjects)
+    const projects = props.projectResources
+    const clickHandlers = []
+    
+    // Adding four clickHandler functions, each of which simply call setActiveProjectIndex with a different integer input
+    for (let i = 0; i < projects.length(); i++) {
+        // .bind() returns a function wrapping the original function where the first arg is set to be the value of 'this'
+        // and the remaining args are simply passed as args to the underlying function. 
+        // We don't use 'this' so we set it to null.
+        // Thus clickHandlers is an array of functions that set the active project to all of it's possible values 
+        clickHandlers.push(setActiveProjectIndex.bind(null, i))
     }
-
-    const clickHandlers = [
-        changeActiveProject.bind(null, 0),
-        changeActiveProject.bind(null, 1),
-        changeActiveProject.bind(null, 2),
-        changeActiveProject.bind(null, 3)
-    ]
-
 
     return(      
         // TODO.. Add rest of projects view
-        <ResponsiveProjectsHeader projects={projects} clickHandlers={clickHandlers}/>
+        <ResponsiveProjectsHeader
+            activeProjectIndex={activeProjectIndex}
+            projects={projects}  
+            clickHandlers={setActiveProjectIndex}
+        />
     )
 }
 
