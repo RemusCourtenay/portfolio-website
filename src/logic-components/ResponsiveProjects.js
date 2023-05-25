@@ -2,6 +2,7 @@ import { useState } from "react";
 import ResponsiveProjectsHeader from "./ResponsiveProjectsHeader";
 import ResponsiveProjectsInner from "./ResponsiveProjectsInner";
 import { Projects, ProjectsBackground } from "../ui-components";
+import { backgrounds } from "../resources/images";
 
 function ResponsiveProjects(props) {
 
@@ -37,7 +38,7 @@ function ResponsiveProjects(props) {
             }
             projectsBackgroundGroup={
                 <ProjectsBackground 
-                    projectbackgroundimgsrc={"assets/backgrounds/projects-shapes.png"}
+                    projectbackgroundimgsrc={backgrounds["PROJECTS"]}
                 />
             }
         />

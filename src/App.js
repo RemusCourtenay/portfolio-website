@@ -2,6 +2,7 @@ import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
 import { resources } from './resources/remus';
+import { backgrounds } from './resources/images';
 import { Footer, Introduction, Projects, ProjectsHeader, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
 import ResponsiveHeader from './logic-components/ResponsiveHeader';
 import ResponsiveSplash from './logic-components/ResponsiveSplash';
@@ -37,7 +38,7 @@ function App() {
 //       <Skills 
 //         skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton />}/>}
 //         skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
-//         backgroundShapesSource="assets/backgrounds/skills-shapes.png"  
+//         backgroundShapesSource={backgrounds["SKILLS"]}  
 //       />
 
 //       <Tech 

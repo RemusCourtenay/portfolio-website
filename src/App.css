@@ -1,3 +1,14 @@
-.circle-view-title {
-    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+.circle-view-title-default {
+    /* x-span, y-span, blur, colour*/
+    text-shadow: 2px 4px 0px rgba(230, 57, 70, 0.8);
+}
+
+.circle-view-title-hover {
+    /* x-span, y-span, blur, colour*/
+    text-shadow: 2px 4px 0px rgba(230, 57, 70, 1);
+}
+
+.circle-view-title-click {
+    /* x-span, y-span, blur, colour*/
+    text-shadow: 2px 4px 0px rgba(230, 57, 70, 1);
 }

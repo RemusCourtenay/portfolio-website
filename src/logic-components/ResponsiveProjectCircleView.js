@@ -1,5 +1,14 @@
 import { ProjectCircleView } from "../ui-components";
 import { useState } from "react"
+import { backgrounds } from "../resources/images";
+
+const customCSSClassNames = {
+    ProjectTitle: {
+        Default:    "circle-view-title-default",
+        Hover:      "circle-view-title-hover",
+        Click:      "circle-view-title-click"
+    }
+}
 
 function ResponsiveProjectCircleView(props) {
 
@@ -21,11 +30,11 @@ function ResponsiveProjectCircleView(props) {
             onMouseLeave={() => setState("Default")}
 
             projectTitle={project["CircleViewTitle"]}
-            circleViewBorderSource={"assets/backgrounds/project-circle.png"}
+            circleViewBorderSource={backgrounds["CIRCLE_VIEW_BORDER"]}
             projectImageSource={project["CircleViewImageSource"]}
             circleViewClickHandler={circleViewClickHandler}
 
-            overrides={{ProjectTitle: {className: "circle-view-title"}}}
+            overrides={{ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]}}}
         />
     );
 }
