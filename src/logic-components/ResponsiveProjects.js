@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ResponsiveProjectsHeader from "./ResponsiveProjectsHeader";
+import ResponsiveProjectsInner from "./ResponsiveProjectsInner";
 import { Projects, ProjectsBackground } from "../ui-components";
 
 function ResponsiveProjects(props) {
@@ -10,7 +11,7 @@ function ResponsiveProjects(props) {
     const clickHandlers = []
     
     // Adding four clickHandler functions, each of which simply call setActiveProjectIndex with a different integer input
-    for (let i = 0; i < projects.length(); i++) {
+    for (let i = 0; i < projects.length; i++) {
         // .bind() returns a function wrapping the original function where the first arg is set to be the value of 'this'
         // and the remaining args are simply passed as args to the underlying function. 
         // We don't use 'this' so we set it to null.
@@ -23,15 +24,17 @@ function ResponsiveProjects(props) {
 
         <Projects
             projectsHeaderGroup={<ResponsiveProjectsHeader
-                                    activeProjectIndex={activeProjectIndex}
                                     projects={projects}  
-                                    clickHandlers={setActiveProjectIndex}
+                                    clickHandlers={clickHandlers}
+                                    activeProjectIndex={activeProjectIndex}
                                 />}
-            projectsInnerGroup={<ProjectsAllView />}
+            projectsInnerGroup={<ResponsiveProjectsInner 
+                                    projects={projects}
+                                    clickHandlers={clickHandlers}
+                                    activeProjectIndex={activeProjectIndex}
+                                />}
             projectsBackgroundGroup={<ProjectsBackground projectbackgroundimgsrc={"assets/backgrounds/projects-shapes.png"}/>}
         />
-
-
 
     )
 }

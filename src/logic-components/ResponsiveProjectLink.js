@@ -5,9 +5,9 @@ function ResponsiveProjectLink(props) {
 
     const [state, setState] = useState("Default")
 
-    const focus = props.project["Focus"]
-    const projectName = props.project["Name"]
-    const clickHandler = props.project["ClickHandler"]
+    const project = props.project
+    const clickHandler = props.clickHandler
+    const focus = props.focus
 
 
     return(      
@@ -17,7 +17,7 @@ function ResponsiveProjectLink(props) {
             onMouseLeave={() => setState("Default")}
 
             focus={focus}
-            projectName={projectName}
+            projectName={project["Name"]}
             projectLinkClickHandler={clickHandler}
         />
     )

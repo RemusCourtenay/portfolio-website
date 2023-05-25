@@ -1,4 +1,4 @@
-import { ProjectExpandedBackground, ProjectFullCircle, ProjectSwapButton, ProjectsExpandedView } from "../ui-components";
+import { ProjectExpandedBackground, ProjectFullCircle, ProjectsExpandedView } from "../ui-components";
 import ResponsiveProjectSwapButton from "./ResponsiveProjectSwapButton";
 
 function ResponsiveProjectsExpandedView(props) {
@@ -8,8 +8,8 @@ function ResponsiveProjectsExpandedView(props) {
     const activeProjectIndex = props.activeProjectIndex;
     const activeProject = projects[activeProjectIndex]
 
-    const leftClickHandler = clickHandlers[(activeProjectIndex - 1) % projects.length()];
-    const rightClickHandler = clickHandlers[(activeProjectIndex + 1) % projects.length()];
+    const leftClickHandler = clickHandlers[(activeProjectIndex - 1) % projects.length];
+    const rightClickHandler = clickHandlers[(activeProjectIndex + 1) % projects.length];
 
 
     return (

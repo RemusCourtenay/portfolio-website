@@ -9,11 +9,11 @@ function ResponsiveProjectsHeader(props) {
     
     const projectLinks = []
 
-    for ((index, project) of projects.entries()) {
+    for (const [index, project] of projects.entries()) {
         projectLinks.push(<ResponsiveProjectLink 
-            project={projects[index]} 
+            project={project} 
             clickHandler={clickHandlers[index]}
-            focus={index === activeProjectIndex? "True": "False"}
+            focus={index === activeProjectIndex?"True":"False"}
             />)
     }
 

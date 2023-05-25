@@ -5,8 +5,8 @@ function ResponsiveProjectSwapButton(props) {
 
     const [state, setState] = useState("Default") 
 
-    direction = props.direction
-    clickHandler = props.clickHandler
+    const direction = props.direction
+    const clickHandler = props.clickHandler
 
     // Cursed
     // Also TODO... addd these images to folder
