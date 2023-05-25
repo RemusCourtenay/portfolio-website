@@ -3,29 +3,23 @@ import { useState } from "react";
 
 function ResponsiveProjectSwapButton(props) {
 
-    const [state, setState] = useState("Default") 
+    const [opacity, setOpacity] = useState("25%") 
 
-    const direction = props.direction
+    const imageSource = props.arrowsrc
     const clickHandler = props.clickHandler
 
-    // Cursed
-    // Also TODO... addd these images to folder
-    const imageSource = direction === "Left"?"assets/left-project-swap-button.png":"assets/right-project-swap-button.png"
-
     function projectSwapClickHandler() {
-        setState("Click")
+        setOpacity("75%")
         clickHandler()
     }
 
     return (
         <ProjectSwapButton 
-            state={state}
-            onMouseEnter={() => setState("Hover")}
-            onMouseLeave={() => setState("Default")}
+            opacity={opacity}
+            onMouseEnter={() => setOpacity("50%")}
+            onMouseLeave={() => setOpacity("25%")}
             projectSwapClickHandler={projectSwapClickHandler}
-
-            direction={direction}
-            arrowimgsrc={imageSource}
+            arrowsrc={imageSource}
         />
     );
 }

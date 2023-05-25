@@ -25,21 +25,21 @@ function ResponsiveProjectsExpandedView(props) {
 
             leftSwapButtonGroup={
                 <ResponsiveProjectSwapButton 
-                    direction={"Left"} 
+                    arrowsrc={"assets/icons/arrow-left.png"} 
                     clickHandler={leftClickHandler}
                 />
             }
 
             rightSwapButtonGroup={
                 <ResponsiveProjectSwapButton 
-                    direction={"Right"} 
-                    clickHandler={rightClickHandler}
+                arrowsrc={"assets/icons/arrow-right.png"}
+                clickHandler={rightClickHandler}
                 />
             }
             // TODO... actually add this image
             backgroundGroup={
                 <ProjectExpandedBackground 
-                    projectExpandedBackgroundSource={"assets/background/project-expanded.png"}
+                    projectExpandedBackgroundSource={"assets/backgrounds/project-expanded.png"}
                 />
             }
         />
