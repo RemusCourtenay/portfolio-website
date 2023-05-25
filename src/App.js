@@ -9,6 +9,7 @@ import ResponsiveCVButton from './logic-components/ResponsiveCVButton';
 import ResponsiveSkillsGraph from './logic-components/ResponsiveSkillsGraph';
 import ResponsiveTechIcon from './logic-components/ResponsiveTechIcon';
 import ResponsiveProjects from './logic-components/ResponsiveProjects';
+import ResponsiveProjectSwapButton from './logic-components/ResponsiveProjectSwapButton';
 
 function App() {
 

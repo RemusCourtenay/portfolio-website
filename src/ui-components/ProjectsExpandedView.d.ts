@@ -7,12 +7,14 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, ViewProps } from "@aws-amplify/ui-react";
+import { ProjectExpandedBackgroundProps } from "./ProjectExpandedBackground";
 import { ProjectSwapButtonProps } from "./ProjectSwapButton";
 import { ProjectFullCircleProps } from "./ProjectFullCircle";
-import { ProjectExpandedBackgroundProps } from "./ProjectExpandedBackground";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectsExpandedViewOverridesProps = {
     ProjectsExpandedView?: PrimitiveOverrideProps<ViewProps>;
+    BackgroundGroup?: PrimitiveOverrideProps<ViewProps>;
+    ProjectExpandedBackground?: ProjectExpandedBackgroundProps;
     ExpandedViewGroup?: PrimitiveOverrideProps<FlexProps>;
     LeftSwapButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectSwapButton2201968?: ProjectSwapButtonProps;
@@ -20,8 +22,6 @@ export declare type ProjectsExpandedViewOverridesProps = {
     ProjectFullCircle?: ProjectFullCircleProps;
     RightSwapButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectSwapButton2201982?: ProjectSwapButtonProps;
-    BackgroundGroup?: PrimitiveOverrideProps<ViewProps>;
-    ProjectExpandedBackground?: ProjectExpandedBackgroundProps;
 } & EscapeHatchProps;
 export declare type ProjectsExpandedViewProps = React.PropsWithChildren<Partial<ViewProps> & {
     projectFullCircleGroup?: React.ReactNode;

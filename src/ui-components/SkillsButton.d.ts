@@ -14,6 +14,8 @@ export declare type SkillsButtonOverridesProps = {
     SkillsButtonText?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type SkillsButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
+    buttonText?: String;
+} & {
     state?: "Click" | "Default" | "Hover";
 } & {
     overrides?: SkillsButtonOverridesProps | undefined | null;

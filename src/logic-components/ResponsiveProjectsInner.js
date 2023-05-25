@@ -32,8 +32,11 @@ function ResponsiveProjectsInner(props) {
                     />
                 }
 
-                // TODO... Fix ResponsiveCVButton so it takes a clickHandler
-                portfolioButtonGroup={<ResponsiveCVButton />}
+                portfolioButtonGroup={
+                    <ResponsiveCVButton 
+                        buttonText="VIEW PORTFOLIO" 
+                        clickHandler={clickHandlers[1]}
+                    />}
             />
         )
     } else {

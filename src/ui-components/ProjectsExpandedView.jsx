@@ -30,6 +30,20 @@ export default function ProjectsExpandedView(props) {
       {...getOverrideProps(overrides, "ProjectsExpandedView")}
       {...rest}
     >
+      <View
+        padding="0px 0px 0px 0px"
+        width="1920px"
+        height="1250px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="0px"
+        left="0px"
+        children={backgroundGroup}
+        {...getOverrideProps(overrides, "BackgroundGroup")}
+      ></View>
       <Flex
         gap="66px"
         direction="row"
@@ -86,20 +100,6 @@ export default function ProjectsExpandedView(props) {
           {...getOverrideProps(overrides, "RightSwapButtonGroup")}
         ></Flex>
       </Flex>
-      <View
-        padding="0px 0px 0px 0px"
-        width="1920px"
-        height="1250px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="0px"
-        left="0px"
-        children={backgroundGroup}
-        {...getOverrideProps(overrides, "BackgroundGroup")}
-      ></View>
     </View>
   );
 }

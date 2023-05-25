@@ -4,6 +4,8 @@ import { SkillsButton } from "../ui-components";
 function ResponsiveCVButton(props) {
 
     const [state, setState] = useState('Default')
+    const buttonText = props.buttonText
+    const cvButtonClickHandler = props.clickHandler
 
     function contactInteractionHandler() {
         setState('Hover')
@@ -11,6 +13,7 @@ function ResponsiveCVButton(props) {
 
     function clickHandler() {
         setState('Click')
+        cvButtonClickHandler()
         setTimeout(contactInteractionHandler, 100)
     }
 
@@ -30,6 +33,8 @@ function ResponsiveCVButton(props) {
             onClick={clickHandler}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseExitHandler}
+
+            buttonText={buttonText}
         />
     );
 }

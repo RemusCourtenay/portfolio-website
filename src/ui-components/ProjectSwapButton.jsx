@@ -16,7 +16,6 @@ export default function ProjectSwapButton(props) {
   const {
     projectSwapClickHandler,
     arrowsrc,
-    opacity = "25%",
     overrides: overridesProp,
     ...rest
   } = props;
@@ -30,11 +29,11 @@ export default function ProjectSwapButton(props) {
       overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      variantValues: { state: "Hover", direction: "Right" },
+      variantValues: { state: "Click", direction: "Right" },
       overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      variantValues: { state: "Click", direction: "Right" },
+      variantValues: { state: "Click", direction: "Left" },
       overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
@@ -42,7 +41,7 @@ export default function ProjectSwapButton(props) {
       overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
     {
-      variantValues: { state: "Click", direction: "Left" },
+      variantValues: { state: "Hover", direction: "Right" },
       overrides: { ArrowImage: {}, ProjectSwapButton: {} },
     },
   ];

@@ -9,7 +9,8 @@ function ResponsiveProjectSwapButton(props) {
     const clickHandler = props.clickHandler
 
     function projectSwapClickHandler() {
-        setOpacity("75%")
+        setOpacity("75%") //maybe add timeout on this so it goes back after click even if you dont take your mouse off
+        console.log("arrow clicky")
         clickHandler()
     }
 
@@ -18,6 +19,7 @@ function ResponsiveProjectSwapButton(props) {
             opacity={opacity}
             onMouseEnter={() => setOpacity("50%")}
             onMouseLeave={() => setOpacity("25%")}
+            
             projectSwapClickHandler={projectSwapClickHandler}
             arrowsrc={imageSource}
         />

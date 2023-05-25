@@ -13,7 +13,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function SkillsButton(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { buttonText, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       variantValues: { state: "Default" },
@@ -94,7 +94,7 @@ export default function SkillsButton(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Download CV"
+          children={buttonText}
           {...getOverrideProps(overrides, "SkillsButtonText")}
         ></Text>
       </Flex>
