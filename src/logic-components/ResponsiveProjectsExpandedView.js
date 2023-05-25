@@ -31,7 +31,7 @@ function ResponsiveProjectsExpandedView(props) {
             }
 
             rightSwapButtonGroup={
-                <ResponsiveProjectSwapButton 
+                <ResponsiveProjectSwapButton
                     arrowsrc={"assets/icons/arrow-right.png"}
                     clickHandler={rightClickHandler}
                 />
