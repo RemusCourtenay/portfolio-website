@@ -8,8 +8,16 @@ function ResponsiveProjectsExpandedView(props) {
     const activeProjectIndex = props.activeProjectIndex;
     const activeProject = projects[activeProjectIndex]
 
-    const leftClickHandler = clickHandlers[(activeProjectIndex - 1) % projects.length];
-    const rightClickHandler = clickHandlers[(activeProjectIndex + 1) % projects.length];
+    // Maps {1,2,3} to {0,1,2}
+    const activeRealProjectIndex = activeProjectIndex - 1
+
+    // Maps {0,1,2} to {-1,0,1,2,3} to {2,3,4,5,6} to {0,1,2}
+    const leftProjectIndex = ((activeRealProjectIndex - 1) + 3) % 3
+    const rightProjectIndex = ((activeRealProjectIndex + 1) + 3) % 3 
+
+    // Maps {0,1,2} to {1,2,3}
+    const leftClickHandler = clickHandlers[leftProjectIndex + 1];
+    const rightClickHandler = clickHandlers[rightProjectIndex + 1];
 
 
     return (

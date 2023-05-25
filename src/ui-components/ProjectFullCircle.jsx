@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ProjectFullCircle(props) {
   const {
     projectImageSource,
@@ -30,59 +30,23 @@ export default function ProjectFullCircle(props) {
       {...getOverrideProps(overrides, "ProjectFullCircle")}
       {...rest}
     >
-      <View
-        padding="0px 0px 0px 0px"
-        width="1145px"
-        height="1145px"
+      <Image
+        width="100%"
+        height="100%"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="0px"
-        left="0px"
-        {...getOverrideProps(overrides, "CircleImageGroup")}
-      >
-        <Icon
-          width="1145px"
-          height="1145px"
-          viewBox={{ minX: 0, minY: 0, width: 1145, height: 1145 }}
-          paths={[
-            {
-              d: "M1145 572.5C1145 888.683 888.683 1145 572.5 1145C256.317 1145 0 888.683 0 572.5C0 256.317 256.317 0 572.5 0C888.683 0 1145 256.317 1145 572.5Z",
-              fill: "rgba(217,217,217,1)",
-              fillRule: "nonzero",
-            },
-          ]}
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          {...getOverrideProps(overrides, "EllipseMask")}
-        ></Icon>
-        <Image
-          width="115.77%"
-          height="100.02%"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="0%"
-          bottom="-0.02%"
-          left="-7.92%"
-          right="-7.85%"
-          padding="0px 0px 0px 0px"
-          objectFit="cover"
-          src={projectImageSource}
-          {...getOverrideProps(overrides, "ProjectImage")}
-        ></Image>
-      </View>
+        top="0%"
+        bottom="0%"
+        left="0%"
+        right="0%"
+        padding="0px 0px 0px 0px"
+        objectFit="cover"
+        src={projectImageSource}
+        {...getOverrideProps(overrides, "ProjectImage")}
+      ></Image>
       <Flex
         gap="23px"
         direction="column"

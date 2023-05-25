@@ -6,12 +6,10 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectFullCircleOverridesProps = {
     ProjectFullCircle?: PrimitiveOverrideProps<ViewProps>;
-    CircleImageGroup?: PrimitiveOverrideProps<ViewProps>;
-    EllipseMask?: PrimitiveOverrideProps<IconProps>;
     ProjectImage?: PrimitiveOverrideProps<ImageProps>;
     TextGroup?: PrimitiveOverrideProps<FlexProps>;
     "NASA\u2019s Kibo \u2028Robot Challenge"?: PrimitiveOverrideProps<TextProps>;
