@@ -14,8 +14,9 @@ export declare type ProjectSwapButtonOverridesProps = {
     ArrowImage?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type ProjectSwapButtonProps = React.PropsWithChildren<Partial<ViewProps> & {
-    arrowimgsrc?: String;
     projectSwapClickHandler?: (event: SyntheticEvent) => void;
+    arrowsrc?: String;
+    opacity?: String;
 } & {
     direction?: "Left" | "Right";
     state?: "Click" | "Default" | "Hover";

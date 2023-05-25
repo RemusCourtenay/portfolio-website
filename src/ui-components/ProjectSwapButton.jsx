@@ -14,8 +14,9 @@ import {
 import { Image, View } from "@aws-amplify/ui-react";
 export default function ProjectSwapButton(props) {
   const {
-    arrowimgsrc,
     projectSwapClickHandler,
+    arrowsrc,
+    opacity = "25%",
     overrides: overridesProp,
     ...rest
   } = props;
@@ -76,7 +77,7 @@ export default function ProjectSwapButton(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        src={arrowimgsrc}
+        src={arrowsrc}
         onClick={projectSwapClickHandler}
         {...getOverrideProps(overrides, "ArrowImage")}
       ></Image>
