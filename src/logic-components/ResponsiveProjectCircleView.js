@@ -24,6 +24,8 @@ function ResponsiveProjectCircleView(props) {
             circleViewBorderSource={"assets/backgrounds/project-circle.png"}
             projectImageSource={project["CircleViewImageSource"]}
             circleViewClickHandler={circleViewClickHandler}
+
+            overrides={{ProjectTitle: {className: "circle-view-title"}}}
         />
     );
 }
