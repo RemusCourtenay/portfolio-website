@@ -25,9 +25,7 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Default" },
       overrides: {
-        EllipseMask: {},
         ProjectImage: {},
-        "Mask group": {},
         ReadMore: {},
         ProjectTitle: {},
         LinkArrow: {},
@@ -38,28 +36,12 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Hover" },
       overrides: {
-        EllipseMask: {
-          viewBox: {
-            minX: 0,
-            minY: 0,
-            width: 557.1396484375,
-            height: 557.1400146484375,
-          },
-          paths: [
-            {
-              d: "M557.14 278.57C557.14 432.42 432.42 557.14 278.57 557.14C124.72 557.14 0 432.42 0 278.57C0 124.72 124.72 0 278.57 0C432.42 0 557.14 124.72 557.14 278.57Z",
-              fill: "rgba(217,217,217,1)",
-              fillRule: "nonzero",
-            },
-          ],
-        },
         ProjectImage: {
           width: "600px",
           height: "600px",
-          top: "-21px",
-          left: "-21px",
+          top: "0px",
+          left: "0px",
         },
-        "Mask group": { top: "21px", left: "21px" },
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "272px" },
@@ -70,14 +52,12 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Click" },
       overrides: {
-        EllipseMask: {},
         ProjectImage: {
           width: "600px",
           height: "600px",
-          top: "-21.43px",
-          left: "-21.43px",
+          top: "0px",
+          left: "0px",
         },
-        "Mask group": {},
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "305px" },
@@ -104,64 +84,23 @@ export default function ProjectCircleView(props) {
       {...getOverrideProps(overrides, "ProjectCircleView")}
       {...rest}
     >
-      <View
-        padding="0px 0px 0px 0px"
-        width="557.14px"
-        height="557.14px"
+      <Image
+        width="100%"
+        height="100%"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="21.43px"
-        left="21.43px"
-        {...getOverrideProps(overrides, "Mask group")}
-      >
-        <Icon
-          width="557.14px"
-          height="557.14px"
-          viewBox={{
-            minX: 0,
-            minY: 0,
-            width: 557.142578125,
-            height: 557.1428833007812,
-          }}
-          paths={[
-            {
-              d: "M557.143 278.571C557.143 432.422 432.422 557.143 278.571 557.143C124.721 557.143 0 432.422 0 278.571C0 124.721 124.721 0 278.571 0C432.422 0 557.143 124.721 557.143 278.571Z",
-              fill: "rgba(217,217,217,1)",
-              fillRule: "nonzero",
-            },
-          ]}
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          {...getOverrideProps(overrides, "EllipseMask")}
-        ></Icon>
-        <Image
-          width="107.69%"
-          height="107.69%"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="-3.85%"
-          bottom="-3.85%"
-          left="-3.85%"
-          right="-3.85%"
-          padding="0px 0px 0px 0px"
-          objectFit="unset"
-          src={projectImageSource}
-          {...getOverrideProps(overrides, "ProjectImage")}
-        ></Image>
-      </View>
+        top="0%"
+        bottom="0%"
+        left="0%"
+        right="0%"
+        padding="0px 0px 0px 0px"
+        objectFit="unset"
+        src={projectImageSource}
+        {...getOverrideProps(overrides, "ProjectImage")}
+      ></Image>
       <Text
         fontFamily="Raleway"
         fontSize="28px"

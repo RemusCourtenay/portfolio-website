@@ -21,8 +21,7 @@ function ResponsiveProjectCircleView(props) {
             onMouseExit={() => setState("Default")}
 
             projectTitle={project["CircleViewProjectTitle"]}
-            // TODO... add image
-            circleViewBorderSource={"assets/backgrounds/circle-view-border.png"}
+            circleViewBorderSource={"assets/backgrounds/project-circle.png"}
             projectImageSource={project["CircleViewImageSource"]}
             circleViewClickHandler={circleViewClickHandler}
         />

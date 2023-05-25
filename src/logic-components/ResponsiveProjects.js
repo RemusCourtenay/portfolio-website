@@ -19,21 +19,27 @@ function ResponsiveProjects(props) {
         clickHandlers.push(setActiveProjectIndex.bind(null, i))
     }
 
-    return(      
-        // TODO.. Add rest of projects view
-
+    return(
         <Projects
-            projectsHeaderGroup={<ResponsiveProjectsHeader
-                                    projects={projects}  
-                                    clickHandlers={clickHandlers}
-                                    activeProjectIndex={activeProjectIndex}
-                                />}
-            projectsInnerGroup={<ResponsiveProjectsInner 
-                                    projects={projects}
-                                    clickHandlers={clickHandlers}
-                                    activeProjectIndex={activeProjectIndex}
-                                />}
-            projectsBackgroundGroup={<ProjectsBackground projectbackgroundimgsrc={"assets/backgrounds/projects-shapes.png"}/>}
+            projectsHeaderGroup={
+                <ResponsiveProjectsHeader
+                    projects={projects}  
+                    clickHandlers={clickHandlers}
+                    activeProjectIndex={activeProjectIndex}
+                />
+            }
+            projectsInnerGroup={
+                <ResponsiveProjectsInner 
+                    projects={projects}
+                    clickHandlers={clickHandlers}
+                    activeProjectIndex={activeProjectIndex}
+                />
+            }
+            projectsBackgroundGroup={
+                <ProjectsBackground 
+                    projectbackgroundimgsrc={"assets/backgrounds/projects-shapes.png"}
+                />
+            }
         />
 
     )

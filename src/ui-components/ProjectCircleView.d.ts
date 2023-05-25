@@ -11,8 +11,6 @@ import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectCircleViewOverridesProps = {
     ProjectCircleView?: PrimitiveOverrideProps<ViewProps>;
-    "Mask group"?: PrimitiveOverrideProps<ViewProps>;
-    EllipseMask?: PrimitiveOverrideProps<IconProps>;
     ProjectImage?: PrimitiveOverrideProps<ImageProps>;
     ReadMore?: PrimitiveOverrideProps<TextProps>;
     ProjectTitle?: PrimitiveOverrideProps<TextProps>;
