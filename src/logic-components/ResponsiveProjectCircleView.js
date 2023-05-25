@@ -18,9 +18,9 @@ function ResponsiveProjectCircleView(props) {
         <ProjectCircleView 
             state={state}
             onMouseEnter={() => setState("Hover")}
-            onMouseExit={() => setState("Default")}
+            onMouseLeave={() => setState("Default")}
 
-            projectTitle={project["CircleViewProjectTitle"]}
+            projectTitle={project["CircleViewTitle"]}
             circleViewBorderSource={"assets/backgrounds/project-circle.png"}
             projectImageSource={project["CircleViewImageSource"]}
             circleViewClickHandler={circleViewClickHandler}

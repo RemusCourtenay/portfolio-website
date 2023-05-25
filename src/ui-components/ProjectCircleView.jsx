@@ -11,7 +11,7 @@ import {
   getOverridesFromVariants,
   mergeVariantsAndOverrides,
 } from "@aws-amplify/ui-react/internal";
-import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ProjectCircleView(props) {
   const {
     projectTitle,
@@ -26,6 +26,7 @@ export default function ProjectCircleView(props) {
       variantValues: { state: "Default" },
       overrides: {
         ProjectImage: {},
+        ImageGroup: {},
         ReadMore: {},
         ProjectTitle: {},
         LinkArrow: {},
@@ -36,12 +37,8 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Hover" },
       overrides: {
-        ProjectImage: {
-          width: "600px",
-          height: "600px",
-          top: "0px",
-          left: "0px",
-        },
+        ProjectImage: {},
+        ImageGroup: {},
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "272px" },
@@ -52,12 +49,8 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Click" },
       overrides: {
-        ProjectImage: {
-          width: "600px",
-          height: "600px",
-          top: "0px",
-          left: "0px",
-        },
+        ProjectImage: {},
+        ImageGroup: {},
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "305px" },
@@ -84,23 +77,35 @@ export default function ProjectCircleView(props) {
       {...getOverrideProps(overrides, "ProjectCircleView")}
       {...rest}
     >
-      <Image
-        width="100%"
-        height="100%"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+      <Flex
+        gap="0"
+        direction="row"
+        width="600px"
+        height="600px"
+        justifyContent="center"
+        alignItems="center"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="0%"
+        top="0px"
+        left="0px"
         padding="0px 0px 0px 0px"
-        objectFit="unset"
-        src={projectImageSource}
-        {...getOverrideProps(overrides, "ProjectImage")}
-      ></Image>
+        display="flex"
+        {...getOverrideProps(overrides, "ImageGroup")}
+      >
+        <Image
+          width="557px"
+          height="557px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          objectFit="contain"
+          src={projectImageSource}
+          {...getOverrideProps(overrides, "ProjectImage")}
+        ></Image>
+      </Flex>
       <Text
         fontFamily="Raleway"
         fontSize="28px"

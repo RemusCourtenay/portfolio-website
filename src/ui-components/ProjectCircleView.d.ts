@@ -6,11 +6,12 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectCircleViewOverridesProps = {
     ProjectCircleView?: PrimitiveOverrideProps<ViewProps>;
+    ImageGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectImage?: PrimitiveOverrideProps<ImageProps>;
     ReadMore?: PrimitiveOverrideProps<TextProps>;
     ProjectTitle?: PrimitiveOverrideProps<TextProps>;
