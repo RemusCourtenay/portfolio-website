@@ -13,6 +13,8 @@ export declare type ProjectCircleViewOverridesProps = {
     ProjectCircleView?: PrimitiveOverrideProps<ViewProps>;
     ImageGroup?: PrimitiveOverrideProps<FlexProps>;
     ProjectImage?: PrimitiveOverrideProps<ImageProps>;
+    MaskGroup?: PrimitiveOverrideProps<FlexProps>;
+    EllipseMask?: PrimitiveOverrideProps<IconProps>;
     ReadMore?: PrimitiveOverrideProps<TextProps>;
     ProjectTitle?: PrimitiveOverrideProps<TextProps>;
     LinkArrow?: PrimitiveOverrideProps<IconProps>;

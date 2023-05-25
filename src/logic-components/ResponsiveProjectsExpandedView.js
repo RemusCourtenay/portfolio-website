@@ -24,7 +24,6 @@ function ResponsiveProjectsExpandedView(props) {
         <ProjectsExpandedView 
             projectFullCircleGroup={
                 <ProjectFullCircle
-                    // TODO... add all this data to the resources json
                     projectImageSource={activeProject["ExpandedViewImageSource"]}
                     projectTitle={activeProject["ExpandedViewTitle"]}
                     projectBodyText={activeProject["ExpandedViewBodyText"]}

@@ -34,7 +34,12 @@ function ResponsiveProjectCircleView(props) {
             projectImageSource={project["CircleViewImageSource"]}
             circleViewClickHandler={circleViewClickHandler}
 
-            overrides={{ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]}}}
+            overrides={
+                {
+                    ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]}
+                    //ProjectImage: {className: "testImageOverlay"}
+                }
+            }
         />
     );
 }

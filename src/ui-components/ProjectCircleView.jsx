@@ -27,6 +27,8 @@ export default function ProjectCircleView(props) {
       overrides: {
         ProjectImage: {},
         ImageGroup: {},
+        EllipseMask: {},
+        MaskGroup: {},
         ReadMore: {},
         ProjectTitle: {},
         LinkArrow: {},
@@ -39,9 +41,19 @@ export default function ProjectCircleView(props) {
       overrides: {
         ProjectImage: {},
         ImageGroup: {},
+        EllipseMask: {
+          paths: [
+            {
+              d: "M557.143 278.571C557.143 432.422 432.422 557.143 278.571 557.143C124.721 557.143 0 432.422 0 278.571C0 124.721 124.721 0 278.571 0C432.422 0 557.143 124.721 557.143 278.571Z",
+              fill: "rgba(0,0,0,0.2)",
+              fillRule: "nonzero",
+            },
+          ],
+        },
+        MaskGroup: {},
         ReadMore: { display: "block" },
         ProjectTitle: {},
-        LinkArrow: { left: "272px" },
+        LinkArrow: { left: "45.33%", right: "49.67%" },
         RedBorderCircle: {},
         ProjectCircleView: {},
       },
@@ -51,9 +63,25 @@ export default function ProjectCircleView(props) {
       overrides: {
         ProjectImage: {},
         ImageGroup: {},
+        EllipseMask: {
+          viewBox: {
+            minX: 0,
+            minY: 0,
+            width: 557.142578125,
+            height: 557.142822265625,
+          },
+          paths: [
+            {
+              d: "M557.143 278.571C557.143 432.422 432.422 557.143 278.571 557.143C124.721 557.143 0 432.422 0 278.571C0 124.721 124.721 0 278.571 0C432.422 0 557.143 124.721 557.143 278.571Z",
+              fill: "rgba(0,0,0,0.2)",
+              fillRule: "nonzero",
+            },
+          ],
+        },
+        MaskGroup: {},
         ReadMore: { display: "block" },
         ProjectTitle: {},
-        LinkArrow: { left: "305px" },
+        LinkArrow: { left: "50.83%", right: "44.17%" },
         RedBorderCircle: {},
         ProjectCircleView: {},
       },
@@ -106,6 +134,39 @@ export default function ProjectCircleView(props) {
           {...getOverrideProps(overrides, "ProjectImage")}
         ></Image>
       </Flex>
+      <Flex
+        gap="0"
+        direction="row"
+        width="600px"
+        height="600px"
+        justifyContent="center"
+        alignItems="center"
+        position="absolute"
+        top="0px"
+        left="0px"
+        padding="0px 0px 0px 0px"
+        display="flex"
+        {...getOverrideProps(overrides, "MaskGroup")}
+      >
+        <Icon
+          width="557.14px"
+          height="557.14px"
+          viewBox={{
+            minX: 0,
+            minY: 0,
+            width: 557.142578125,
+            height: 557.1428833007812,
+          }}
+          paths={[]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          position="relative"
+          {...getOverrideProps(overrides, "EllipseMask")}
+        ></Icon>
+      </Flex>
       <Text
         fontFamily="Raleway"
         fontSize="28px"
@@ -151,15 +212,14 @@ export default function ProjectCircleView(props) {
         {...getOverrideProps(overrides, "ProjectTitle")}
       ></Text>
       <Icon
-        width="28px"
-        height="0px"
-        viewBox={{ minX: 0, minY: 0, width: 28, height: 1 }}
+        width="30px"
+        height="15px"
+        viewBox={{ minX: 0, minY: 0, width: 30, height: 15 }}
         paths={[
           {
-            d: "M0 -1L-1 -1L-1 1L0 1L0 -1ZM28.7071 0.707107C29.0976 0.316583 29.0976 -0.316583 28.7071 -0.707107L22.3431 -7.07107C21.9526 -7.46159 21.3195 -7.46159 20.9289 -7.07107C20.5384 -6.68054 20.5384 -6.04738 20.9289 -5.65685L26.5858 0L20.9289 5.65685C20.5384 6.04738 20.5384 6.68054 20.9289 7.07107C21.3195 7.46159 21.9526 7.46159 22.3431 7.07107L28.7071 0.707107ZM0 1L28 1L28 -1L0 -1L0 1Z",
-            stroke: "rgba(255,255,255,1)",
+            d: "M1 6.48152L0 6.48152L0 8.51847L1 8.51847L1 6.48152ZM29.7071 8.22017C30.0976 7.82242 30.0976 7.17757 29.7071 6.77982L23.3431 0.298304C22.9526 -0.0994345 22.3195 -0.0994345 21.9289 0.298304C21.5384 0.696046 21.5384 1.3409 21.9289 1.73865L27.5858 7.49999L21.9289 13.2614C21.5384 13.6591 21.5384 14.3039 21.9289 14.7017C22.3195 15.0994 22.9526 15.0994 23.3431 14.7017L29.7071 8.22017ZM1 8.51847L29 8.51847L29 6.48152L1 6.48152L1 8.51847Z",
+            fill: "rgba(255,255,255,1)",
             fillRule: "nonzero",
-            strokeWidth: 2,
           },
         ]}
         display="block"
@@ -167,8 +227,10 @@ export default function ProjectCircleView(props) {
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="399px"
-        left="115px"
+        top="65.33%"
+        bottom="32.17%"
+        left="19.17%"
+        right="75.83%"
         {...getOverrideProps(overrides, "LinkArrow")}
       ></Icon>
       <Image
