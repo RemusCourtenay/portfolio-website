@@ -18,6 +18,8 @@ export declare type SkillsTextOverridesProps = {
     SkillsButton?: SkillsButtonProps;
 } & EscapeHatchProps;
 export declare type SkillsTextProps = React.PropsWithChildren<Partial<FlexProps> & {
+    cvButtonGroup?: React.ReactNode;
+} & {
     overrides?: SkillsTextOverridesProps | undefined | null;
 }>;
 export default function SkillsText(props: SkillsTextProps): React.ReactElement;
