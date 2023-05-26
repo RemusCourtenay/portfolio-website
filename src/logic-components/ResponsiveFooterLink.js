@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import { footerIcons } from "../resources/images";
 import { useState } from "react"
 

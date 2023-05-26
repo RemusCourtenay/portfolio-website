@@ -6,11 +6,13 @@ import { backgrounds, layout } from './resources/images';
 import { Footer, Introduction, Projects, ProjectsHeader, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
 import ResponsiveHeader from './logic-components/ResponsiveHeader';
 import ResponsiveSplash from './logic-components/ResponsiveSplash';
-import ResponsiveCVButton from './logic-components/ResponsiveCVButton';  
+import ResponsiveCVButton from './logic-components/ResponsiveCVButton'; 
+import ResponsiveContactButton from './logic-components/ResponsiveContactButton'; 
 import ResponsiveSkillsGraph from './logic-components/ResponsiveSkillsGraph';
 import ResponsiveTechIcon from './logic-components/ResponsiveTechIcon';
 import ResponsiveProjects from './logic-components/ResponsiveProjects';
 import ResponsiveProjectSwapButton from './logic-components/ResponsiveProjectSwapButton';
+import ResponsiveFooterLinks from './logic-components/ResponsiveFooterLinks';
 
 function App() {
 
@@ -60,7 +62,20 @@ function App() {
       
       />
       <ResponsiveProjects projectResources={resources["PROJECTS"]} />
-      <Footer />
+
+      <Footer 
+        footerLinksGroup={
+          <ResponsiveFooterLinks 
+            contactLinkData={resources["CONTACT"]}
+          />
+        }
+        contactButtonGroup={
+          <ResponsiveContactButton 
+            bold="False"
+          />
+        }
+        backgroundShapesSource={backgrounds["FOOTER"]}
+      />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import { FooterLinks } from "../ui-components";
 import ResponsiveFooterLink from "./ResponsiveFooterLink";
 
@@ -6,6 +7,7 @@ function ResponsiveFooterLinks(props) {
     const contactLinkData = props.contactLinkData;
 
     function goToLinkDestination(url) {
+        console.log(url);
         // TODO..
     }
 
@@ -31,5 +33,10 @@ function ResponsiveFooterLinks(props) {
 }
 
 ResponsiveFooterLinks.propTypes = {
-    contactLinkData: PropTypes.arrayOf(PropTypes.shape())
-}
+    contactLinkData: PropTypes.arrayOf(PropTypes.shape({
+        NAME: PropTypes.string.isRequired,
+        URL: PropTypes.string.isRequired
+    }))
+};
+
+export default ResponsiveFooterLinks;
