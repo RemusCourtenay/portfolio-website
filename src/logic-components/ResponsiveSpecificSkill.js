@@ -1,4 +1,5 @@
 import { SkillIcon, SpecificSkill } from "../ui-components";
+import { experiences } from "../resources/images";
 
 function ResponsiveSpecificSkill(props) {
 
@@ -8,9 +9,27 @@ function ResponsiveSpecificSkill(props) {
     return (
         <SpecificSkill 
             skillName={skillName}
-            personalGroup={<SkillIcon focus={focusValues["Personal"]} iconSource="assets/icons/personal-icon.png" focusIconSource="assets/icons/personal-icon-red.png"/>}
-            educationGroup={<SkillIcon focus={focusValues["Education"]} iconSource="assets/icons/education-icon.png" focusIconSource="assets/icons/education-icon-red.png"/>}
-            commercialGroup={<SkillIcon focus={focusValues["Commercial"]} iconSource="assets/icons/commercial-icon.png" focusIconSource="assets/icons/commercial-icon-red.png"/>}
+            personalGroup={
+                <SkillIcon 
+                    focus={focusValues["PERSONAL"]}
+                    iconSource={experiences["PERSONAL"]["DEFAULT"]}
+                    focusIconSource={experiences["PERSONAL"]["FOCUS"]}
+                />
+            }
+            educationGroup={
+                <SkillIcon 
+                    focus={focusValues["EDUCATION"]}
+                    iconSource={experiences["EDUCATION"]["DEFAULT"]}
+                    focusIconSource={experiences["EDUCATION"]["FOCUS"]}
+                />
+            }
+            commercialGroup={
+                <SkillIcon 
+                    focus={focusValues["COMMERCIAL"]}
+                    iconSource={experiences["COMMERCIAL"]["DEFAULT"]}
+                    focusIconSource={experiences["COMMERCIAL"]["FOCUS"]}
+                />
+            }
         />
     );
 }

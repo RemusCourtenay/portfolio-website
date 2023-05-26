@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { TechIcon } from "../ui-components";
+import { techs } from "../resources/images";
 
 function ResponsiveTechIcon(props) {
 
     const [hover, setHover] = useState(false)
     const techName = props.techName
-    const imageSource = "assets/icons/tech/default/" + techName + ".png"
-    const imageHoverSource = "assets/icons/tech/hover/" + techName + ".png"  
+    const imageSource = techs[techName.toUpperCase()]["DEFAULT"]
+    const imageHoverSource = techs[techName.toUpperCase()]["FOCUS"]
 
     function mouseEnterHandler() {
         setHover(true)
@@ -26,6 +27,10 @@ function ResponsiveTechIcon(props) {
             onMouseLeave={() => setTimeout(mouseExitHandler, 200)}
         />
     );
+}
+
+ResponsiveTechIcon.propTypes={
+    techName: PropTypes.string.isRequired
 }
 
 export default ResponsiveTechIcon;
