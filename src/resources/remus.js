@@ -7,41 +7,41 @@ export const resources = {
         {   
             SKILL_NAME: "Python",
             FOCUS_VALUES: {
-                "Personal": true,
-                "Education": true,
-                "Commercial": true
+                PERSONAL: true,
+                EDUCATION: true,
+                COMMERCIAL: true
             }
         },
         {   
             SKILL_NAME: "JavaScript",
             FOCUS_VALUES: {
-                "Personal": true,
-                "Education": false,
-                "Commercial": true
+                PERSONAL: true,
+                EDUCATION: false,
+                COMMERCIAL: true
             }
         },
         {   
             SKILL_NAME: "Terraform",
             FOCUS_VALUES: {
-                "Personal": false,
-                "Education": true,
-                "Commercial": true
+                PERSONAL: false,
+                EDUCATION: true,
+                COMMERCIAL: true
             }
         },
         {   
             SKILL_NAME: "Ruby",
             FOCUS_VALUES: {
-                "Personal": false,
-                "Education": true,
-                "Commercial": false
+                PERSONAL: false,
+                EDUCATION: true,
+                COMMERCIAL: false
             }
         },
         {   
             SKILL_NAME: "Java",
             FOCUS_VALUES: {
-                "Personal": true,
-                "Education": true,
-                "Commercial": false
+                PERSONAL: true,
+                EDUCATION: true,
+                COMMERCIAL: false
             }
         }
     ],
