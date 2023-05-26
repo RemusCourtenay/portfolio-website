@@ -1,5 +1,6 @@
 import { experienceNames, techNames } from "./shared";
 
+const imagesFolder: string =        "assets/";
 const backgroundsFolder: string =   "assets/backgrounds/";
 const iconsFolder: string =         "assets/icons/";
 const techsFolder: string =         "assets/icons/techs/";
@@ -21,6 +22,10 @@ function buildImagePathData(baseFolderPath: string, imageNames: Array<string>): 
         imageData.set(imageName.toUpperCase(), imagePath);
     }
     return imageData;
+}
+
+export const layout = {
+    TECH_DIVIDER: imagesFolder + "tech-divider.png" 
 }
 
 export const backgrounds = {

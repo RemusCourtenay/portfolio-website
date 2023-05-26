@@ -29,4 +29,8 @@ function ResponsiveTechIcon(props) {
     );
 }
 
+ResponsiveTechIcon.propTypes={
+    techName: PropTypes.string.isRequired
+}
+
 export default ResponsiveTechIcon;

@@ -2,7 +2,7 @@ import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
 import { resources } from './resources/remus';
-import { backgrounds } from './resources/images';
+import { backgrounds, layout } from './resources/images';
 import { Footer, Introduction, Projects, ProjectsHeader, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
 import ResponsiveHeader from './logic-components/ResponsiveHeader';
 import ResponsiveSplash from './logic-components/ResponsiveSplash';
@@ -43,7 +43,7 @@ function App() {
 
       <Tech 
         techSquaresGroup={<TechSquares 
-                            techDividerGroup={<TechDivider dividerImageSource="assets/tech-divider.png"/>}
+                            techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]}/>}
                             iconGroup1={<ResponsiveTechIcon techName={resources["TECH"][0]}/>}
                             iconGroup2={<ResponsiveTechIcon techName={resources["TECH"][1]}/>}
                             iconGroup3={<ResponsiveTechIcon techName={resources["TECH"][2]}/>}

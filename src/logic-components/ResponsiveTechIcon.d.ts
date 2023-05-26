@@ -1,6 +1,6 @@
-import { ReactElement } from "react"
+import * as React from "react";
 
 export declare type ResponsiveTechIconProps = {
-    techName?: string
+    techName: string
 }
-export default function ResponsiveTechIcon(props: ResponsiveTechIconProps): ReactElement;
+export default function ResponsiveTechIcon(props: ResponsiveTechIconProps): React.ReactElement;
