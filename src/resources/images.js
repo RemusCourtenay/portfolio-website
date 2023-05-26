@@ -1,20 +1,18 @@
 import { experienceNames, techNames } from "./shared";
 
-const imagesFolder: string =        "assets/";
-const backgroundsFolder: string =   "assets/backgrounds/";
-const iconsFolder: string =         "assets/icons/";
-const techsFolder: string =         "assets/icons/techs/";
-const experiencesFolder: string =   "assets/icons/experiences/";
+const imagesFolder =        "assets/";
+const backgroundsFolder =   "assets/backgrounds/";
+const iconsFolder =         "assets/icons/";
+const techsFolder =         "assets/icons/techs/";
+const experiencesFolder =   "assets/icons/experiences/";
 
 
-type iconTypes = "DEFAULT" | "FOCUS";
-type iconPaths = Record<iconTypes, string>
 
-function buildImagePathData(baseFolderPath: string, imageNames: Array<string>): Map<string, iconPaths> {
-    const imageData: Map<string, iconPaths> = new Map<string, iconPaths>();
+function buildImagePathData(baseFolderPath, imageNames) {
+    const imageData = {}
 
     for (const imageName in imageNames) {
-        const imagePath: iconPaths = {
+        const imagePath = {
             DEFAULT:    baseFolderPath + "default/" + imageName.toLowerCase() + ".png",
             FOCUS:      baseFolderPath + "focus/" + imageName.toLowerCase() + ".png"
         };
@@ -42,7 +40,7 @@ export const icons = {
 };
 
 // Placeholder
-export const footerIcons: Map<string, iconPaths> = new Map<string, iconPaths>();
+export const footerIcons = {}
 
 export const techs = buildImagePathData(techsFolder, techNames);
 export const experiences = buildImagePathData(experiencesFolder, experienceNames);
