@@ -18,3 +18,9 @@ export const experienceNames = [
     "education",
     "personal"
 ]
+
+export const projectNames = [
+    "kibo",
+    "aws",
+    "honours"
+]

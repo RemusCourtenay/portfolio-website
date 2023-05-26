@@ -1,6 +1,6 @@
 import { ProjectCircleView } from "../ui-components";
 import { useState } from "react"
-import { backgrounds } from "../resources/images";
+import { backgrounds, projectImages } from "../resources/images";
 
 const customCSSClassNames = {
     ProjectTitle: {
@@ -32,7 +32,7 @@ function ResponsiveProjectCircleView(props) {
 
             projectTitle={project["CircleViewTitle"]}
             circleViewBorderSource={backgrounds["CIRCLE_VIEW_BORDER"]}
-            projectImageSource={project["CircleViewImageSource"]}
+            projectImageSource={projectImages[project["Name"].toUpperCase()]["CIRCLE"]}
             circleViewClickHandler={circleViewClickHandler}
 
             overrides={

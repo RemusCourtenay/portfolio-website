@@ -1,15 +1,36 @@
-import { experienceNames, techNames } from "./shared";
+import { experienceNames, projectNames, techNames } from "./shared";
 
 const imagesFolder =        "assets/";
-const backgroundsFolder =   "assets/backgrounds/";
-const iconsFolder =         "assets/icons/";
-const techsFolder =         "assets/icons/techs/";
-const experiencesFolder =   "assets/icons/experiences/";
+const backgroundsFolder =   imagesFolder + "backgrounds/";
+
+const iconsFolder =         imagesFolder + "icons/";
+const techsFolder =         iconsFolder + "techs/";
+const experiencesFolder =   iconsFolder +"experiences/";
+
+const projectsFolder            = imagesFolder + "projects/";
+const projectsLargeFolder       = projectsFolder + "1145/";
+const projectsSmallFolder       = projectsFolder + "557/";
+const projectsLargeCircleFolder = projectsLargeFolder + "circular/dark/";
+const projectsSmallCircleFolder = projectsSmallFolder + "circular/";
 
 
 
-function buildImagePathData(baseFolderPath, imageNames) {
-    const imageData = {}
+function buildProjectImagePathData(largeCircleFolder, smallCircleFolder, projectNames) {
+    const projectData = {};
+
+    for (const projectName in projectNames) {
+        const projectPath = {
+            EXPANDED: largeCircleFolder + projectName.toLowerCase() + ".png",
+            CIRCLE: smallCircleFolder + projectName.toLowerCase() + ".png"
+        }
+        projectData[projectName.toUpperCase()] = projectPath;
+    }
+    return projectData;
+}
+
+
+function buildFocusImagePathData(baseFolderPath, imageNames) {
+    const imageData = {};
 
     for (const imageName in imageNames) {
         const imagePath = {
@@ -42,5 +63,6 @@ export const icons = {
 // Placeholder
 export const footerIcons = {}
 
-export const techs = buildImagePathData(techsFolder, techNames);
-export const experiences = buildImagePathData(experiencesFolder, experienceNames);
+export const projectImagess = buildProjectImagePathData(projectsLargeCircleFolder, projectsSmallCircleFolder, projectNames)
+export const techs = buildFocusImagePathData(techsFolder, techNames);
+export const experiences = buildFocusImagePathData(experiencesFolder, experienceNames);

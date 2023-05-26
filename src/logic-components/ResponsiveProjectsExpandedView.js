@@ -1,4 +1,5 @@
 import { ProjectExpandedBackground, ProjectFullCircle, ProjectsExpandedView } from "../ui-components";
+import { projectImages } from "../resources/images";
 import ResponsiveProjectSwapButton from "./ResponsiveProjectSwapButton";
 
 function ResponsiveProjectsExpandedView(props) {
@@ -7,6 +8,7 @@ function ResponsiveProjectsExpandedView(props) {
     const clickHandlers = props.clickHandlers;
     const activeProjectIndex = props.activeProjectIndex;
     const activeProject = projects[activeProjectIndex]
+    const projectImageData = projectImages[activeProject["Name"].toUpperCase()]
 
     // Maps {1,2,3} to {0,1,2}
     const activeRealProjectIndex = activeProjectIndex - 1
@@ -24,7 +26,7 @@ function ResponsiveProjectsExpandedView(props) {
         <ProjectsExpandedView 
             projectFullCircleGroup={
                 <ProjectFullCircle
-                    projectImageSource={activeProject["ExpandedViewImageSource"]}
+                    projectImageSource={projectImageData["EXPANDED"]}
                     projectTitle={activeProject["ExpandedViewTitle"]}
                     projectBodyText={activeProject["ExpandedViewBodyText"]}
                 />
