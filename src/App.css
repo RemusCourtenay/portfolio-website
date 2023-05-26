@@ -12,7 +12,3 @@
     /* x-span, y-span, blur, colour*/
     text-shadow: 2px 4px 0px rgba(230, 57, 70, 1);
 }
-
-.testImageOverlay {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-}

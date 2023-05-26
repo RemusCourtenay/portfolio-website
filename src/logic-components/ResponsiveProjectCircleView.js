@@ -20,7 +20,8 @@ function ResponsiveProjectCircleView(props) {
     function circleViewClickHandler() {
         // TODO.. figure out how to do animations
         setState("Click");
-        clickHandler();
+        // TODO... remove this unnecessary wait
+        setTimeout(clickHandler, 100);
     };
 
     return (
@@ -37,7 +38,6 @@ function ResponsiveProjectCircleView(props) {
             overrides={
                 {
                     ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]}
-                    //ProjectImage: {className: "testImageOverlay"}
                 }
             }
         />
