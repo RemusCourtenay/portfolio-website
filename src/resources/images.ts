@@ -41,5 +41,8 @@ export const icons = {
     RIGHT_ARROW: iconsFolder + "arrow-right.png",
 };
 
+// Placeholder
+export const footerIcons: Map<string, iconPaths> = new Map<string, iconPaths>();
+
 export const techs = buildImagePathData(techsFolder, techNames);
 export const experiences = buildImagePathData(experiencesFolder, experienceNames);
