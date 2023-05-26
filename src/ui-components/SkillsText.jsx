@@ -8,9 +8,8 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-import SkillsButton from "./SkillsButton";
 export default function SkillsText(props) {
-  const { overrides, ...rest } = props;
+  const { cvButtonGroup, overrides, ...rest } = props;
   return (
     <Flex
       gap="25px"
@@ -98,25 +97,9 @@ export default function SkillsText(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
+        children={cvButtonGroup}
         {...getOverrideProps(overrides, "CvButtonGroup")}
-      >
-        <SkillsButton
-          display="flex"
-          gap="10px"
-          direction="column"
-          width="196px"
-          height="55px"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          overflow="hidden"
-          position="absolute"
-          top="0px"
-          left="0px"
-          padding="0px 0px 0px 0px"
-          state="Default"
-          {...getOverrideProps(overrides, "SkillsButton")}
-        ></SkillsButton>
-      </Flex>
+      ></Flex>
     </Flex>
   );
 }

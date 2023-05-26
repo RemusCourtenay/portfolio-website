@@ -1,6 +1,7 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import { footerIcons } from "../resources/images";
 import { useState } from "react"
+
 
 function ResponsiveFooterLink(props) {
 
@@ -10,15 +11,16 @@ function ResponsiveFooterLink(props) {
 
 
     return (
-        <FooterLink 
-            state={state}
-            onMouseEnter={() => setState("Hover")}
-            onMouseLeave={() => setState("Default")}
+        <></>
+        // <FooterLink 
+        //     state={state}
+        //     onMouseEnter={() => setState("Hover")}
+        //     onMouseLeave={() => setState("Default")}
 
-            clickHandler={clickHandler}
-            iconSource={footerIcons[linkName]["DEFAULT"]}
-            iconFocusSource={footerIcons[linkName]["FOCUS"]}
-        />
+        //     clickHandler={clickHandler}
+        //     iconSource={footerIcons[linkName]["DEFAULT"]}
+        //     iconFocusSource={footerIcons[linkName]["FOCUS"]}
+        // />
     );
 }
 
