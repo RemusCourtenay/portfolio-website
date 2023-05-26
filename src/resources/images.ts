@@ -1,17 +1,24 @@
 import { experienceNames, techNames } from "./shared";
 
-const backgroundsFolder =   "assets/backgrounds/";
-const iconsFolder =         "assets/icons/";
-const techsFolder =         "assets/icons/techs/";
-const experiencesFolder =   "assets/icons/experiences/";
+const backgroundsFolder: string =   "assets/backgrounds/";
+const iconsFolder: string =         "assets/icons/";
+const techsFolder: string =         "assets/icons/techs/";
+const experiencesFolder: string =   "assets/icons/experiences/";
 
-function buildImagePathData(baseFolderPath, imageNames) {
-    const imageData = {};
+
+type iconTypes = "DEFAULT" | "FOCUS";
+type iconPaths = Record<iconTypes, string>
+
+function buildImagePathData(baseFolderPath: string, imageNames: Array<string>): Map<string, iconPaths> {
+    const imageData: Map<string, iconPaths> = new Map<string, iconPaths>();
+
     for (const imageName in imageNames) {
-        imageData[imageName.toUpperCase()] = {
+        const imagePath: iconPaths = {
             DEFAULT:    baseFolderPath + "default/" + imageName.toLowerCase() + ".png",
             FOCUS:      baseFolderPath + "focus/" + imageName.toLowerCase() + ".png"
-        }
+        };
+
+        imageData.set(imageName.toUpperCase(), imagePath);
     }
     return imageData;
 }
