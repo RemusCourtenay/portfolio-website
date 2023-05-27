@@ -2,6 +2,7 @@ import { ProjectCircleView } from "../ui-components";
 import { useState } from "react"
 import { backgrounds, projectImages } from "../resources/images";
 import { Loader } from "@aws-amplify/ui-react"
+import { useAutoAnimate } from "@formkit/auto-animate/react"
 
 const customCSSClassNames = {
     ProjectTitle: {
@@ -15,6 +16,8 @@ function ResponsiveProjectCircleView(props) {
 
     const [state, setState] = useState("Default");
     const [isLoading, setIsLoading] = useState(true)
+
+    const [parent, enableAnimations] = useAutoAnimate()
 
     const project = props.project;
     const clickHandler = props.clickHandler;
@@ -41,7 +44,8 @@ function ResponsiveProjectCircleView(props) {
                 overrides={
                     {
                         ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]},
-                        ProjectImage: {onLoad: () => setIsLoading(false)}
+                        ProjectImage: {onLoad: () => setIsLoading(false)},
+                        LinkArrow: {ref: parent}
                     }
                 }
             />
