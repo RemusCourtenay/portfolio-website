@@ -3,16 +3,17 @@ import { ProjectLink } from "../ui-components";
 
 function ResponsiveProjectLink(props) {
 
-    const [state, setState] = useState("Default")
+    const [state, setState] = useState("Default");
 
-    const project = props.project
-    const clickHandler = props.clickHandler
-    const focus = props.focus
+    const project = props.project;
+    const clickHandler = props.clickHandler;
+    const focus = props.focus;
+    const isPending = props.isPending;
 
 
     return(      
         <ProjectLink 
-            state={state}
+            state={isPending?"Pending":state}
             onMouseEnter={() => setState("Hover")}
             onMouseLeave={() => setState("Default")}
 

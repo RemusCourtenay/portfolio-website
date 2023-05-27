@@ -1,12 +1,17 @@
 import { ProjectExpandedBackground, ProjectFullCircle, ProjectsExpandedView } from "../ui-components";
 import { projectImages } from "../resources/images";
 import ResponsiveProjectSwapButton from "./ResponsiveProjectSwapButton";
+import { useState } from "react"
 
 function ResponsiveProjectsExpandedView(props) {
+
+    const [isLoading, setIsLoading] = useState(true)
 
     const projects = props.projects;
     const clickHandlers = props.clickHandlers;
     const activeProjectIndex = props.activeProjectIndex;
+    const onLoad = props.onLoad;
+
     const activeProject = projects[activeProjectIndex]
     const projectImageData = projectImages[activeProject["Name"].toUpperCase()]
 
@@ -21,38 +26,54 @@ function ResponsiveProjectsExpandedView(props) {
     const leftClickHandler = clickHandlers[leftProjectIndex + 1];
     const rightClickHandler = clickHandlers[rightProjectIndex + 1];
 
+    function loadProjectsExpandedView() {
+        return (
+            <ProjectsExpandedView 
+                projectFullCircleGroup={
+                    <ProjectFullCircle
+                        projectImageSource={projectImageData["EXPANDED"]}
+                        projectTitle={activeProject["ExpandedViewTitle"]}
+                        projectBodyText={activeProject["ExpandedViewBodyText"]}
+                        overrides={
+                            {
+                                ProjectImage: {onLoad: () => setIsLoading(false)}
+                            }
+                        }
+                    />
+                }
 
-    return (
-        <ProjectsExpandedView 
-            projectFullCircleGroup={
-                <ProjectFullCircle
-                    projectImageSource={projectImageData["EXPANDED"]}
-                    projectTitle={activeProject["ExpandedViewTitle"]}
-                    projectBodyText={activeProject["ExpandedViewBodyText"]}
-                />
-            }
+                leftSwapButtonGroup={
+                    <ResponsiveProjectSwapButton 
+                        arrowsrc={"assets/icons/arrow-left.png"} 
+                        clickHandler={leftClickHandler}
+                    />
+                }
 
-            leftSwapButtonGroup={
-                <ResponsiveProjectSwapButton 
-                    arrowsrc={"assets/icons/arrow-left.png"} 
-                    clickHandler={leftClickHandler}
-                />
-            }
+                rightSwapButtonGroup={
+                    <ResponsiveProjectSwapButton
+                        arrowsrc={"assets/icons/arrow-right.png"}
+                        clickHandler={rightClickHandler}
+                    />
+                }
 
-            rightSwapButtonGroup={
-                <ResponsiveProjectSwapButton
-                    arrowsrc={"assets/icons/arrow-right.png"}
-                    clickHandler={rightClickHandler}
-                />
-            }
+                backgroundGroup={
+                    <ProjectExpandedBackground 
+                        projectExpandedBackgroundSource={"assets/backgrounds/project-expanded.png"}
+                    />
+                }
+            />
+        )
+    }
 
-            backgroundGroup={
-                <ProjectExpandedBackground 
-                    projectExpandedBackgroundSource={"assets/backgrounds/project-expanded.png"}
-                />
-            }
-        />
-    );
+    const loadedProjectExpandedView = loadProjectsExpandedView()
+
+    if (isLoading) {
+        // TODO... replace with something better
+        return (<Loader />);
+    } else {
+        return (loadedProjectExpandedView);
+    }
+
 }
 
 export default ResponsiveProjectsExpandedView;

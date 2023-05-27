@@ -3,17 +3,20 @@ import ResponsiveProjectLink from "./ResponsiveProjectLink";
 
 function ResponsiveProjectsHeader(props) {
 
-    const projects = props.projects 
-    const clickHandlers = props.clickHandlers
-    const activeProjectIndex = props.activeProjectIndex
+    const projects = props.projects;
+    const clickHandlers = props.clickHandlers;
+    const activeProjectIndex = props.activeProjectIndex;
+    const isPendingProjectChange = props.isPendingProjectChange;
     
     const projectLinks = []
 
     for (const [index, project] of projects.entries()) {
+        const isActive = index === activeProjectIndex;
         projectLinks.push(<ResponsiveProjectLink 
             project={project} 
             clickHandler={clickHandlers[index]}
-            focus={index === activeProjectIndex?"True":"False"}
+            focus={isActive?"True":"False"}
+            isPending={isActive && isPendingProjectChange}
             />)
     }
 

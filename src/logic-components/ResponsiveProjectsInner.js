@@ -6,6 +6,8 @@ function ResponsiveProjectsInner(props) {
     const projects = props.projects 
     const clickHandlers = props.clickHandlers
     const activeProjectIndex = props.activeProjectIndex
+    const isLoading = props.isLoading
+    const onLoad = props.onLoad
 
     // Replace with direct False check to seem big brain?
     if (activeProjectIndex === 0) {
@@ -13,6 +15,7 @@ function ResponsiveProjectsInner(props) {
             <ResponsiveProjectsAllView
                 projects={projects}
                 clickHandlers={clickHandlers}
+                onLoad={onLoad}
             />
         )
     } else {
@@ -22,6 +25,7 @@ function ResponsiveProjectsInner(props) {
                 projects={projects}
                 clickHandlers={clickHandlers}
                 activeProjectIndex={activeProjectIndex}
+                onLoad={onLoad}
             />
         )
     }

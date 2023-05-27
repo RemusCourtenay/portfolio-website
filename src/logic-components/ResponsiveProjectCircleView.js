@@ -1,6 +1,7 @@
 import { ProjectCircleView } from "../ui-components";
 import { useState } from "react"
 import { backgrounds, projectImages } from "../resources/images";
+import { Loader } from "@aws-amplify/ui-react"
 
 const customCSSClassNames = {
     ProjectTitle: {
@@ -13,6 +14,7 @@ const customCSSClassNames = {
 function ResponsiveProjectCircleView(props) {
 
     const [state, setState] = useState("Default");
+    const [isLoading, setIsLoading] = useState(true)
 
     const project = props.project;
     const clickHandler = props.clickHandler;
@@ -24,24 +26,36 @@ function ResponsiveProjectCircleView(props) {
         setTimeout(clickHandler, 100);
     };
 
-    return (
-        <ProjectCircleView 
-            state={state}
-            onMouseEnter={() => setState("Hover")}
-            onMouseLeave={() => setState("Default")}
+    function loadProjectCircleView() {
+        return (
+            <ProjectCircleView 
+                state={state}
+                onMouseEnter={() => setState("Hover")}
+                onMouseLeave={() => setState("Default")}
 
-            projectTitle={project["CircleViewTitle"]}
-            circleViewBorderSource={backgrounds["CIRCLE_VIEW_BORDER"]}
-            projectImageSource={projectImages[project["Name"].toUpperCase()]["CIRCLE"]}
-            circleViewClickHandler={circleViewClickHandler}
+                projectTitle={project["CircleViewTitle"]}
+                circleViewBorderSource={backgrounds["CIRCLE_VIEW_BORDER"]}
+                projectImageSource={projectImages[project["Name"].toUpperCase()]["CIRCLE"]}
+                circleViewClickHandler={circleViewClickHandler}
 
-            overrides={
-                {
-                    ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]}
+                overrides={
+                    {
+                        ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]},
+                        ProjectImage: {onLoad: () => setIsLoading(false)}
+                    }
                 }
-            }
-        />
-    );
+            />
+        )
+    }
+
+    const loadedProjectCircleView = loadProjectCircleView();
+
+    if (isLoading) {
+        // TODO... replace with something
+        return <Loader />
+    } else {
+        return loadedProjectCircleView;
+    }
 }
 
 export default ResponsiveProjectCircleView;
