@@ -7,12 +7,13 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Footer(props) {
   const {
     backgroundShapesSource,
     contactButtonGroup,
     footerLinksGroup,
+    footerBackgroundGroup,
     overrides,
     ...rest
   } = props;
@@ -41,23 +42,9 @@ export default function Footer(props) {
         top="0px"
         left="0px"
         padding="0px 0px 0px 0px"
+        children={footerBackgroundGroup}
         {...getOverrideProps(overrides, "FooterBackgroundGroup")}
-      >
-        <Image
-          width="1217px"
-          height="477px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          objectFit="cover"
-          src={backgroundShapesSource}
-          {...getOverrideProps(overrides, "FooterBackground")}
-        ></Image>
-      </Flex>
+      ></Flex>
       <Flex
         gap="95px"
         direction="column"
@@ -159,11 +146,11 @@ export default function Footer(props) {
         >
           <Icon
             width="1274px"
-            height="0px"
-            viewBox={{ minX: 0, minY: 0, width: 1274, height: 1 }}
+            height="5px"
+            viewBox={{ minX: 0, minY: 0, width: 1274, height: 5 }}
             paths={[
               {
-                d: "M0 0L1274 0L1274 -1L0 -1L0 0Z",
+                d: "M0 0.5L1274 0.5L1274 -0.5L0 -0.5L0 0.5Z",
                 stroke: "rgba(132,132,132,1)",
                 fillRule: "nonzero",
                 strokeWidth: 1,

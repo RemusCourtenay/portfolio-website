@@ -2,6 +2,7 @@ import { ProjectExpandedBackground, ProjectFullCircle, ProjectsExpandedView } fr
 import { projectImages } from "../resources/images";
 import ResponsiveProjectSwapButton from "./ResponsiveProjectSwapButton";
 import { useState } from "react"
+import { Loader } from "@aws-amplify/ui-react";
 
 function ResponsiveProjectsExpandedView(props) {
 

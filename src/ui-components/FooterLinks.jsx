@@ -7,13 +7,16 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import FacebookFooterLink from "./FacebookFooterLink";
-import LinkedInFooterLink from "./LinkedInFooterLink";
-import GmailFooterLink from "./GmailFooterLink";
-import PhoneFooterLink from "./PhoneFooterLink";
 import { Flex } from "@aws-amplify/ui-react";
 export default function FooterLinks(props) {
-  const { overrides, ...rest } = props;
+  const {
+    footerLinkGroup1,
+    footerLinkGroup2,
+    footerLinkGroup3,
+    footerLinkGroup4,
+    overrides,
+    ...rest
+  } = props;
   return (
     <Flex
       gap="50px"
@@ -28,7 +31,8 @@ export default function FooterLinks(props) {
       {...getOverrideProps(overrides, "FooterLinks")}
       {...rest}
     >
-      <FacebookFooterLink
+      <Flex
+        padding="0px 0px 0px 0px"
         width="15px"
         height="15px"
         display="block"
@@ -37,11 +41,11 @@ export default function FooterLinks(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
+        children={footerLinkGroup1}
+        {...getOverrideProps(overrides, "FooterLinkGroup1")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        {...getOverrideProps(overrides, "FacebookFooterLink")}
-      ></FacebookFooterLink>
-      <LinkedInFooterLink
         width="15px"
         height="15px"
         display="block"
@@ -50,11 +54,11 @@ export default function FooterLinks(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
+        children={footerLinkGroup2}
+        {...getOverrideProps(overrides, "FooterLinkGroup2")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        {...getOverrideProps(overrides, "LinkedInFooterLink")}
-      ></LinkedInFooterLink>
-      <GmailFooterLink
         width="15px"
         height="15px"
         display="block"
@@ -63,11 +67,11 @@ export default function FooterLinks(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
+        children={footerLinkGroup3}
+        {...getOverrideProps(overrides, "FooterLinkGroup3")}
+      ></Flex>
+      <Flex
         padding="0px 0px 0px 0px"
-        state="Default"
-        {...getOverrideProps(overrides, "GmailFooterLink")}
-      ></GmailFooterLink>
-      <PhoneFooterLink
         width="15px"
         height="15px"
         display="block"
@@ -76,10 +80,9 @@ export default function FooterLinks(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
-        state="Default"
-        {...getOverrideProps(overrides, "PhoneFooterLink")}
-      ></PhoneFooterLink>
+        children={footerLinkGroup4}
+        {...getOverrideProps(overrides, "FooterLinkGroup4")}
+      ></Flex>
     </Flex>
   );
 }

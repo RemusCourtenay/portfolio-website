@@ -32,6 +32,7 @@ export declare type FooterProps = React.PropsWithChildren<Partial<ViewProps> & {
     backgroundShapesSource?: String;
     contactButtonGroup?: React.ReactNode;
     footerLinksGroup?: React.ReactNode;
+    footerBackgroundGroup?: React.ReactNode;
 } & {
     overrides?: FooterOverridesProps | undefined | null;
 }>;

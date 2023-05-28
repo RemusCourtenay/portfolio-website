@@ -1,3 +1,4 @@
+
 import { ProjectCircleView } from "../ui-components";
 import { useState } from "react"
 import { backgrounds, projectImages } from "../resources/images";
@@ -16,7 +17,6 @@ function ResponsiveProjectCircleView(props) {
 
     const [state, setState] = useState("Default");
     const [isLoading, setIsLoading] = useState(true)
-
     const [parent, enableAnimations] = useAutoAnimate()
 
     const project = props.project;
@@ -29,10 +29,12 @@ function ResponsiveProjectCircleView(props) {
         setTimeout(clickHandler, 100);
     };
 
-    function loadProjectCircleView() {
-        return (
+    return (
+        <>
+            <Loader display={isLoading? "block": "none"}/>
             <ProjectCircleView 
                 state={state}
+                display={isLoading? "none": "block"}
                 onMouseEnter={() => setState("Hover")}
                 onMouseLeave={() => setState("Default")}
 
@@ -44,22 +46,13 @@ function ResponsiveProjectCircleView(props) {
                 overrides={
                     {
                         ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]},
-                        ProjectImage: {onLoad: () => setIsLoading(false)},
-                        LinkArrow: {ref: parent}
+                        ProjectImage: {onLoad: setIsLoading.bind(null, false)},
+                        ProjectCircleView: {ref: parent}
                     }
                 }
             />
-        )
-    }
-
-    const loadedProjectCircleView = loadProjectCircleView();
-
-    if (isLoading) {
-        // TODO... replace with something
-        return <Loader />
-    } else {
-        return loadedProjectCircleView;
-    }
+        </>
+    )
 }
 
 export default ResponsiveProjectCircleView;

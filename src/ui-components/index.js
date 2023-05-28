@@ -36,6 +36,7 @@ export { default as GithubIcon } from "./GithubIcon";
 export { default as SkillsGraph } from "./SkillsGraph";
 export { default as TechSquares } from "./TechSquares";
 export { default as ProjectSwapButton } from "./ProjectSwapButton";
+export { default as FooterLink } from "./FooterLink";
 export { default as LinkedInFooterLink } from "./LinkedInFooterLink";
 export { default as JavaIcon } from "./JavaIcon";
 export { default as ProjectLink } from "./ProjectLink";

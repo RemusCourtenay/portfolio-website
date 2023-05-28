@@ -18,7 +18,7 @@ const projectsSmallCircleFolder = projectsSmallFolder + "circular/";
 function buildProjectImagePathData(largeCircleFolder, smallCircleFolder, projectNames) {
     const projectData = {};
 
-    for (const projectName in projectNames) {
+    for (const projectName of projectNames) {
         const projectPath = {
             EXPANDED: largeCircleFolder + projectName.toLowerCase() + ".png",
             CIRCLE: smallCircleFolder + projectName.toLowerCase() + ".png"
@@ -32,7 +32,7 @@ function buildProjectImagePathData(largeCircleFolder, smallCircleFolder, project
 function buildFocusImagePathData(baseFolderPath, imageNames) {
     const imageData = {};
 
-    for (const imageName in imageNames) {
+    for (const imageName of imageNames) {
         const imagePath = {
             DEFAULT:    baseFolderPath + "default/" + imageName.toLowerCase() + ".png",
             FOCUS:      baseFolderPath + "focus/" + imageName.toLowerCase() + ".png"
@@ -52,7 +52,8 @@ export const backgrounds = {
     EXPANDED_VIEW_BORDER:   backgroundsFolder + "project-expanded.png",
     PROJECTS:               backgroundsFolder + "projects-shapes.png",
     SKILLS:                 backgroundsFolder + "skills-shapes.png",
-    SPLASH:                 backgroundsFolder + "splash-shapes.png"
+    SPLASH:                 backgroundsFolder + "splash-shapes.png",
+    FOOTER:                 backgroundsFolder + "footer-shapes.png"
 };
 
 export const icons = {
@@ -63,6 +64,6 @@ export const icons = {
 // Placeholder
 export const footerIcons = {}
 
-export const projectImagess = buildProjectImagePathData(projectsLargeCircleFolder, projectsSmallCircleFolder, projectNames)
+export const projectImages = buildProjectImagePathData(projectsLargeCircleFolder, projectsSmallCircleFolder, projectNames)
 export const techs = buildFocusImagePathData(techsFolder, techNames);
 export const experiences = buildFocusImagePathData(experiencesFolder, experienceNames);

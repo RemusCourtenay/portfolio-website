@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { TechIcon } from "../ui-components";
 import { techs } from "../resources/images";
+
 function ResponsiveTechIcon(props) {
 
     const [hover, setHover] = useState(false)
