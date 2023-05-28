@@ -83,16 +83,16 @@ export const resources = {
         }
     ],
     CONTACT:{
-        "facebook": {
+        facebook: {
             URL: "https://www.facebook.com/remus.courtenay/"
         },
-        "linkedin": {
+        linkedin: {
             URL: "https://www.linkedin.com/in/remuscourtenay/"
         },
-        "github": {
+        github: {
             URL: "https://github.com/RemusCourtenay"
         },
-        "gmail": {
+        gmail: {
             URL: "mailto:remuscourtenay@gmail.com" 
         }
     }

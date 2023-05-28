@@ -9,7 +9,9 @@ function ResponsiveFooterLinks(props) {
 
     const footerLinks = []
 
-    for (const [linkName, linkData] in contactLinkData ) {
+    for (const linkName in contactLinkData ) {
+        const linkData = contactLinkData[linkName]["URL"]
+        console.log(linkName + ": " + linkData)
         footerLinks.push(
             <ResponsiveFooterLink 
                 linkName = {linkName}
@@ -20,10 +22,10 @@ function ResponsiveFooterLinks(props) {
 
     return(
         <FooterLinks 
-            link1Group={footerLinks[0]}
-            link2Group={footerLinks[1]}
-            link3Group={footerLinks[2]}
-            link4Group={footerLinks[3]}
+            footerLinkGroup1={footerLinks[0]}
+            footerLinkGroup2={footerLinks[1]}
+            footerLinkGroup3={footerLinks[2]}
+            footerLinkGroup4={footerLinks[3]}
         />
     );
 }
