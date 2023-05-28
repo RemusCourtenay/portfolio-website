@@ -82,7 +82,7 @@ export default function Footer(props) {
             direction="column"
             justifyContent="unset"
             letterSpacing="0.93px"
-            width="700px"
+            width="710px"
             height="86.87px"
             gap="unset"
             alignItems="unset"

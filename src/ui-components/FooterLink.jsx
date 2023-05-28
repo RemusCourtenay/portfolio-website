@@ -9,7 +9,14 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function FooterLink(props) {
-  const { logoSource, onLogoClick, overrides, ...rest } = props;
+  const {
+    logoSource,
+    onLogoClick,
+    logoFocusSource,
+    isFocus,
+    overrides,
+    ...rest
+  } = props;
   return (
     <View
       width="15px"
@@ -37,7 +44,7 @@ export default function FooterLink(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
-        src={logoSource}
+        src={isFocus == true ? logoFocusSource : logoSource}
         onClick={onLogoClick}
         {...getOverrideProps(overrides, "Logo")}
       ></Image>

@@ -16,6 +16,8 @@ export declare type FooterLinkOverridesProps = {
 export declare type FooterLinkProps = React.PropsWithChildren<Partial<ViewProps> & {
     logoSource?: String;
     onLogoClick?: (event: SyntheticEvent) => void;
+    logoFocusSource?: String;
+    isFocus?: Boolean;
 } & {
     overrides?: FooterLinkOverridesProps | undefined | null;
 }>;

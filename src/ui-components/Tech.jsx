@@ -49,7 +49,7 @@ export default function Tech(props) {
           direction="column"
           justifyContent="unset"
           letterSpacing="-0.33px"
-          width="700px"
+          width="710px"
           height="56.31px"
           gap="unset"
           alignItems="unset"

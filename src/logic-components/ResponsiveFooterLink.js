@@ -1,26 +1,31 @@
 import PropTypes from "prop-types";
 import { footerIcons } from "../resources/images";
 import { useState } from "react"
+import { FooterLink } from "../ui-components"
 
 
 function ResponsiveFooterLink(props) {
 
-    const [state, setState] = useState("Default");
+    const [isFocus, setIsFocus] = useState(false);
     const linkName = props.linkName;
-    const clickHandler = props.clickHandler;
+    const linkData = props.linkData;
+
+    function goToFooterLinkDestination(url) {
+        // TODO...
+        console.log(url)
+    }
 
 
     return (
-        <></>
-        // <FooterLink 
-        //     state={state}
-        //     onMouseEnter={() => setState("Hover")}
-        //     onMouseLeave={() => setState("Default")}
+        <FooterLink
+            isFocus={isFocus}
+            onMouseEnter={() => setIsFocus(true)}
+            onMouseLeave={() => setIsFocus(false)}
 
-        //     clickHandler={clickHandler}
-        //     iconSource={footerIcons[linkName]["DEFAULT"]}
-        //     iconFocusSource={footerIcons[linkName]["FOCUS"]}
-        // />
+            onLogoClick={() => goToFooterLinkDestination(linkData["URL"])}
+            iconSource={footerIcons[linkName.toUpperCase()]["DEFAULT"]}
+            iconFocusSource={footerIcons[linkName.toUpperCase()]["FOCUS"]}
+        />
     );
 }
 

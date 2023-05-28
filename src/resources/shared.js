@@ -24,3 +24,10 @@ export const projectNames = [
     "aws",
     "honours"
 ]
+
+export const footerIconNames = [
+    "facebook",
+    "linkedin",
+    "github",
+    "gmail"
+]

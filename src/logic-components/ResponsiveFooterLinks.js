@@ -1,26 +1,22 @@
 import PropTypes from "prop-types"
 import { FooterLinks } from "../ui-components";
 import ResponsiveFooterLink from "./ResponsiveFooterLink";
+import { footerIconNames } from "../resources/shared.js"
 
 function ResponsiveFooterLinks(props) {
 
     const contactLinkData = props.contactLinkData;
 
-    function goToLinkDestination(url) {
-        console.log(url);
-        // TODO..
-    }
-
     const footerLinks = []
 
-    for (const contactLink in contactLinkData) {
+    for (const [linkName, linkData] in contactLinkData ) {
         footerLinks.push(
             <ResponsiveFooterLink 
-                linkName={contactLink["NAME"]}
-                clickHandler={goToLinkDestination.bind(null, contactLink["URL"])}
+                linkName = {linkName}
+                linkData = {linkData}
             />
         )
-    }
+    };
 
     return(
         <FooterLinks 
@@ -31,12 +27,5 @@ function ResponsiveFooterLinks(props) {
         />
     );
 }
-
-ResponsiveFooterLinks.propTypes = {
-    contactLinkData: PropTypes.arrayOf(PropTypes.shape({
-        NAME: PropTypes.string.isRequired,
-        URL: PropTypes.string.isRequired
-    }))
-};
 
 export default ResponsiveFooterLinks;

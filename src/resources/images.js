@@ -1,11 +1,12 @@
-import { experienceNames, projectNames, techNames } from "./shared";
+import { experienceNames, projectNames, techNames, footerIconNames } from "./shared";
 
 const imagesFolder =        "assets/";
 const backgroundsFolder =   imagesFolder + "backgrounds/";
 
 const iconsFolder =         imagesFolder + "icons/";
 const techsFolder =         iconsFolder + "techs/";
-const experiencesFolder =   iconsFolder +"experiences/";
+const experiencesFolder =   iconsFolder + "experiences/";
+const footerIconsFolder =   iconsFolder + "footerIcons/"
 
 const projectsFolder            = imagesFolder + "projects/";
 const projectsLargeFolder       = projectsFolder + "1145/";
@@ -58,12 +59,10 @@ export const backgrounds = {
 
 export const icons = {
     LEFT_ARROW: iconsFolder + "arrow-left.png",
-    RIGHT_ARROW: iconsFolder + "arrow-right.png",
+    RIGHT_ARROW: iconsFolder + "arrow-right.png"
 };
-
-// Placeholder
-export const footerIcons = {}
 
 export const projectImages = buildProjectImagePathData(projectsLargeCircleFolder, projectsSmallCircleFolder, projectNames)
 export const techs = buildFocusImagePathData(techsFolder, techNames);
 export const experiences = buildFocusImagePathData(experiencesFolder, experienceNames);
+export const footerIcons = buildFocusImagePathData(footerIconsFolder, footerIconNames);
