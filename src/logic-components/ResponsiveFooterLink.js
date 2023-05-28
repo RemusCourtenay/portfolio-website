@@ -10,8 +10,6 @@ function ResponsiveFooterLink(props) {
     const linkName = props.linkName;
     const linkData = props.linkData;
 
-    console.log(footerIcons)
-
     function goToFooterLinkDestination(url) {
         // TODO...
         console.log(url)

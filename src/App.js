@@ -29,70 +29,54 @@ function App() {
   }
 
   return (
-    <Footer 
-      footerLinksGroup={
-        <ResponsiveFooterLinks 
-          contactLinkData={resources["CONTACT"]}
-        />
-      }
-      contactButtonGroup={
-        <ResponsiveContactButton 
-          bold="False"
-        />
-      }
-      footerBackgroundGroup = {
-        <Image src={backgrounds["FOOTER"]}/>
+    <>
+      <Introduction 
+        headerGroup={<ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>}
+        splashGroup={<ResponsiveSplash />}
+      />
+      <Skills 
+        skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton buttonText="Download CV" clickhandler={() => console.log("download cv")}/>}/>}
+        skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
+        backgroundShapesSource={backgrounds["SKILLS"]}  
+      />
+
+      <Tech 
+        techSquaresGroup={<TechSquares 
+                            techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]}/>}
+                            iconGroup1={<ResponsiveTechIcon techName={resources["TECH"][0]}/>}
+                            iconGroup2={<ResponsiveTechIcon techName={resources["TECH"][1]}/>}
+                            iconGroup3={<ResponsiveTechIcon techName={resources["TECH"][2]}/>}
+                            iconGroup4={<ResponsiveTechIcon techName={resources["TECH"][3]}/>}
+                            iconGroup5={<ResponsiveTechIcon techName={resources["TECH"][4]}/>}
+                            iconGroup6={<ResponsiveTechIcon techName={resources["TECH"][5]}/>}
+                            iconGroup7={<ResponsiveTechIcon techName={resources["TECH"][6]}/>}
+                            iconGroup8={<ResponsiveTechIcon techName={resources["TECH"][7]}/>}
+                            iconGroup9={<ResponsiveTechIcon techName={resources["TECH"][8]}/>}
+                            iconGroup10={<ResponsiveTechIcon techName={resources["TECH"][9]}/>}
+                            iconGroup11={<ResponsiveTechIcon techName={resources["TECH"][10]}/>}
+                            iconGroup12={<ResponsiveTechIcon techName={resources["TECH"][11]}/>}
+                          />}
+      
+      />
+      <ResponsiveProjects projectResources={resources["PROJECTS"]} />
+
+      <Footer 
+        footerLinksGroup={
+          <ResponsiveFooterLinks 
+            contactLinkData={resources["CONTACT"]}
+          />
+        }
+        contactButtonGroup={
+          <ResponsiveContactButton 
+            bold="False"
+          />
+        }
+        footerBackgroundGroup = {
+          <Image src={backgrounds["FOOTER"]}/>
       }
     />
+  </>
   );
-
-  // return (
-  //   <div>
-  //     <Introduction 
-  //       headerGroup={<ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>}
-  //       splashGroup={<ResponsiveSplash />}
-  //     />
-  //     <Skills 
-  //       skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton buttonText="Download CV" clickhandler={() => console.log("download cv")}/>}/>}
-  //       skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
-  //       backgroundShapesSource={backgrounds["SKILLS"]}  
-  //     />
-
-  //     <Tech 
-  //       techSquaresGroup={<TechSquares 
-  //                           techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]}/>}
-  //                           iconGroup1={<ResponsiveTechIcon techName={resources["TECH"][0]}/>}
-  //                           iconGroup2={<ResponsiveTechIcon techName={resources["TECH"][1]}/>}
-  //                           iconGroup3={<ResponsiveTechIcon techName={resources["TECH"][2]}/>}
-  //                           iconGroup4={<ResponsiveTechIcon techName={resources["TECH"][3]}/>}
-  //                           iconGroup5={<ResponsiveTechIcon techName={resources["TECH"][4]}/>}
-  //                           iconGroup6={<ResponsiveTechIcon techName={resources["TECH"][5]}/>}
-  //                           iconGroup7={<ResponsiveTechIcon techName={resources["TECH"][6]}/>}
-  //                           iconGroup8={<ResponsiveTechIcon techName={resources["TECH"][7]}/>}
-  //                           iconGroup9={<ResponsiveTechIcon techName={resources["TECH"][8]}/>}
-  //                           iconGroup10={<ResponsiveTechIcon techName={resources["TECH"][9]}/>}
-  //                           iconGroup11={<ResponsiveTechIcon techName={resources["TECH"][10]}/>}
-  //                           iconGroup12={<ResponsiveTechIcon techName={resources["TECH"][11]}/>}
-  //                         />}
-      
-  //     />
-  //     <ResponsiveProjects projectResources={resources["PROJECTS"]} />
-
-  //     <Footer 
-  //       footerLinksGroup={
-  //         <ResponsiveFooterLinks 
-  //           contactLinkData={resources["CONTACT"]}
-  //         />
-  //       }
-  //       contactButtonGroup={
-  //         <ResponsiveContactButton 
-  //           bold="False"
-  //         />
-  //       }
-  //       backgroundShapesSource={backgrounds["FOOTER"]}
-  //     />
-  //   </div>
-  // );
 
 
 }

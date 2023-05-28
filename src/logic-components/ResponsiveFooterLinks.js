@@ -11,7 +11,6 @@ function ResponsiveFooterLinks(props) {
 
     for (const linkName in contactLinkData ) {
         const linkData = contactLinkData[linkName]["URL"]
-        console.log(linkName + ": " + linkData)
         footerLinks.push(
             <ResponsiveFooterLink 
                 linkName = {linkName}
