@@ -21,20 +21,20 @@ export default function FooterLinks(props) {
     <Flex
       gap="50px"
       direction="row"
-      width="200px"
-      height="25px"
+      width="224px"
+      height="26px"
       justifyContent="space-between"
       alignItems="center"
       overflow="hidden"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="5px 10px 5px 10px"
       {...getOverrideProps(overrides, "FooterLinks")}
       {...rest}
     >
       <Flex
         padding="0px 0px 0px 0px"
-        width="15px"
-        height="15px"
+        width="16px"
+        height="16px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -46,8 +46,8 @@ export default function FooterLinks(props) {
       ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
-        width="15px"
-        height="15px"
+        width="16px"
+        height="16px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -59,8 +59,8 @@ export default function FooterLinks(props) {
       ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
-        width="15px"
-        height="15px"
+        width="16px"
+        height="16px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -72,8 +72,8 @@ export default function FooterLinks(props) {
       ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
-        width="15px"
-        height="15px"
+        width="16px"
+        height="16px"
         display="block"
         gap="unset"
         alignItems="unset"

@@ -133,7 +133,7 @@ export default function Footer(props) {
           {...getOverrideProps(overrides, "ContactButtonGroup")}
         ></Flex>
         <Flex
-          gap="10px"
+          gap="0"
           direction="column"
           width="unset"
           height="unset"
@@ -187,10 +187,11 @@ export default function Footer(props) {
               direction="column"
               justifyContent="unset"
               width="350px"
-              height="17.37px"
+              height="unset"
               gap="unset"
               alignItems="unset"
               shrink="0"
+              alignSelf="stretch"
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
@@ -202,8 +203,8 @@ export default function Footer(props) {
             ></Text>
             <Flex
               padding="0px 0px 0px 0px"
-              width="200px"
-              height="25px"
+              width="224px"
+              height="26px"
               display="block"
               gap="unset"
               alignItems="unset"
@@ -228,6 +229,7 @@ export default function Footer(props) {
               gap="unset"
               alignItems="unset"
               shrink="0"
+              alignSelf="stretch"
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
