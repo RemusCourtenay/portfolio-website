@@ -45,7 +45,8 @@ function App() {
 
   async function downloadFileFromS3(fileResourcesKey) {
     const fileKey = resources["PERSONAL"][fileResourcesKey]["FILE_URI"];
-    const result = await Storage.get(fileKey, {download: true})
+    const result = await Storage.get(fileKey, {download: true});
+    console.log(result);
     downloadBlob(result.Body, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"])
   }
 
