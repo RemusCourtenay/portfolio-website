@@ -41,19 +41,13 @@ function App() {
     a.addEventListener('click', clickHandler, false);
     a.click();
     return a;
-  }
+  };
 
-  function downloadFileFromS3(fileResourcesKey) {
+  async function downloadFileFromS3(fileResourcesKey) {
     const fileKey = resources["PERSONAL"][fileResourcesKey]["FILE_URI"];
-    console.log("fileKey: " + fileKey)
-
-    const downloadFileFromS3Promise = new Promise((resolve, reject) => {
-      resolve(Storage.get("remus-cv.pdf", {download: true, level: 'public'}))
-    })
-
-    downloadFileFromS3Promise
-      .then((result) => downloadBlob(result, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"]))
-      .catch((error) => console.log(error))
+    const result = await Storage.get(fileKey, {download: true});
+    console.log(result);
+    downloadBlob(result.Body, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"])
   }
 
 
@@ -79,7 +73,6 @@ function App() {
         skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
         backgroundShapesSource={backgrounds["SKILLS"]}  
       />
-
       <Tech
         id={anchors['Experience']} 
         techSquaresGroup={<TechSquares 
@@ -100,7 +93,6 @@ function App() {
       
       />
       <ResponsiveProjects id={anchors['Project']} projectResources={resources["PROJECTS"]} />
-
       <Footer
         id={anchors['Contact']} 
         footerLinksGroup={
@@ -113,14 +105,12 @@ function App() {
             bold="False"
           />
         }
-        footerBackgroundGroup = {
+        footerBackgroundGroup={
           <Image src={backgrounds["FOOTER"]}/>
-      }
-    />
-  </>
+        }
+      />
+    </>
   );
-
-
 }
 
 export default App;
