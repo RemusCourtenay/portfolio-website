@@ -15,9 +15,10 @@ import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ProjectCircleView(props) {
   const {
     projectTitle,
-    circleViewBorderSource,
     projectImageSource,
     circleViewClickHandler,
+    backgroundGroup,
+    backgroundImageSource,
     overrides: overridesProp,
     ...rest
   } = props;
@@ -25,6 +26,8 @@ export default function ProjectCircleView(props) {
     {
       variantValues: { state: "Default" },
       overrides: {
+        RedBorderCircle: {},
+        BackgroundGroup: {},
         ProjectImage: {},
         ImageGroup: {},
         EllipseMask: {},
@@ -32,13 +35,14 @@ export default function ProjectCircleView(props) {
         ReadMore: {},
         ProjectTitle: {},
         LinkArrow: {},
-        RedBorderCircle: {},
         ProjectCircleView: {},
       },
     },
     {
       variantValues: { state: "Hover" },
       overrides: {
+        RedBorderCircle: {},
+        BackgroundGroup: {},
         ProjectImage: {},
         ImageGroup: {},
         EllipseMask: {
@@ -54,13 +58,14 @@ export default function ProjectCircleView(props) {
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "45.33%", right: "49.67%" },
-        RedBorderCircle: {},
         ProjectCircleView: {},
       },
     },
     {
       variantValues: { state: "Click" },
       overrides: {
+        RedBorderCircle: {},
+        BackgroundGroup: {},
         ProjectImage: {},
         ImageGroup: {},
         EllipseMask: {
@@ -82,7 +87,6 @@ export default function ProjectCircleView(props) {
         ReadMore: { display: "block" },
         ProjectTitle: {},
         LinkArrow: { left: "50.83%", right: "44.17%" },
-        RedBorderCircle: {},
         ProjectCircleView: {},
       },
     },
@@ -107,6 +111,35 @@ export default function ProjectCircleView(props) {
     >
       <Flex
         gap="0"
+        direction="column"
+        width="600px"
+        height="600px"
+        justifyContent="center"
+        alignItems="center"
+        position="absolute"
+        top="0px"
+        left="0px"
+        padding="0px 0px 0px 0px"
+        display="flex"
+        {...getOverrideProps(overrides, "BackgroundGroup")}
+      >
+        <Image
+          width="600px"
+          height="600px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          objectFit="cover"
+          src={backgroundImageSource}
+          {...getOverrideProps(overrides, "RedBorderCircle")}
+        ></Image>
+      </Flex>
+      <Flex
+        gap="0"
         direction="row"
         width="600px"
         height="600px"
@@ -129,7 +162,7 @@ export default function ProjectCircleView(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          objectFit="contain"
+          objectFit="cover"
           src={projectImageSource}
           {...getOverrideProps(overrides, "ProjectImage")}
         ></Image>
@@ -233,21 +266,6 @@ export default function ProjectCircleView(props) {
         right="75.83%"
         {...getOverrideProps(overrides, "LinkArrow")}
       ></Icon>
-      <Image
-        width="600px"
-        height="600px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="0px"
-        left="0px"
-        padding="0px 0px 0px 0px"
-        objectFit="cover"
-        src={circleViewBorderSource}
-        {...getOverrideProps(overrides, "RedBorderCircle")}
-      ></Image>
     </View>
   );
 }

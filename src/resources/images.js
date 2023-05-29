@@ -49,8 +49,8 @@ export const layout = {
 }
 
 export const backgrounds = {
-    CIRCLE_VIEW_BORDER:     backgroundsFolder + "project-circle.png",
-    EXPANDED_VIEW_BORDER:   backgroundsFolder + "project-expanded.png",
+    CIRCLE_VIEW_BORDER:     backgroundsFolder + "project-circle.svg",
+    EXPANDED_VIEW_BORDER:   backgroundsFolder + "project-expanded.svg",
     PROJECTS:               backgroundsFolder + "projects-shapes.png",
     SKILLS:                 backgroundsFolder + "skills-shapes.png",
     SPLASH:                 backgroundsFolder + "splash-shapes.png",

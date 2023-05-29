@@ -31,17 +31,15 @@ export default function ProjectFullCircle(props) {
       {...rest}
     >
       <Image
-        width="100%"
-        height="100%"
+        width="1145px"
+        height="1145px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="0%"
+        top="0px"
+        left="0px"
         padding="0px 0px 0px 0px"
         objectFit="cover"
         src={projectImageSource}

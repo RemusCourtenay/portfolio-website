@@ -24,7 +24,7 @@ export default function ProjectExpandedBackground(props) {
       {...rest}
     >
       <Image
-        width="1843.2px"
+        width="1200px"
         height="1200px"
         display="block"
         gap="unset"
