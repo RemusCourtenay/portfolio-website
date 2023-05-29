@@ -21,11 +21,11 @@ import { useAutoAnimate } from '@formkit/auto-animate/react';
 function App() {
 
   const anchors = {
-    'Home': 'HomeTest',
-    'Skills': 'SkillsTest',
-    'Project': 'ProjectTest',
-    'Experience': 'ExperienceTest',
-    'Contact': 'ContactTest'
+    Home: 'introductionSection',
+    Skills: 'skillsSection',
+    Experience: 'techSection',
+    Projects: 'projectSection',
+    Contact: 'footerSection'
   }
 
 
@@ -33,16 +33,19 @@ function App() {
   return (
     <>
       <Introduction 
+        id={anchors['Home']}
         headerGroup={<ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>}
         splashGroup={<ResponsiveSplash />}
       />
-      <Skills 
+      <Skills
+        id={anchors['Skills']} 
         skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton buttonText="Download CV" clickhandler={() => console.log("download cv")}/>}/>}
         skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
         backgroundShapesSource={backgrounds["SKILLS"]}  
       />
 
-      <Tech 
+      <Tech
+        id={anchors['Experience']} 
         techSquaresGroup={<TechSquares 
                             techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]}/>}
                             iconGroup1={<ResponsiveTechIcon techName={resources["TECH"][0]}/>}
@@ -60,9 +63,10 @@ function App() {
                           />}
       
       />
-      <ResponsiveProjects projectResources={resources["PROJECTS"]} />
+      <ResponsiveProjects id={anchors['Project']} projectResources={resources["PROJECTS"]} />
 
-      <Footer 
+      <Footer
+        id={anchors['Contact']} 
         footerLinksGroup={
           <ResponsiveFooterLinks 
             contactLinkData={resources["CONTACT"]}

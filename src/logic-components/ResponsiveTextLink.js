@@ -10,7 +10,8 @@ function ResponsiveTextLink(props) {
     const [hover, setHover] = useState('False')
 
     function clickHandler() {
-        window.alert("anchor: " + anchor)
+        const anchorElement = document.getElementById(anchor)
+        anchorElement.scrollIntoView({behaviour: "smooth"})
     }
 
     function mouseEnterHandler() {

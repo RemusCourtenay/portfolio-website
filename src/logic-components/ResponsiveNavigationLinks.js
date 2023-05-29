@@ -18,14 +18,14 @@ function ResponsiveNavigationLinks(props) {
                 anchor={anchors['Skills']}
               />}
         link3={<ResponsiveTextLink 
-                content='Project'
-                focus='False'
-                anchor={anchors['Project']}
-              />}
-        link4={<ResponsiveTextLink 
                 content='Experience'
                 focus='False'
                 anchor={anchors['Experience']}
+              />}
+        link4={<ResponsiveTextLink 
+                content='Projects'
+                focus='False'
+                anchor={anchors['Projects']}
               />}
         link5={<ResponsiveTextLink 
                 content='Contact'
