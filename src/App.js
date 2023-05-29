@@ -1,10 +1,10 @@
 import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
-import { Image, View, Icon } from '@aws-amplify/ui-react';
+import { Image } from '@aws-amplify/ui-react';
 import { resources } from './resources/remus';
-import { backgrounds, layout, techs } from './resources/images';
-import { Footer, Introduction, Projects, ProjectsHeader, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
+import { backgrounds, layout } from './resources/images';
+import { Footer, Introduction, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
 import ResponsiveHeader from './logic-components/ResponsiveHeader';
 import ResponsiveSplash from './logic-components/ResponsiveSplash';
 import ResponsiveCVButton from './logic-components/ResponsiveCVButton'; 
@@ -12,11 +12,9 @@ import ResponsiveContactButton from './logic-components/ResponsiveContactButton'
 import ResponsiveSkillsGraph from './logic-components/ResponsiveSkillsGraph';
 import ResponsiveTechIcon from './logic-components/ResponsiveTechIcon';
 import ResponsiveProjects from './logic-components/ResponsiveProjects';
-import ResponsiveProjectSwapButton from './logic-components/ResponsiveProjectSwapButton';
 import ResponsiveFooterLinks from './logic-components/ResponsiveFooterLinks';
 
-import { useState } from 'react';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { Storage } from "aws-amplify"
 
 function App() {
 
@@ -26,6 +24,29 @@ function App() {
     Experience: 'techSection',
     Projects: 'projectSection',
     Contact: 'footerSection'
+  }
+
+  // Stolen from https://docs.amplify.aws/lib/storage/download/q/platform/react-native/#file-download-option
+  function downloadBlob(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename || 'download';
+    const clickHandler = () => {
+      setTimeout(() => {
+        URL.revokeObjectURL(url);
+        a.removeEventListener('click', clickHandler);
+      }, 150);
+    };
+    a.addEventListener('click', clickHandler, false);
+    a.click();
+    return a;
+  }
+
+  async function downloadFileFromS3(fileResourcesKey) {
+    const fileKey = resources["PERSONAL"][fileResourcesKey]["FILE_URI"];
+    const result = await Storage.get(fileKey, {download: true})
+    downloadBlob(result.Body, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"])
   }
 
 
@@ -39,7 +60,16 @@ function App() {
       />
       <Skills
         id={anchors['Skills']} 
-        skillsTextGroup={<SkillsText cvButtonGroup={<ResponsiveCVButton buttonText="Download CV" clickhandler={() => console.log("download cv")}/>}/>}
+        skillsTextGroup={
+          <SkillsText 
+            cvButtonGroup={
+              <ResponsiveCVButton 
+                buttonText="Download CV" 
+                clickhandler={() => downloadFileFromS3("CV")}
+              />
+            }
+          />
+        }
         skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
         backgroundShapesSource={backgrounds["SKILLS"]}  
       />

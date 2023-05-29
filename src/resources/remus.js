@@ -1,7 +1,11 @@
 export const resources = {
     PERSONAL: {
         FIRST_NAME: "Remus",
-        FULL_NAME: "Remus Courtenay"
+        FULL_NAME: "Remus Courtenay",
+        CV: {
+            FILE_URI: "remus-cv.pdf",
+            FILE_NAME: "Remus Courtenay Resume.pdf"
+        }
     },
     SKILLS: [
         {   

@@ -6,7 +6,15 @@ function ResponsiveSplash(props){
 
     return(      
             <Splash
-                splashTextGroup={<SplashText contactButtonGroup={<ResponsiveContactButton bold='False' />} />} 
+                splashTextGroup={
+                    <SplashText 
+                        contactButtonGroup={
+                            <ResponsiveContactButton 
+                                bold='False' 
+                            />
+                        }
+                    />
+                } 
                 faceImage="assets/face.png"
                 backgroundShapesSource={backgrounds["SPLASH"]}
             />
