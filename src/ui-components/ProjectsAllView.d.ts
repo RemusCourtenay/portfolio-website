@@ -6,13 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, ViewProps } from "@aws-amplify/ui-react";
 import { SkillsButtonProps } from "./SkillsButton";
 import { ProjectCircleViewProps } from "./ProjectCircleView";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectsAllViewOverridesProps = {
     ProjectsAllView?: PrimitiveOverrideProps<ViewProps>;
-    PortfolioButtonGroup?: PrimitiveOverrideProps<ViewProps>;
+    PortfolioButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     SkillsButton?: SkillsButtonProps;
     Project3Group?: PrimitiveOverrideProps<ViewProps>;
     ProjectCircleView220965?: ProjectCircleViewProps;

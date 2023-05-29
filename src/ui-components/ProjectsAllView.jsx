@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { View } from "@aws-amplify/ui-react";
+import { Flex, View } from "@aws-amplify/ui-react";
 export default function ProjectsAllView(props) {
   const {
     project1Group,
@@ -30,20 +30,20 @@ export default function ProjectsAllView(props) {
       {...getOverrideProps(overrides, "ProjectsAllView")}
       {...rest}
     >
-      <View
-        padding="0px 0px 0px 0px"
+      <Flex
+        gap="10px"
+        direction="column"
         width="270px"
         height="100px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        justifyContent="center"
+        alignItems="center"
         position="absolute"
         top="1018px"
         left="822px"
+        padding="0px 0px 0px 0px"
         children={portfolioButtonGroup}
         {...getOverrideProps(overrides, "PortfolioButtonGroup")}
-      ></View>
+      ></Flex>
       <View
         padding="0px 0px 0px 0px"
         width="600px"

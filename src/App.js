@@ -14,7 +14,7 @@ import ResponsiveTechIcon from './logic-components/ResponsiveTechIcon';
 import ResponsiveProjects from './logic-components/ResponsiveProjects';
 import ResponsiveFooterLinks from './logic-components/ResponsiveFooterLinks';
 
-import { Storage } from "aws-amplify"
+import { Storage } from "@aws-amplify/storage"
 
 function App() {
 
@@ -43,12 +43,18 @@ function App() {
     return a;
   }
 
-  async function downloadFileFromS3(fileResourcesKey) {
+  function downloadFileFromS3(fileResourcesKey) {
     const fileKey = resources["PERSONAL"][fileResourcesKey]["FILE_URI"];
-    const result = await Storage.get(fileKey, {download: true})
-    downloadBlob(result.Body, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"])
-  }
+    console.log("fileKey: " + fileKey)
 
+    const downloadFileFromS3Promise = new Promise((resolve, reject) => {
+      resolve(Storage.get("remus-cv.pdf", {download: true, level: 'public'}))
+    })
+
+    downloadFileFromS3Promise
+      .then((result) => downloadBlob(result, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"]))
+      .catch((error) => console.log(error))
+  }
 
 
   return (
@@ -65,7 +71,7 @@ function App() {
             cvButtonGroup={
               <ResponsiveCVButton 
                 buttonText="Download CV" 
-                clickhandler={() => downloadFileFromS3("CV")}
+                clickHandler={() => downloadFileFromS3("CV")}
               />
             }
           />
