@@ -46,8 +46,8 @@ export default function Header(props) {
       ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
-        width="467px"
-        height="43px"
+        width="500px"
+        height="45px"
         display="block"
         gap="unset"
         alignItems="unset"

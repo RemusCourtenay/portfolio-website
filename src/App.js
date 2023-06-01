@@ -46,7 +46,6 @@ function App() {
   async function downloadFileFromS3(fileResourcesKey) {
     const fileKey = resources["PERSONAL"][fileResourcesKey]["FILE_URI"];
     const result = await Storage.get(fileKey, {download: true});
-    console.log(result);
     downloadBlob(result.Body, resources["PERSONAL"][fileResourcesKey]["FILE_NAME"])
   }
 
@@ -92,7 +91,7 @@ function App() {
                           />}
       
       />
-      <ResponsiveProjects id={anchors['Project']} projectResources={resources["PROJECTS"]} />
+      <ResponsiveProjects id={anchors['Projects']} projectResources={resources["PROJECTS"]} />
       <Footer
         id={anchors['Contact']} 
         footerLinksGroup={

@@ -11,7 +11,12 @@ function ResponsiveTextLink(props) {
 
     function clickHandler() {
         const anchorElement = document.getElementById(anchor)
-        anchorElement.scrollIntoView({behaviour: "smooth"})
+        // anchorElement.scrollIntoView({behaviour: "smooth"})
+        anchorPosition = anchorElement.current.getBoundingClientRect().top + window.scrollY
+        window.scroll({
+            top: anchorPosition,
+            behaviour: "smooth"
+        })
     }
 
     function mouseEnterHandler() {

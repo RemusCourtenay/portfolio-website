@@ -12,15 +12,15 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type NavigationLinksOverridesProps = {
     NavigationLinks?: PrimitiveOverrideProps<FlexProps>;
     Group1?: PrimitiveOverrideProps<FlexProps>;
-    Home?: TextLinkProps;
+    TextLink39328?: TextLinkProps;
     Group2?: PrimitiveOverrideProps<FlexProps>;
-    Skills?: TextLinkProps;
+    TextLink157890?: TextLinkProps;
     Group3?: PrimitiveOverrideProps<FlexProps>;
-    Projects?: TextLinkProps;
+    TextLink3001244?: TextLinkProps;
     Group4?: PrimitiveOverrideProps<FlexProps>;
-    Experience?: TextLinkProps;
+    TextLink3001276?: TextLinkProps;
     Group5?: PrimitiveOverrideProps<FlexProps>;
-    Contact?: TextLinkProps;
+    TextLink39330?: TextLinkProps;
 } & EscapeHatchProps;
 export declare type NavigationLinksProps = React.PropsWithChildren<Partial<FlexProps> & {
     link1?: React.ReactNode;

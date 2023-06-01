@@ -16,7 +16,7 @@ export default function HeaderName(props) {
       direction="row"
       width="248px"
       height="30px"
-      justifyContent="flex-start"
+      justifyContent="center"
       alignItems="flex-end"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -50,7 +50,7 @@ export default function HeaderName(props) {
         viewBox={{ minX: 0, minY: 0, width: 8, height: 8 }}
         paths={[
           {
-            d: "M8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4Z",
+            d: "M4 8C6.20914 8 8 6.20914 8 4C8 1.79086 6.20914 0 4 0C1.79086 0 0 1.79086 0 4C0 6.20914 1.79086 8 4 8Z",
             fill: "rgba(230,57,70,1)",
             fillRule: "nonzero",
           },
@@ -61,7 +61,7 @@ export default function HeaderName(props) {
         justifyContent="unset"
         shrink="0"
         position="relative"
-        {...getOverrideProps(overrides, "Red Dot")}
+        {...getOverrideProps(overrides, "RedCircle")}
       ></Icon>
     </Flex>
   );

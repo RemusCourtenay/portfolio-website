@@ -49,7 +49,7 @@ export default function TextLink(props) {
       gap="10px"
       direction="row"
       width="unset"
-      height="unset"
+      height="45px"
       justifyContent="center"
       alignItems="center"
       position="relative"

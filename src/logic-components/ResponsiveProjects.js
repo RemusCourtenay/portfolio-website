@@ -12,6 +12,7 @@ function ResponsiveProjects(props) {
     const [isPendingProjectChange, startProjectTransition] = useTransition();
 
     const projects = props.projectResources
+    const anchorId = props.id
     const clickHandlers = []
 
     // Wrapping the state change in a useTransition hook means that the UI will remain responsive
@@ -35,6 +36,7 @@ function ResponsiveProjects(props) {
 
     return(
         <Projects
+            id={anchorId}
             projectsHeaderGroup={
                 <ResponsiveProjectsHeader
                     projects={projects}  

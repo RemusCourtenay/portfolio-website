@@ -14,77 +14,77 @@ export default function NavigationLinks(props) {
     <Flex
       gap="0"
       direction="row"
-      width="467px"
-      height="unset"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      width="500px"
+      height="45px"
+      justifyContent="space-between"
+      alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
       {...getOverrideProps(overrides, "NavigationLinks")}
       {...rest}
     >
       <Flex
-        padding="0px 0px 0px 0px"
-        width="78px"
-        height="43px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        padding="0px 0px 0px 0px"
         children={link1}
         {...getOverrideProps(overrides, "Group1")}
       ></Flex>
       <Flex
-        padding="0px 0px 0px 0px"
-        width="72px"
-        height="43px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        padding="0px 0px 0px 0px"
         children={link2}
         {...getOverrideProps(overrides, "Group2")}
       ></Flex>
       <Flex
-        padding="0px 0px 0px 0px"
-        width="99px"
-        height="43px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        padding="0px 0px 0px 0px"
         children={link3}
         {...getOverrideProps(overrides, "Group3")}
       ></Flex>
       <Flex
-        padding="0px 0px 0px 0px"
-        width="128px"
-        height="43px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        padding="0px 0px 0px 0px"
         children={link4}
         {...getOverrideProps(overrides, "Group4")}
       ></Flex>
       <Flex
-        padding="0px 0px 0px 0px"
-        width="96px"
-        height="43px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        padding="0px 0px 0px 0px"
         children={link5}
         {...getOverrideProps(overrides, "Group5")}
       ></Flex>

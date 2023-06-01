@@ -11,7 +11,7 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type HeaderNameOverridesProps = {
     HeaderName?: PrimitiveOverrideProps<FlexProps>;
     HeaderNameText?: PrimitiveOverrideProps<TextProps>;
-    "Red Dot"?: PrimitiveOverrideProps<IconProps>;
+    RedCircle?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
 export declare type HeaderNameProps = React.PropsWithChildren<Partial<FlexProps> & {
     firstName?: String;
