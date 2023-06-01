@@ -12,3 +12,19 @@
     /* x-span, y-span, blur, colour*/
     text-shadow: 2px 4px 0px rgba(230, 57, 70, 1);
 }
+
+.footer-text-link:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.header-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    z-index: 100000;
+}

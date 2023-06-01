@@ -10,6 +10,7 @@ import { FlexProps, IconProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type HeaderNameOverridesProps = {
     HeaderName?: PrimitiveOverrideProps<FlexProps>;
+    BottomAlignedGroup?: PrimitiveOverrideProps<FlexProps>;
     HeaderNameText?: PrimitiveOverrideProps<TextProps>;
     RedCircle?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;

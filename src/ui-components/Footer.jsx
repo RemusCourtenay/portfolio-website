@@ -6,17 +6,24 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
+import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Footer(props) {
   const {
     backgroundShapesSource,
     contactButtonGroup,
     footerLinksGroup,
     footerBackgroundGroup,
+    chloeCreditLink = "https://www.instagram.com/chloe.m.creates/",
+    footerDividerLineSource,
     overrides,
     ...rest
   } = props;
+  const designCredittoChloeMarerAmpersandTemplateJungleOnClick =
+    useNavigateAction({ type: "url", url: chloeCreditLink, target: "_blank" });
   return (
     <View
       width="1920px"
@@ -133,7 +140,7 @@ export default function Footer(props) {
           {...getOverrideProps(overrides, "ContactButtonGroup")}
         ></Flex>
         <Flex
-          gap="0"
+          gap="3px"
           direction="column"
           width="unset"
           height="unset"
@@ -144,26 +151,20 @@ export default function Footer(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "FooterBottom")}
         >
-          <Icon
+          <Image
             width="1274px"
-            height="5px"
-            viewBox={{ minX: 0, minY: 0, width: 1274, height: 5 }}
-            paths={[
-              {
-                d: "M0 0.5L1274 0.5L1274 -0.5L0 -0.5L0 0.5Z",
-                stroke: "rgba(132,132,132,1)",
-                fillRule: "nonzero",
-                strokeWidth: 1,
-              },
-            ]}
+            height="2px"
             display="block"
             gap="unset"
             alignItems="unset"
             justifyContent="unset"
             shrink="0"
             position="relative"
+            padding="0px 0px 0px 0px"
+            objectFit="cover"
+            src={footerDividerLineSource}
             {...getOverrideProps(overrides, "FooterDividerLine")}
-          ></Icon>
+          ></Image>
           <Flex
             gap="82px"
             direction="row"
@@ -195,10 +196,13 @@ export default function Footer(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Credit to TemplateJungle/FlatIcon"
+              children="Design Credit to Chloe Marer & TemplateJungle"
+              onClick={() => {
+                designCredittoChloeMarerAmpersandTemplateJungleOnClick();
+              }}
               {...getOverrideProps(
                 overrides,
-                "Credit to TemplateJungle/FlatIcon"
+                "Design Credit to Chloe Marer & TemplateJungle"
               )}
             ></Text>
             <Flex

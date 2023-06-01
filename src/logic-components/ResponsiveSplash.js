@@ -4,13 +4,16 @@ import ResponsiveContactButton from "./ResponsiveContactButton";
 
 function ResponsiveSplash(props){
 
+    const contactLink = props.contactLink
+
     return(      
             <Splash
                 splashTextGroup={
                     <SplashText 
                         contactButtonGroup={
                             <ResponsiveContactButton 
-                                bold='False' 
+                                bold='False'
+                                contactLink = {contactLink} 
                             />
                         }
                     />

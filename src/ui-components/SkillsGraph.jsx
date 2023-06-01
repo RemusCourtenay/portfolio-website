@@ -73,7 +73,7 @@ export default function SkillsGraph(props) {
           direction="row"
           width="unset"
           height="unset"
-          justifyContent="space-between"
+          justifyContent="flex-end"
           alignItems="center"
           shrink="0"
           alignSelf="stretch"
@@ -81,32 +81,10 @@ export default function SkillsGraph(props) {
           padding="0px 10px 0px 0px"
           {...getOverrideProps(overrides, "LabelTextGroup")}
         >
-          <Text
-            fontFamily="Raleway"
-            fontSize="16px"
-            fontWeight="500"
-            color="rgba(45,45,45,1)"
-            lineHeight="18.784000396728516px"
-            textAlign="left"
-            display="block"
-            direction="column"
-            justifyContent="unset"
-            letterSpacing="0.17px"
-            width="100px"
-            height="unset"
-            gap="unset"
-            alignItems="unset"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Python"
-            {...getOverrideProps(overrides, "HiddenPaddingText")}
-          ></Text>
           <Flex
             gap="47px"
             direction="row"
-            width="399.08px"
+            width="400px"
             height="unset"
             justifyContent="space-between"
             alignItems="center"
@@ -115,72 +93,111 @@ export default function SkillsGraph(props) {
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "ExperienceTitles")}
           >
-            <Text
-              fontFamily="Raleway"
-              fontSize="16px"
-              fontWeight="500"
-              color="rgba(0,0,0,1)"
-              lineHeight="18.784000396728516px"
-              textAlign="center"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              letterSpacing="0.17px"
-              width="101.69px"
-              height="20px"
-              gap="unset"
-              alignItems="unset"
+            <Flex
+              gap="10px"
+              direction="row"
+              width="100px"
+              height="19px"
+              justifyContent="center"
+              alignItems="center"
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Personal"
-              {...getOverrideProps(overrides, "Personal")}
-            ></Text>
-            <Text
-              fontFamily="Raleway"
-              fontSize="16px"
-              fontWeight="500"
-              color="rgba(0,0,0,1)"
-              lineHeight="18.784000396728516px"
-              textAlign="center"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              letterSpacing="0.17px"
-              width="101.69px"
-              height="20px"
-              gap="unset"
-              alignItems="unset"
+              {...getOverrideProps(overrides, "Header1Group")}
+            >
+              <Text
+                fontFamily="Raleway"
+                fontSize="16px"
+                fontWeight="500"
+                color="rgba(0,0,0,1)"
+                lineHeight="18.784000396728516px"
+                textAlign="center"
+                display="block"
+                direction="column"
+                justifyContent="unset"
+                letterSpacing="0.17px"
+                width="unset"
+                height="unset"
+                gap="unset"
+                alignItems="unset"
+                shrink="0"
+                position="relative"
+                padding="0px 0px 0px 0px"
+                whiteSpace="pre-wrap"
+                children="Personal"
+                {...getOverrideProps(overrides, "Personal")}
+              ></Text>
+            </Flex>
+            <Flex
+              gap="10px"
+              direction="row"
+              width="100px"
+              height="unset"
+              justifyContent="center"
+              alignItems="center"
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Educational"
-              {...getOverrideProps(overrides, "Educational")}
-            ></Text>
-            <Text
-              fontFamily="Raleway"
-              fontSize="16px"
-              fontWeight="500"
-              color="rgba(0,0,0,1)"
-              lineHeight="18.784000396728516px"
-              textAlign="center"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              letterSpacing="0.17px"
-              width="101.69px"
-              height="20px"
-              gap="unset"
-              alignItems="unset"
+              {...getOverrideProps(overrides, "Header2Group")}
+            >
+              <Text
+                fontFamily="Raleway"
+                fontSize="16px"
+                fontWeight="500"
+                color="rgba(0,0,0,1)"
+                lineHeight="18.784000396728516px"
+                textAlign="center"
+                display="block"
+                direction="column"
+                justifyContent="unset"
+                letterSpacing="0.17px"
+                width="unset"
+                height="unset"
+                gap="unset"
+                alignItems="unset"
+                shrink="0"
+                position="relative"
+                padding="0px 0px 0px 0px"
+                whiteSpace="pre-wrap"
+                children="Educational"
+                {...getOverrideProps(overrides, "Educational")}
+              ></Text>
+            </Flex>
+            <Flex
+              gap="10px"
+              direction="row"
+              width="100px"
+              height="unset"
+              justifyContent="center"
+              alignItems="center"
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Commercial"
-              {...getOverrideProps(overrides, "Commercial")}
-            ></Text>
+              {...getOverrideProps(overrides, "Header3Group")}
+            >
+              <Text
+                fontFamily="Raleway"
+                fontSize="16px"
+                fontWeight="500"
+                color="rgba(0,0,0,1)"
+                lineHeight="18.784000396728516px"
+                textAlign="center"
+                display="block"
+                direction="column"
+                justifyContent="unset"
+                letterSpacing="0.17px"
+                width="unset"
+                height="unset"
+                gap="unset"
+                alignItems="unset"
+                shrink="0"
+                position="relative"
+                padding="0px 0px 0px 0px"
+                whiteSpace="pre-wrap"
+                children="Commercial"
+                {...getOverrideProps(overrides, "Commercial")}
+              ></Text>
+            </Flex>
           </Flex>
         </Flex>
         <Flex

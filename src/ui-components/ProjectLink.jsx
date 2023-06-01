@@ -60,11 +60,11 @@ export default function ProjectLink(props) {
       {...rest}
     >
       <Text
-        fontFamily="Source Sans Pro"
+        fontFamily="Raleway"
         fontSize="20px"
         fontWeight="400"
         color="rgba(83,83,83,1)"
-        lineHeight="25.139999389648438px"
+        lineHeight="23.479999542236328px"
         textAlign="center"
         display="block"
         direction="column"

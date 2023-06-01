@@ -30,6 +30,9 @@ function ResponsiveSpecificSkill(props) {
                     focusIconSource={experiences["COMMERCIAL"]["FOCUS"]}
                 />
             }
+            overrides={
+                {SpecificSkill: {gap: "47px"}}
+            }
         />
     );
 }

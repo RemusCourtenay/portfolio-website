@@ -4,16 +4,18 @@ import { ContactButton } from "../ui-components";
 function ResponsiveContactButton(props) {
 
     const bold = props.bold
+    const contactLink = props.contactLink
 
     const [state, setState] = useState('Default')
 
-    function contactInteractionHandler() {
+    function contactInteractionHandler(url) {
+        window.location.href = url;
         setState('Hover')
     }
 
     function clickHandler() {
         setState('Click')
-        setTimeout(contactInteractionHandler, 100)
+        setTimeout(() => contactInteractionHandler(contactLink), 100)
     }
 
     function mouseEnterHandler() {

@@ -88,7 +88,7 @@ export default function Skills(props) {
         <Flex
           padding="0px 0px 0px 0px"
           width="550px"
-          height="380px"
+          height="379px"
           display="block"
           gap="unset"
           alignItems="unset"

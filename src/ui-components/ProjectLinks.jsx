@@ -33,7 +33,7 @@ export default function ProjectLinks(props) {
       <Flex
         padding="0px 0px 0px 0px"
         width="100px"
-        height="25px"
+        height="23px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -46,7 +46,7 @@ export default function ProjectLinks(props) {
       <Flex
         padding="0px 0px 0px 0px"
         width="100px"
-        height="25px"
+        height="23px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -59,7 +59,7 @@ export default function ProjectLinks(props) {
       <Flex
         padding="0px 0px 0px 0px"
         width="100px"
-        height="25px"
+        height="23px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -72,7 +72,7 @@ export default function ProjectLinks(props) {
       <Flex
         padding="0px 0px 0px 0px"
         width="100px"
-        height="25px"
+        height="23px"
         display="block"
         gap="unset"
         alignItems="unset"

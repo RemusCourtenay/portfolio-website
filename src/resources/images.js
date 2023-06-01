@@ -45,7 +45,8 @@ function buildFocusImagePathData(baseFolderPath, imageNames) {
 }
 
 export const layout = {
-    TECH_DIVIDER: imagesFolder + "tech-divider.png" 
+    TECH_DIVIDER: imagesFolder + "tech-divider.png",
+    FOOTER_DIVIDER: imagesFolder + "footer-divider.svg"
 }
 
 export const backgrounds = {

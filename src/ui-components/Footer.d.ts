@@ -6,7 +6,7 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 import { ContactButtonProps } from "./ContactButton";
 import { FooterLinksProps } from "./FooterLinks";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -21,9 +21,9 @@ export declare type FooterOverridesProps = {
     ContactButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     ContactButton?: ContactButtonProps;
     FooterBottom?: PrimitiveOverrideProps<FlexProps>;
-    FooterDividerLine?: PrimitiveOverrideProps<IconProps>;
+    FooterDividerLine?: PrimitiveOverrideProps<ImageProps>;
     FooterContentBottom?: PrimitiveOverrideProps<FlexProps>;
-    "Credit to TemplateJungle/FlatIcon"?: PrimitiveOverrideProps<TextProps>;
+    "Design Credit to Chloe Marer & TemplateJungle"?: PrimitiveOverrideProps<TextProps>;
     FooterLinksGroup?: PrimitiveOverrideProps<FlexProps>;
     FooterLinks?: FooterLinksProps;
     "Made with Figma, AWS Amplify Studio, and React"?: PrimitiveOverrideProps<TextProps>;
@@ -33,6 +33,8 @@ export declare type FooterProps = React.PropsWithChildren<Partial<ViewProps> & {
     contactButtonGroup?: React.ReactNode;
     footerLinksGroup?: React.ReactNode;
     footerBackgroundGroup?: React.ReactNode;
+    chloeCreditLink?: String;
+    footerDividerLineSource?: String;
 } & {
     overrides?: FooterOverridesProps | undefined | null;
 }>;

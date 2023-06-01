@@ -11,6 +11,7 @@ import { SkillIconProps } from "./SkillIcon";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type SpecificSkillOverridesProps = {
     SpecificSkill?: PrimitiveOverrideProps<FlexProps>;
+    SkillNameGroup?: PrimitiveOverrideProps<FlexProps>;
     SkillName?: PrimitiveOverrideProps<TextProps>;
     Icons?: PrimitiveOverrideProps<FlexProps>;
     PersonalGroup?: PrimitiveOverrideProps<FlexProps>;

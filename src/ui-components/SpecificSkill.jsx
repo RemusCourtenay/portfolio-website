@@ -30,28 +30,42 @@ export default function SpecificSkill(props) {
       {...getOverrideProps(overrides, "SpecificSkill")}
       {...rest}
     >
-      <Text
-        fontFamily="Raleway"
-        fontSize="16px"
-        fontWeight="500"
-        color="rgba(45,45,45,1)"
-        lineHeight="18.784000396728516px"
-        textAlign="left"
-        display="block"
-        direction="column"
-        justifyContent="unset"
-        letterSpacing="0.17px"
+      <Flex
+        gap="10px"
+        direction="row"
         width="100px"
         height="unset"
-        gap="unset"
-        alignItems="unset"
+        justifyContent="flex-start"
+        alignItems="center"
         shrink="0"
+        alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={skillName}
-        {...getOverrideProps(overrides, "SkillName")}
-      ></Text>
+        {...getOverrideProps(overrides, "SkillNameGroup")}
+      >
+        <Text
+          fontFamily="Raleway"
+          fontSize="16px"
+          fontWeight="500"
+          color="rgba(45,45,45,1)"
+          lineHeight="18.784000396728516px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          letterSpacing="0.17px"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={skillName}
+          {...getOverrideProps(overrides, "SkillName")}
+        ></Text>
+      </Flex>
       <Flex
         gap="110px"
         direction="row"
@@ -60,6 +74,7 @@ export default function SpecificSkill(props) {
         justifyContent="space-between"
         alignItems="center"
         shrink="0"
+        alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Icons")}

@@ -12,7 +12,7 @@ import { NavigationLinksProps } from "./NavigationLinks";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type HeaderOverridesProps = {
     Header?: PrimitiveOverrideProps<FlexProps>;
-    NameGroup?: PrimitiveOverrideProps<FlexProps>;
+    HeaderNameGroup?: PrimitiveOverrideProps<FlexProps>;
     HeaderName?: HeaderNameProps;
     NavigationLinksGroup?: PrimitiveOverrideProps<FlexProps>;
     NavigationLinks?: NavigationLinksProps;
@@ -21,6 +21,7 @@ export declare type HeaderProps = React.PropsWithChildren<Partial<FlexProps> & {
     navigationLinks?: React.ReactNode;
     nameGroup?: React.ReactNode;
     navigationLinksGroup?: React.ReactNode;
+    headerNameGroup?: React.ReactNode;
 } & {
     overrides?: HeaderOverridesProps | undefined | null;
 }>;

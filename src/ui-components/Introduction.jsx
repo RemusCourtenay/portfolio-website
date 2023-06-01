@@ -39,22 +39,6 @@ export default function Introduction(props) {
         children={splashGroup}
         {...getOverrideProps(overrides, "SplashGroup")}
       ></View>
-      <View
-        padding="0px 0px 0px 0px"
-        width="1914px"
-        height="100px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="0%"
-        bottom="88.89%"
-        left="0.16%"
-        right="0.16%"
-        children={headerGroup}
-        {...getOverrideProps(overrides, "HeaderGroup")}
-      ></View>
     </View>
   );
 }

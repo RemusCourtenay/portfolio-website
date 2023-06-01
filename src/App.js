@@ -52,10 +52,12 @@ function App() {
 
   return (
     <>
+      <div className='header-wrap'>
+        <ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>
+      </div>
       <Introduction 
         id={anchors['Home']}
-        headerGroup={<ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>}
-        splashGroup={<ResponsiveSplash />}
+        splashGroup={<ResponsiveSplash contactLink={resources["CONTACT"]["gmail"]["URL"]}/>}
       />
       <Skills
         id={anchors['Skills']} 
@@ -102,10 +104,15 @@ function App() {
         contactButtonGroup={
           <ResponsiveContactButton 
             bold="False"
+            contactLink={resources["CONTACT"]["gmail"]["URL"]}
           />
         }
         footerBackgroundGroup={
           <Image src={backgrounds["FOOTER"]}/>
+        }
+        footerDividerLineSource={layout["FOOTER_DIVIDER"]}
+        overrides={
+          {"Design Credit to Chloe Marer & TemplateJungle": {className: "footer-text-link"}}
         }
       />
     </>

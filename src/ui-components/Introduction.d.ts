@@ -8,14 +8,11 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 import { SplashProps } from "./Splash";
-import { HeaderProps } from "./Header";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type IntroductionOverridesProps = {
     Introduction?: PrimitiveOverrideProps<ViewProps>;
     SplashGroup?: PrimitiveOverrideProps<ViewProps>;
     Splash?: SplashProps;
-    HeaderGroup?: PrimitiveOverrideProps<ViewProps>;
-    Header?: HeaderProps;
 } & EscapeHatchProps;
 export declare type IntroductionProps = React.PropsWithChildren<Partial<ViewProps> & {
     splashGroup?: React.ReactNode;

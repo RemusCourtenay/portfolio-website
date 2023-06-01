@@ -1,7 +1,5 @@
-import PropTypes from "prop-types"
 import { FooterLinks } from "../ui-components";
 import ResponsiveFooterLink from "./ResponsiveFooterLink";
-import { footerIconNames } from "../resources/shared.js"
 
 function ResponsiveFooterLinks(props) {
 

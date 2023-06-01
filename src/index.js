@@ -8,7 +8,6 @@ import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 Amplify.configure(awsconfig);
-console.log(awsconfig)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

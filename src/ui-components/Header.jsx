@@ -13,6 +13,7 @@ export default function Header(props) {
     navigationLinks,
     nameGroup,
     navigationLinksGroup,
+    headerNameGroup,
     overrides,
     ...rest
   } = props;
@@ -20,40 +21,40 @@ export default function Header(props) {
     <Flex
       gap="361px"
       direction="row"
-      width="1914px"
-      height="100px"
+      width="1920px"
+      height="50px"
       justifyContent="space-between"
       alignItems="center"
       position="relative"
       border="1px SOLID rgba(0,0,0,0.1)"
-      padding="13px 236px 13px 236px"
+      padding="0px 0px 0px 0px"
       backgroundColor="rgba(249,249,249,0.5)"
       {...getOverrideProps(overrides, "Header")}
       {...rest}
     >
       <Flex
-        padding="0px 0px 0px 0px"
-        width="248px"
-        height="30px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="50px"
+        justifyContent="flex-start"
+        alignItems="flex-start"
         shrink="0"
         position="relative"
-        children={nameGroup}
-        {...getOverrideProps(overrides, "NameGroup")}
+        padding="0px 0px 0px 0px"
+        children={headerNameGroup}
+        {...getOverrideProps(overrides, "HeaderNameGroup")}
       ></Flex>
       <Flex
-        padding="0px 0px 0px 0px"
-        width="500px"
-        height="45px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
+        gap="10px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="flex-start"
+        alignItems="flex-start"
         shrink="0"
         position="relative"
+        padding="0px 50px 0px 0px"
         children={navigationLinksGroup}
         {...getOverrideProps(overrides, "NavigationLinksGroup")}
       ></Flex>

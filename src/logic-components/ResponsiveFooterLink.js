@@ -11,8 +11,7 @@ function ResponsiveFooterLink(props) {
     const linkData = props.linkData;
 
     function goToFooterLinkDestination(url) {
-        // TODO...
-        console.log(url)
+        window.location.href = url
     }
 
 
@@ -22,7 +21,7 @@ function ResponsiveFooterLink(props) {
             onMouseEnter={() => setIsFocus(true)}
             onMouseLeave={() => setIsFocus(false)}
 
-            onLogoClick={() => goToFooterLinkDestination(linkData["URL"])}
+            onLogoClick={() => goToFooterLinkDestination(linkData)}
             logoSource={footerIcons[linkName.toUpperCase()]["DEFAULT"]}
             logoFocusSource={footerIcons[linkName.toUpperCase()]["FOCUS"]}
         />

@@ -15,7 +15,7 @@ export default function NavigationLinks(props) {
       gap="0"
       direction="row"
       width="500px"
-      height="45px"
+      height="50px"
       justifyContent="space-between"
       alignItems="center"
       position="relative"

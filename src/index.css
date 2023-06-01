@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@200..700&display=swap');
 
 body {
   margin: 0;
@@ -13,4 +12,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
