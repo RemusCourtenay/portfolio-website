@@ -97,13 +97,13 @@ export default function Splash(props) {
       <View
         padding="0px 0px 0px 0px"
         width="627px"
-        height="366.14px"
+        height="382.14px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="277px"
+        top="269px"
         left="364px"
         children={splashTextGroup}
         {...getOverrideProps(overrides, "SplashTextGroup")}

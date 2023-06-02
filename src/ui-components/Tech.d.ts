@@ -13,7 +13,7 @@ export declare type TechOverridesProps = {
     Tech?: PrimitiveOverrideProps<FlexProps>;
     TechTextGroup?: PrimitiveOverrideProps<FlexProps>;
     "Technologies I've Worked With"?: PrimitiveOverrideProps<TextProps>;
-    "Things that I can do for my clients. Just make your good trust I love to provide quality works."?: PrimitiveOverrideProps<TextProps>;
+    TechnologiesBlurb?: PrimitiveOverrideProps<TextProps>;
     TechSquaresGroup?: PrimitiveOverrideProps<FlexProps>;
     TechSquares?: TechSquaresProps;
 } & EscapeHatchProps;

@@ -17,7 +17,7 @@ export declare type FooterOverridesProps = {
     FooterContent?: PrimitiveOverrideProps<FlexProps>;
     FooterContentText?: PrimitiveOverrideProps<FlexProps>;
     "Let\u2019s work together"?: PrimitiveOverrideProps<TextProps>;
-    "I\u2019m available for freelance work. Have any projects in your mind? Just feel free to contact me"?: PrimitiveOverrideProps<TextProps>;
+    "Connect with me to stay updated with my latest projects and software engineering adventures. Feel free to reach out for collaborations, discussions, or just to say hello!"?: PrimitiveOverrideProps<TextProps>;
     ContactButtonGroup?: PrimitiveOverrideProps<FlexProps>;
     ContactButton?: ContactButtonProps;
     FooterBottom?: PrimitiveOverrideProps<FlexProps>;

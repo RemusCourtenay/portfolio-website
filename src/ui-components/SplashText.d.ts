@@ -24,6 +24,7 @@ export declare type SplashTextOverridesProps = {
 } & EscapeHatchProps;
 export declare type SplashTextProps = React.PropsWithChildren<Partial<FlexProps> & {
     contactButtonGroup?: React.ReactNode;
+    splashBlurbText?: String;
 } & {
     overrides?: SplashTextOverridesProps | undefined | null;
 }>;

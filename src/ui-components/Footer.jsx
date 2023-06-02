@@ -111,18 +111,18 @@ export default function Footer(props) {
             direction="column"
             justifyContent="unset"
             letterSpacing="0.03px"
-            width="463px"
-            height="59.28px"
+            width="550px"
+            height="unset"
             gap="unset"
             alignItems="unset"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="I’m available for freelance work. Have any projects in your mind? Just feel free to contact me"
+            children="Connect with me to stay updated with my latest projects and software engineering adventures. Feel free to reach out for collaborations, discussions, or just to say hello!"
             {...getOverrideProps(
               overrides,
-              "I\u2019m available for freelance work. Have any projects in your mind? Just feel free to contact me"
+              "Connect with me to stay updated with my latest projects and software engineering adventures. Feel free to reach out for collaborations, discussions, or just to say hello!"
             )}
           ></Text>
         </Flex>

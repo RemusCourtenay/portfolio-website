@@ -57,7 +57,11 @@ function App() {
       </div>
       <Introduction 
         id={anchors['Home']}
-        splashGroup={<ResponsiveSplash contactLink={resources["CONTACT"]["gmail"]["URL"]}/>}
+        splashGroup={
+          <ResponsiveSplash 
+            contactLink={resources["CONTACT"]["gmail"]["URL"]} 
+            splashBlurbText={resources["PERSONAL"]["SPLASH_BLURB"]} 
+            splashImageSource={resources["PERSONAL"]["FACE_IMAGE"]}/>}
       />
       <Skills
         id={anchors['Skills']} 
@@ -69,9 +73,10 @@ function App() {
                 clickHandler={() => downloadFileFromS3("CV")}
               />
             }
+            skillsBlurbText={resources["PERSONAL"]["SKILLS_BLURB"]}
           />
         }
-        skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]}/>}
+        skillsGraphGroup={<ResponsiveSkillsGraph skills={resources["SKILLS"]} />}
         backgroundShapesSource={backgrounds["SKILLS"]}  
       />
       <Tech

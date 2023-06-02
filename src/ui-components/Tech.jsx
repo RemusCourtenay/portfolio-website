@@ -57,7 +57,7 @@ export default function Tech(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Technologies I've Worked With"
+          children="Technologies"
           {...getOverrideProps(overrides, "Technologies I've Worked With")}
         ></Text>
         <Text
@@ -71,19 +71,16 @@ export default function Tech(props) {
           direction="column"
           justifyContent="unset"
           letterSpacing="0.17px"
-          width="495px"
-          height="58.32px"
+          width="615px"
+          height="unset"
           gap="unset"
           alignItems="unset"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Things that I can do for my clients. Just make your good trust I love to provide quality works."
-          {...getOverrideProps(
-            overrides,
-            "Things that I can do for my clients. Just make your good trust I love to provide quality works."
-          )}
+          children="From front-end development frameworks to robust back-end solutions, this section showcases my proficiency and adaptability in tackling various tech stacks."
+          {...getOverrideProps(overrides, "TechnologiesBlurb")}
         ></Text>
       </Flex>
       <Flex

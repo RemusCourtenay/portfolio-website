@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function SkillsText(props) {
-  const { cvButtonGroup, overrides, ...rest } = props;
+  const { cvButtonGroup, skillsBlurbText, overrides, ...rest } = props;
   return (
     <Flex
       gap="25px"
@@ -80,7 +80,7 @@ export default function SkillsText(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus. Vulputate pulvinar cursus suspendisse risus vulputate  enim pharetra eu. Tetur adipiscing elit eu placera."
+          children={skillsBlurbText}
           {...getOverrideProps(
             overrides,
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus. Vulputate pulvinar cursus suspendisse risus vulputate enim pharetra eu. Tetur adipiscing elit eu placera."

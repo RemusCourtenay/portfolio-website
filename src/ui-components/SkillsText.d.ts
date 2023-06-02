@@ -19,6 +19,7 @@ export declare type SkillsTextOverridesProps = {
 } & EscapeHatchProps;
 export declare type SkillsTextProps = React.PropsWithChildren<Partial<FlexProps> & {
     cvButtonGroup?: React.ReactNode;
+    skillsBlurbText?: String;
 } & {
     overrides?: SkillsTextOverridesProps | undefined | null;
 }>;
