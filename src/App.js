@@ -1,7 +1,7 @@
 import '@aws-amplify/ui-react/styles.css';
 import '@fontsource/inter/variable.css';
 import './App.css';
-import { Image } from '@aws-amplify/ui-react';
+import { Image, View } from '@aws-amplify/ui-react';
 import { resources } from './resources/remus';
 import { backgrounds, layout } from './resources/images';
 import { Footer, Introduction, Skills, SkillsText, Tech, TechDivider, TechSquares } from './ui-components';
@@ -51,7 +51,8 @@ function App() {
 
 
   return (
-    <>
+    <div className="all-div"
+    >
       <div className='header-wrap'>
         <ResponsiveHeader firstName={resources["PERSONAL"]["FIRST_NAME"]} anchors={anchors}/>
       </div>
@@ -120,7 +121,7 @@ function App() {
           {"Design Credit to Chloe Marer & TemplateJungle": {className: "footer-text-link"}}
         }
       />
-    </>
+    </div>
   );
 }
 
