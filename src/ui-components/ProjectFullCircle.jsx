@@ -77,17 +77,14 @@ export default function ProjectFullCircle(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={projectTitle}
-          {...getOverrideProps(
-            overrides,
-            "NASA\u2019s Kibo \u2028Robot Challenge"
-          )}
+          {...getOverrideProps(overrides, "ProjectTitle")}
         ></Text>
         <Text
           fontFamily="Raleway"
-          fontSize="32px"
+          fontSize="28px"
           fontWeight="500"
           color="rgba(255,255,255,1)"
-          lineHeight="37.56800079345703px"
+          lineHeight="32.87200164794922px"
           textAlign="left"
           display="block"
           direction="column"
@@ -101,10 +98,7 @@ export default function ProjectFullCircle(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={projectBodyText}
-          {...getOverrideProps(
-            overrides,
-            "Consequuntur et nulla blanditiis odit illo ut quo magnam. Laboriosam aut repellendus quis molestiae cumque eveniet officia. Aliquid eveniet iure cum doloremque dolores. Voluptatibus quas et impedit omnis quas. Laborum alias nihil porro. Perferendis aliquam tenetur natus temporibus exercitationem soluta nisi. Ut molestiae ullam eaque maiores assumenda. Quos tenetur dicta eaque et placeat et adipisci. Quisquam qui magni maxime velit assumenda. Non libero voluptate qui et debitis enim sed. Neque distinctio ducimus aliquam inventore qui magni aliquid. In tempore repudiandae praesentium. Omnis saepe laudantium alias sunt alias incidunt excepturi. Assumenda tempore sit illo maiores dolores quasi iure. Impedit eaque sed eveniet voluptatibus dolores occaecati. Suscipit molestiae repellendus voluptatum voluptate velit totam."
-          )}
+          {...getOverrideProps(overrides, "ProjectBody")}
         ></Text>
       </Flex>
     </View>

@@ -1,16 +1,20 @@
 export const techNames = [
-    "amplify",
-    "angular",
-    "csharp",
-    "docker",
-    "git",
-    "java",
-    "python",
-    "react",
-    "ruby",
-    "terraform",
-    "typescript", 
-    "vue"
+    "Amplify",
+    "Angular",
+    "Csharp",
+    "Docker",
+    "Git",
+    "Java",
+    "Python",
+    "React",
+    "Ruby",
+    "Terraform",
+    "Typescript", 
+    "Vue",
+    "Linux",
+    "Lambda",
+    "MySQL",
+    "Firebase"
 ]
 
 export const experienceNames = [

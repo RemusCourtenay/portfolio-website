@@ -11,6 +11,7 @@ function ResponsiveProjectSwapButton(props) {
     function projectSwapClickHandler() {
         setOpacity("75%") //maybe add timeout on this so it goes back after click even if you dont take your mouse off
         clickHandler()
+        setTimeout(() => setOpacity("50%"), 100)
     }
 
     return (

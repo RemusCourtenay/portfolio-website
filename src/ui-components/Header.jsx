@@ -21,8 +21,8 @@ export default function Header(props) {
     <Flex
       gap="361px"
       direction="row"
-      width="1920px"
-      height="50px"
+      width="1921px"
+      height="51px"
       justifyContent="space-between"
       alignItems="center"
       position="relative"

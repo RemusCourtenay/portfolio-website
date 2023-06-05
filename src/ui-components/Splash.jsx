@@ -27,6 +27,7 @@ export default function Splash(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
+      backgroundColor="rgba(249,249,249,1)"
       {...getOverrideProps(overrides, "Splash")}
       {...rest}
     >

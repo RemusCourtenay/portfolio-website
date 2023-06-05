@@ -32,6 +32,9 @@ function ResponsiveProjectsExpandedView(props) {
                 <>  
                     <Loader 
                         display={isLoading? "block": "none"}
+                        size="large"
+                        filledColor="#E63946"
+                        width="500px"
                     />
                     <ProjectFullCircle
                         display={isLoading? "none": "block"}
@@ -40,7 +43,9 @@ function ResponsiveProjectsExpandedView(props) {
                         projectBodyText={activeProject["ExpandedViewBodyText"]}
                         overrides={
                             {
-                                ProjectImage: {onLoad: () => setIsLoading(false)}
+                                ProjectImage: {onLoad: () => setIsLoading(false)},
+                                ProjectTitle: {className: "circle-view-title-default"},
+                                ProjectBody: {className: "circle-view-body-default"}
                             }
                         }
                     />

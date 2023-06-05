@@ -13,6 +13,11 @@
     text-shadow: 2px 4px 0px rgba(230, 57, 70, 1);
 }
 
+.circle-view-body-default {
+    /* x-span, y-span, blur, colour*/
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
 .footer-text-link:hover {
     text-decoration: underline;
 }
@@ -34,4 +39,13 @@ html {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+    min-width: 1920px;
+    background-color: #E5E9ED;
+    background-image: url("../public/assets/backgrounds/skills-shapes.png")
+}
+
+.wrap-content-div {
+    border-style: none solid;
+    border-width: 2px;
+    border-color: rgb(173, 175, 177);
 }

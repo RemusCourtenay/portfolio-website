@@ -6,29 +6,21 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, ImageProps, ViewProps } from "@aws-amplify/ui-react";
+import { ProjectSmallCircleProps } from "./ProjectSmallCircle";
 import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProjectCircleViewOverridesProps = {
     ProjectCircleView?: PrimitiveOverrideProps<ViewProps>;
     BackgroundGroup?: PrimitiveOverrideProps<FlexProps>;
     RedBorderCircle?: PrimitiveOverrideProps<ImageProps>;
-    ImageGroup?: PrimitiveOverrideProps<FlexProps>;
-    ProjectImage?: PrimitiveOverrideProps<ImageProps>;
-    MaskGroup?: PrimitiveOverrideProps<FlexProps>;
-    EllipseMask?: PrimitiveOverrideProps<IconProps>;
-    ReadMore?: PrimitiveOverrideProps<TextProps>;
-    ProjectTitle?: PrimitiveOverrideProps<TextProps>;
-    LinkArrow?: PrimitiveOverrideProps<IconProps>;
+    SmallCircleGroup?: PrimitiveOverrideProps<FlexProps>;
+    ProjectSmallCircle?: ProjectSmallCircleProps;
 } & EscapeHatchProps;
 export declare type ProjectCircleViewProps = React.PropsWithChildren<Partial<ViewProps> & {
-    projectTitle?: String;
-    projectImageSource?: String;
-    circleViewClickHandler?: (event: SyntheticEvent) => void;
-    backgroundGroup?: React.ReactNode;
     backgroundImageSource?: String;
-} & {
-    state?: "Click" | "Default" | "Hover";
+    circleViewClickHandler?: (event: SyntheticEvent) => void;
+    smallCircleGroup?: React.ReactNode;
 } & {
     overrides?: ProjectCircleViewOverridesProps | undefined | null;
 }>;

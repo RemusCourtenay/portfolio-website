@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { View } from "@aws-amplify/ui-react";
 export default function Introduction(props) {
-  const { splashGroup, headerGroup, overrides, ...rest } = props;
+  const { splashGroup, overrides, ...rest } = props;
   return (
     <View
       width="1920px"

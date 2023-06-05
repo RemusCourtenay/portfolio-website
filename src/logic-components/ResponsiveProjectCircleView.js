@@ -1,5 +1,4 @@
-
-import { ProjectCircleView } from "../ui-components";
+import { ProjectCircleView, ProjectSmallCircle } from "../ui-components";
 import { useState } from "react";
 import { backgrounds, projectImages } from "../resources/images";
 import { Loader } from "@aws-amplify/ui-react";
@@ -21,34 +20,51 @@ function ResponsiveProjectCircleView(props) {
     const clickHandler = props.clickHandler;
 
     function circleViewClickHandler() {
-        // TODO.. figure out how to do animations
         setState("Click");
-        // TODO... remove this unnecessary wait
-        setTimeout(clickHandler, 100);
+        clickHandler()
     };
 
     return (
         <>
-            <Loader display={isLoading? "block": "none"}/>
-            <ProjectCircleView 
-                state={state}
-                display={isLoading? "none": "block"}
-                onMouseEnter={() => setState("Hover")}
-                onMouseLeave={() => setState("Default")}
 
-                projectTitle={project["CircleViewTitle"]}
-                projectImageSource={projectImages[project["Name"].toUpperCase()]["CIRCLE"]}
+
+            <ProjectCircleView
+                backgroundImageSource={backgrounds["CIRCLE_VIEW_BORDER"]}
                 circleViewClickHandler={circleViewClickHandler}
 
-                backgroundImageSource={backgrounds["CIRCLE_VIEW_BORDER"]}
+                smallCircleGroup={
+                    <>
+                        <Loader 
+                            display={isLoading? "block": "none"}
+                            size="large"
+                            filledColor="#E63946"
+                            width="300px"
+                        />
+                        <ProjectSmallCircle
+                            state={state}
+                            display={isLoading? "none": "block"}
+                            onMouseEnter={() => setState("Hover")}
+                            onMouseLeave={() => setState("Default")}
 
-                overrides={
-                    {
-                        ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]},
-                        ProjectImage: {onLoad: setIsLoading.bind(null, false)}
-                    }
+                            projectTitle={project["CircleViewTitle"]}
+                            projectImageSource={projectImages[project["Name"].toUpperCase()]["CIRCLE"]}
+                            
+
+                            overrides={
+                                {
+                                    ProjectTitle: {className: customCSSClassNames["ProjectTitle"][state]},
+                                    ProjectImage: {onLoad: () => setIsLoading(false)}
+                                }
+                            }
+                        />
+
+                    </>
                 }
+
             />
+
+
+
         </>
     )
 }

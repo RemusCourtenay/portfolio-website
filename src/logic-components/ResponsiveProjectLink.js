@@ -8,12 +8,11 @@ function ResponsiveProjectLink(props) {
     const project = props.project;
     const clickHandler = props.clickHandler;
     const focus = props.focus;
-    const isPending = props.isPending;
 
 
     return(      
         <ProjectLink 
-            state={isPending?"Pending":state}
+            state={state}
             onMouseEnter={() => setState("Hover")}
             onMouseLeave={() => setState("Default")}
 

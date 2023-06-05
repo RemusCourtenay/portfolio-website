@@ -16,7 +16,6 @@ export declare type IntroductionOverridesProps = {
 } & EscapeHatchProps;
 export declare type IntroductionProps = React.PropsWithChildren<Partial<ViewProps> & {
     splashGroup?: React.ReactNode;
-    headerGroup?: React.ReactNode;
 } & {
     overrides?: IntroductionOverridesProps | undefined | null;
 }>;

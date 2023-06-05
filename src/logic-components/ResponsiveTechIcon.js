@@ -26,7 +26,9 @@ function ResponsiveTechIcon(props) {
             IconHoverImageSource={imageHoverSource}
 
             onMouseEnter={mouseEnterHandler}
-            onMouseLeave={() => setTimeout(mouseExitHandler, 200)}
+            onMouseLeave={() => setTimeout(mouseExitHandler, 100)}
+
+            title={techName}
         />
     );
 }
