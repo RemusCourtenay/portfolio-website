@@ -1,6 +1,5 @@
 // CSS Imports
 import '@aws-amplify/ui-react/styles.css';
-import '@fontsource/inter/variable.css';
 import './App.css';
 
 // Resource Imports
