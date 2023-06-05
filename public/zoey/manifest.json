@@ -1,19 +1,19 @@
 {
   "short_name": "Portfolio",
-  "name": "Remus Courtenay's Portfolio",
+  "name": "Zoey Arnold's Portfolio",
   "icons": [
     {
-      "src": "remus/favicon.ico",
+      "src": "zoey/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "remus/logo192.png",
+      "src": "zoey/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "remus/logo512.png",
+      "src": "zoey/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
