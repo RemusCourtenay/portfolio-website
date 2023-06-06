@@ -25,6 +25,7 @@ export declare type SplashTextOverridesProps = {
 export declare type SplashTextProps = React.PropsWithChildren<Partial<FlexProps> & {
     contactButtonGroup?: React.ReactNode;
     splashBlurbText?: String;
+    splashNameText?: String;
 } & {
     overrides?: SplashTextOverridesProps | undefined | null;
 }>;

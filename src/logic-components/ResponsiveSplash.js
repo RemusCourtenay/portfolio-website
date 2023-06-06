@@ -5,6 +5,7 @@ import ResponsiveContactButton from "./ResponsiveContactButton";
 function ResponsiveSplash(props){
 
     const contactLink = props.contactLink;
+    const splashNameText = props.splashNameText;
     const splashBlurbText = props.splashBlurbText;
     const splashImageSource = props.splashImageSource;
 
@@ -19,6 +20,7 @@ function ResponsiveSplash(props){
                             />
                         }
                         splashBlurbText={splashBlurbText}
+                        splashNameText={splashNameText}
                     />
                 } 
                 faceImage={splashImageSource}

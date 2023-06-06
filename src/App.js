@@ -4,12 +4,18 @@ import './App.css';
 
 // Resource Imports
 import { resources } from './resources/remus';
+import { experiences } from './resources/images'
 
 // App Type Imports
-import BrowserApp from './BrowserApp.js'
+import BrowserApp from './BrowserApp.js';
 
 // Library Imports
-import { isBrowser } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+
+
+
+import { MobileSkills, MobileSkillIcon } from './ui-components';
+import MobileResponsiveSkillsGraph from './logic-components/mobile/MobileResponsiveSkillsGraph'
 
 function App() {
 
@@ -22,15 +28,36 @@ function App() {
     Contact: 'footerSection'
   }
 
-  if (isBrowser) {
-    return (
-      <BrowserApp resources={resources} anchors={anchors}/>
-    );
-  } else {
-    return (
-      <p>Bad! use a browser.</p>
-    )
+  function test() {
+    console.log("screen.width: " + screen.width)
+    console.log("screen.availWidth: " + screen.availWidth)
   }
+
+  
+  return (
+    <MobileSkills 
+      left="0%"
+      right="0%"
+      width="unset"
+      mobileSkillsGraphGroup = {<MobileResponsiveSkillsGraph skills={resources["SKILLS"]} />}
+      overrides={
+        {
+          MobileSkillsText: {skillsBlurbText: resources["PERSONAL"]["SKILLS_BLURB"], overrides: {MobileSkillsButton: {clickHandler: test}}},
+        }
+      }
+    />
+  );
+
+  // if (isMobile) {
+  //   // TODO... make MobileApp
+  //   return (
+  //     <BrowserApp resources={resources} anchors={anchors}/>
+  //   );
+  // } else {
+  //   return (
+  //     <BrowserApp resources={resources} anchors={anchors}/>
+  //   );
+  // }
 }
 
 export default App;

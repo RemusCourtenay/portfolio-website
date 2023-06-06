@@ -18,9 +18,9 @@ function ResponsiveSpecificSkill(props) {
             }
             educationGroup={
                 <SkillIcon 
-                    focus={focusValues["EDUCATION"]}
-                    iconSource={experiences["EDUCATION"]["DEFAULT"]}
-                    focusIconSource={experiences["EDUCATION"]["FOCUS"]}
+                    focus={focusValues["EDUCATIONAL"]}
+                    iconSource={experiences["EDUCATIONAL"]["DEFAULT"]}
+                    focusIconSource={experiences["EDUCATIONAL"]["FOCUS"]}
                 />
             }
             commercialGroup={

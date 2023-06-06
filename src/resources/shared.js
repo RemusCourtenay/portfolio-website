@@ -14,12 +14,14 @@ export const techNames = [
     "Linux",
     "Lambda",
     "MySQL",
-    "Firebase"
+    "Firebase",
+    "MongoDB",
+    "PowerBI"
 ]
 
 export const experienceNames = [
     "commercial",
-    "education",
+    "educational",
     "personal"
 ]
 

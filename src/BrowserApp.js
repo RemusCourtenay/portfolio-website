@@ -35,6 +35,7 @@ function BrowserApp(props) {
                     splashGroup={
                         <ResponsiveSplash 
                         contactLink={resources["CONTACT"]["gmail"]["URL"]} 
+                        splashNameText={resources["PERSONAL"]["FULL_NAME"]}
                         splashBlurbText={resources["PERSONAL"]["SPLASH_BLURB"]} 
                         splashImageSource={resources["PERSONAL"]["FACE_IMAGE"]}/>}
                 />
