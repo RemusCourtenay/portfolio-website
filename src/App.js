@@ -14,8 +14,9 @@ import { isMobile } from 'react-device-detect';
 
 
 
-import { MobileSkills, MobileSkillIcon } from './ui-components';
+import { MobileSkills, MobileTech, MobileProjects, MobileProjectsLayered, MobileSkillsLayered } from './ui-components';
 import MobileResponsiveSkillsGraph from './logic-components/mobile/MobileResponsiveSkillsGraph'
+import MobileResponsiveTechSquares from './logic-components/mobile/MobileResponsiveTechSquares';
 
 function App() {
 
@@ -28,25 +29,48 @@ function App() {
     Contact: 'footerSection'
   }
 
-  function test() {
-    console.log("screen.width: " + screen.width)
-    console.log("screen.availWidth: " + screen.availWidth)
-  }
+  return (
+    <>
+      <MobileResponsiveTechSquares techs={resources["TECH"]} />
+    </>
+  );
+
+}
+
+  // return (
+  //   <>
+  //     <MobileSkills
+  //       left="0%"
+  //       right="0%"
+  //       width="unset"
+  //       mobileSkillsGraphGroup = {<MobileResponsiveSkillsGraph skills={resources["SKILLS"]} />}
+  //       overrides={
+  //         {
+  //           MobileSkillsText: {
+  //             skillsBlurbText: resources["PERSONAL"]["SKILLS_BLURB"], 
+  //             overrides: {MobileSkillsButton: {clickHandler: test}}},
+  //             display: "flex",
+  //             shrink: "0"
+  //         }
+  //       } 
+  //     />
+  //     <MobileTech 
+  //       left="0%"
+  //       right="0%"
+  //       width="unset"
+  //       mobileTechSquaresGroup={<MobileResponsiveTechSquares techs={resources["TECH"]}/>}
+  //     />
+  //   </>
+  // );
+
 
   
-  return (
-    <MobileSkills 
-      left="0%"
-      right="0%"
-      width="unset"
-      mobileSkillsGraphGroup = {<MobileResponsiveSkillsGraph skills={resources["SKILLS"]} />}
-      overrides={
-        {
-          MobileSkillsText: {skillsBlurbText: resources["PERSONAL"]["SKILLS_BLURB"], overrides: {MobileSkillsButton: {clickHandler: test}}},
-        }
-      }
-    />
-  );
+  // return (
+  //   <>
+
+  //   
+  //   </>
+  // );
 
   // if (isMobile) {
   //   // TODO... make MobileApp
@@ -58,6 +82,6 @@ function App() {
   //     <BrowserApp resources={resources} anchors={anchors}/>
   //   );
   // }
-}
+
 
 export default App;

@@ -13,6 +13,10 @@ export declare type MobileTechIconOverridesProps = {
     IconImage?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type MobileTechIconProps = React.PropsWithChildren<Partial<FlexProps> & {
+    focus?: Boolean;
+    imageSource?: String;
+    focusImageSource?: String;
+} & {
     overrides?: MobileTechIconOverridesProps | undefined | null;
 }>;
 export default function MobileTechIcon(props: MobileTechIconProps): React.ReactElement;

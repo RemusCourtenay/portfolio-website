@@ -59,7 +59,7 @@ function BrowserApp(props) {
                     id={anchors['Experience']} 
                     techSquaresGroup={
                         <TechSquares 
-                            techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]}/>}
+                            techDividerGroup={<TechDivider dividerImageSource={layout["TECH_DIVIDER"]["BROWSER"]}/>}
                             iconGroup1={<ResponsiveTechIcon techName={resources["TECH"][0]}/>}
                             iconGroup2={<ResponsiveTechIcon techName={resources["TECH"][1]}/>}
                             iconGroup3={<ResponsiveTechIcon techName={resources["TECH"][2]}/>}

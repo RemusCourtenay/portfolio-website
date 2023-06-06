@@ -12,18 +12,36 @@ import {
   mergeVariantsAndOverrides,
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-export default function MobileSkillsButton(props) {
+export default function MobileProjectLink(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      variantValues: { state: "Default" },
-      overrides: { SkillsButtonText: {}, MobileSkillsButton: {} },
+      variantValues: { state: "Default", focus: "True" },
+      overrides: { Honours: {}, MobileProjectLink: {} },
     },
     {
-      variantValues: { state: "Hover" },
+      variantValues: { state: "Hover", focus: "True" },
       overrides: {
-        SkillsButtonText: {},
-        MobileSkillsButton: { backgroundColor: "rgba(58,58,58,1)" },
+        Honours: { width: "unset", textDecoration: "underline" },
+        MobileProjectLink: { gap: "5px" },
+      },
+    },
+    {
+      variantValues: { state: "Default", focus: "False" },
+      overrides: {
+        Honours: { color: "rgba(182,182,182,1)", width: "unset" },
+        MobileProjectLink: { gap: "5px" },
+      },
+    },
+    {
+      variantValues: { state: "Hover", focus: "False" },
+      overrides: {
+        Honours: {
+          color: "rgba(182,182,182,1)",
+          width: "unset",
+          textDecoration: "underline",
+        },
+        MobileProjectLink: { gap: "5px" },
       },
     },
   ];
@@ -33,32 +51,30 @@ export default function MobileSkillsButton(props) {
   );
   return (
     <Flex
-      gap="0"
+      gap="10px"
       direction="row"
-      width="98px"
-      height="27.5px"
+      width="50px"
+      height="unset"
       justifyContent="center"
       alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(45,45,45,1)"
       display="flex"
-      {...getOverrideProps(overrides, "MobileSkillsButton")}
+      {...getOverrideProps(overrides, "MobileProjectLink")}
       {...rest}
     >
       <Text
         fontFamily="Raleway"
-        fontSize="8px"
-        fontWeight="500"
-        color="rgba(229,233,237,1)"
-        textTransform="uppercase"
-        lineHeight="9.392000198364258px"
-        textAlign="left"
+        fontSize="10px"
+        fontWeight="400"
+        color="rgba(83,83,83,1)"
+        lineHeight="11.739999771118164px"
+        textAlign="center"
         display="block"
         direction="column"
         justifyContent="unset"
-        letterSpacing="0.09px"
-        width="unset"
+        letterSpacing="0px"
+        width="40px"
         height="unset"
         gap="unset"
         alignItems="unset"
@@ -66,8 +82,8 @@ export default function MobileSkillsButton(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Download CV"
-        {...getOverrideProps(overrides, "SkillsButtonText")}
+        children="Honours"
+        {...getOverrideProps(overrides, "Honours")}
       ></Text>
     </Flex>
   );

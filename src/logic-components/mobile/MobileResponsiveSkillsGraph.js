@@ -6,7 +6,15 @@ function MobileResponsiveSkillsGraph(props) {
     const skills = props.skills
 
     return (
-        <MobileSkillsGraph 
+        <MobileSkillsGraph
+            display="flex"
+            direction="column"
+            width="275px"
+            height="190px"
+            position="absolute"
+            top="0px"
+            left="0px"
+            
             skill1Group={<MobileResponsiveSpecificSkill skill={skills[0]} />}
             skill2Group={<MobileResponsiveSpecificSkill skill={skills[1]} />}
             skill3Group={<MobileResponsiveSpecificSkill skill={skills[2]} />}

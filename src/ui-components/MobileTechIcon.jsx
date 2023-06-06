@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image } from "@aws-amplify/ui-react";
 export default function MobileTechIcon(props) {
-  const { overrides, ...rest } = props;
+  const { focus, imageSource, focusImageSource, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -34,6 +34,7 @@ export default function MobileTechIcon(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={focus == true ? focusImageSource : imageSource}
         {...getOverrideProps(overrides, "IconImage")}
       ></Image>
     </Flex>

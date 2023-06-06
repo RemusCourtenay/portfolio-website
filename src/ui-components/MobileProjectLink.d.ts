@@ -8,13 +8,14 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type MobileSkillsButtonOverridesProps = {
-    MobileSkillsButton?: PrimitiveOverrideProps<FlexProps>;
-    SkillsButtonText?: PrimitiveOverrideProps<TextProps>;
+export declare type MobileProjectLinkOverridesProps = {
+    MobileProjectLink?: PrimitiveOverrideProps<FlexProps>;
+    Honours?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type MobileSkillsButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type MobileProjectLinkProps = React.PropsWithChildren<Partial<FlexProps> & {
+    focus?: "False" | "True";
     state?: "Default" | "Hover";
 } & {
-    overrides?: MobileSkillsButtonOverridesProps | undefined | null;
+    overrides?: MobileProjectLinkOverridesProps | undefined | null;
 }>;
-export default function MobileSkillsButton(props: MobileSkillsButtonProps): React.ReactElement;
+export default function MobileProjectLink(props: MobileProjectLinkProps): React.ReactElement;

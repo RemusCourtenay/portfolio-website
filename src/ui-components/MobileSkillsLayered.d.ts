@@ -7,18 +7,16 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { MobileSkillsTextProps } from "./MobileSkillsText";
-import { FlexProps } from "@aws-amplify/ui-react";
 import { MobileSkillsGraphProps } from "./MobileSkillsGraph";
+import { FlexProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type MobileSkillsOverridesProps = {
-    MobileSkills?: PrimitiveOverrideProps<FlexProps>;
+export declare type MobileSkillsLayeredOverridesProps = {
+    MobileSkillsLayered?: PrimitiveOverrideProps<FlexProps>;
     MobileSkillsText?: MobileSkillsTextProps;
     MobileSkillsGraphGroup?: PrimitiveOverrideProps<FlexProps>;
     MobileSkillsGraph?: MobileSkillsGraphProps;
 } & EscapeHatchProps;
-export declare type MobileSkillsProps = React.PropsWithChildren<Partial<FlexProps> & {
-    mobileSkillsGraphGroup?: React.ReactNode;
-} & {
-    overrides?: MobileSkillsOverridesProps | undefined | null;
+export declare type MobileSkillsLayeredProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: MobileSkillsLayeredOverridesProps | undefined | null;
 }>;
-export default function MobileSkills(props: MobileSkillsProps): React.ReactElement;
+export default function MobileSkillsLayered(props: MobileSkillsLayeredProps): React.ReactElement;
