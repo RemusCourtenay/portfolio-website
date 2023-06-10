@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <MobileResponsiveTechSquares techs={resources["TECH"]} />
+      <BrowserApp resources={resources} anchors={anchors}/>
     </>
   );
 
