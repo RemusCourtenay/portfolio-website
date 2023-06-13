@@ -62,37 +62,33 @@ export default function Splash(props) {
       </View>
       <View
         padding="0px 0px 0px 0px"
-        width="1320.27px"
-        height="990.2px"
+        width="1320px"
+        height="1364.04px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="-0.22%"
-        bottom="-9.8%"
-        left="39.06%"
-        right="-7.83%"
+        top="-25.78%"
+        bottom="-25.78%"
+        left="41.15%"
+        right="-9.9%"
         {...getOverrideProps(overrides, "Mask Group")}
       >
         <Image
-          width="100%"
-          height="100%"
+          width="1320px"
+          height="1364.04px"
           display="block"
           gap="unset"
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          transformOrigin="top left"
-          transform="rotate(0deg)"
+          top="0px"
+          left="0px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
           src={faceImage}
-          {...getOverrideProps(overrides, "Face")}
+          {...getOverrideProps(overrides, "face")}
         ></Image>
       </View>
       <View

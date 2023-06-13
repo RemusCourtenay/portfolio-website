@@ -14,7 +14,7 @@ export declare type SplashOverridesProps = {
     "Background Group"?: PrimitiveOverrideProps<ViewProps>;
     "Background Pattern Intro"?: PrimitiveOverrideProps<ImageProps>;
     "Mask Group"?: PrimitiveOverrideProps<ViewProps>;
-    Face?: PrimitiveOverrideProps<ImageProps>;
+    face?: PrimitiveOverrideProps<ImageProps>;
     SplashTextGroup?: PrimitiveOverrideProps<ViewProps>;
     SplashText?: SplashTextProps;
 } & EscapeHatchProps;

@@ -25,6 +25,9 @@ function ResponsiveSplash(props){
                 } 
                 faceImage={splashImageSource}
                 backgroundShapesSource={backgrounds["SPLASH"]}
+                overrides={
+                    {"face": {objectFit: "none"}}
+                }
             />
     )
 }

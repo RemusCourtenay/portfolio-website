@@ -34,10 +34,12 @@ function BrowserApp(props) {
                     id={anchors['Home']}
                     splashGroup={
                         <ResponsiveSplash 
-                        contactLink={resources["CONTACT"]["gmail"]["URL"]} 
-                        splashNameText={resources["PERSONAL"]["FULL_NAME"]}
-                        splashBlurbText={resources["PERSONAL"]["SPLASH_BLURB"]} 
-                        splashImageSource={resources["PERSONAL"]["FACE_IMAGE"]}/>}
+                            contactLink={resources["CONTACT"]["gmail"]["URL"]} 
+                            splashNameText={resources["PERSONAL"]["FULL_NAME"]}
+                            splashBlurbText={resources["PERSONAL"]["SPLASH_BLURB"]} 
+                            splashImageSource={resources["PERSONAL"]["FACE_IMAGE"]}
+                        />
+                    }
                 />
                 <Skills
                     id={anchors['Skills']} 
