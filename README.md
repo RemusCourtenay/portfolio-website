@@ -69,4 +69,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-amazon
+### TODO.... ###
+- New Technologies
+- Update Projects
+- Update various blurbs/text
+- Update Photo
+- Update Skills
+- Consider Resizing?
+- Buy DNS records
+- Connect DNS record to Amplify branch
