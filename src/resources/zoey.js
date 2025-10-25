@@ -3,8 +3,8 @@ export const resources = {
         FIRST_NAME: "Zoey",
         FULL_NAME: "Zoey Arnold",
         CV: {
-            FILE_URI: "placeholder.pdf",
-            FILE_NAME: "My Placeholder CV.pdf"
+            FILE_URI: "Zoey Arnold CV 2025.pdf",
+            FILE_NAME: "Zoey Arnold CV 2025.pdf"
         },
         SPLASH_BLURB: "pls gib job",
         SKILLS_BLURB: "honestly probably a bad idea",
