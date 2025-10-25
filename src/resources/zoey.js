@@ -8,7 +8,7 @@ export const resources = {
         },
         SPLASH_BLURB: "pls gib job",
         SKILLS_BLURB: "honestly probably a bad idea",
-        FACE_IMAGE: "assets/face.png"
+        FACE_IMAGE: "assets/bee.png"
     },
     SKILLS: [
         {   
