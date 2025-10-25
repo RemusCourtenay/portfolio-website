@@ -43,3 +43,16 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+#vscode stolen from https://gitignore.pro/vscode-gitignore/
+# Keep these VS Code files for team sharing
+!.vscode/
+!.vscode/extensions.json
+!.vscode/settings.shared.json
+!.vscode/launch.shared.json
+
+# Ignore personal overrides
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+#vscode
