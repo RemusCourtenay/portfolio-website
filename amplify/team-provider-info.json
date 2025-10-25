@@ -1,28 +1,22 @@
 {
-  "dev": {
+  "master": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-remuspersonalwebsite-dev-131737-authRole",
-      "UnauthRoleArn": "arn:aws:iam::587671861382:role/amplify-remuspersonalwebsite-dev-131737-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::587671861382:role/amplify-remuspersonalwebsite-dev-131737-authRole",
+      "AuthRoleName": "amplify-portfoliowebsite-master-005d0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767729395376:role/amplify-portfoliowebsite-master-005d0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767729395376:role/amplify-portfoliowebsite-master-005d0-authRole",
       "Region": "ap-southeast-2",
-      "DeploymentBucketName": "amplify-remuspersonalwebsite-dev-131737-deployment",
-      "UnauthRoleName": "amplify-remuspersonalwebsite-dev-131737-unauthRole",
-      "StackName": "amplify-remuspersonalwebsite-dev-131737",
-      "StackId": "arn:aws:cloudformation:ap-southeast-2:587671861382:stack/amplify-remuspersonalwebsite-dev-131737/50c0a250-b246-11ed-839a-022eeed86a0e",
-      "AmplifyAppId": "d2hgpwuc9kamoc"
+      "DeploymentBucketName": "amplify-portfoliowebsite-master-005d0-deployment",
+      "UnauthRoleName": "amplify-portfoliowebsite-master-005d0-unauthRole",
+      "StackName": "amplify-portfoliowebsite-master-005d0",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:767729395376:stack/amplify-portfoliowebsite-master-005d0/e7b63230-b151-11f0-aa09-027c076c4da5",
+      "AmplifyAppId": "d3lraseuzx0w1y"
     },
     "categories": {
       "auth": {
-        "remuspersonalwebsitef097a1ca": {}
+        "portfoliowebsitebb88d32a": {}
       },
       "storage": {
-        "remuspersonalwebsitestorage": {}
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d2hgpwuc9kamoc",
-          "type": "manual"
-        }
+        "portfoliowebsitestorage": {}
       }
     }
   }

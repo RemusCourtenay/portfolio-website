@@ -1,6 +1,6 @@
 {
   "auth": {
-    "remuspersonalwebsitef097a1ca": {
+    "portfoliowebsitebb88d32a": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -25,33 +25,8 @@
       "service": "Cognito"
     }
   },
-  "hosting": {
-    "amplifyhosting": {
-      "providerPlugin": "awscloudformation",
-      "service": "amplifyhosting",
-      "type": "manual"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_hosting_amplifyhosting_appId": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
-    },
-    "AMPLIFY_hosting_amplifyhosting_type": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
-    }
-  },
   "storage": {
-    "remuspersonalwebsitestorage": {
+    "portfoliowebsitestorage": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3"

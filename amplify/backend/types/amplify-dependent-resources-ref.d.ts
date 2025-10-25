@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "remuspersonalwebsitef097a1ca": {
+    "portfoliowebsitebb88d32a": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
@@ -11,7 +11,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
-    "remuspersonalwebsitestorage": {
+    "portfoliowebsitestorage": {
       "BucketName": "string",
       "Region": "string"
     }
