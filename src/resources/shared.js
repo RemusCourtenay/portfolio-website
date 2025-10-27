@@ -16,7 +16,10 @@ export const techNames = [
     "MySQL",
     "Firebase",
     "MongoDB",
-    "PowerBI"
+    "PowerBI",
+    "SQLServer",
+    "PostgreSQL"
+
 ]
 
 export const experienceNames = [
