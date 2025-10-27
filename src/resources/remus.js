@@ -53,7 +53,7 @@ export const resources = {
         }
     ],
     TECH: [
-        "Java",
+        "CSharp",
         "Python",
         "Ruby",
         "Firebase",

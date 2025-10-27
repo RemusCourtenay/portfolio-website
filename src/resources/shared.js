@@ -1,7 +1,7 @@
 export const techNames = [
     "Amplify",
     "Angular",
-    "Csharp",
+    "CSharp",
     "Docker",
     "Git",
     "Java",
