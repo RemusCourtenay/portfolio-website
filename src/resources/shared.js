@@ -18,7 +18,10 @@ export const techNames = [
     "MongoDB",
     "PowerBI",
     "SQLServer",
-    "PostgreSQL"
+    "PostgreSQL",
+    "UiPath",
+    "AWS",
+    "Azure"
 
 ]
 

@@ -54,17 +54,17 @@ export const resources = {
     ],
     TECH: [
         "CSharp",
-        "Python",
+        "Java",
         "Ruby",
+        "React",
         "SQLServer",
         "PostgreSQL",
-        "Lambda",
         "Git",
         "Docker",
         "Terraform",
-        "React",
-        "Linux",
-        "Amplify"
+        "AWS",
+        "Azure",
+        "UiPath"
     ],
     PROJECTS:[
         {
