@@ -12,7 +12,15 @@ export const resources = {
     },
     SKILLS: [
         {   
-            SKILL_NAME: "Web Dev",
+            SKILL_NAME: "Web/Frontend",
+            FOCUS_VALUES: {
+                PERSONAL: true,
+                EDUCATIONAL: true,
+                COMMERCIAL: true
+            }
+        },
+        {   
+            SKILL_NAME: "Server/Backend",
             FOCUS_VALUES: {
                 PERSONAL: true,
                 EDUCATIONAL: true,
@@ -28,25 +36,17 @@ export const resources = {
             }
         },
         {   
-            SKILL_NAME: "Agile",
+            SKILL_NAME: "Automation",
             FOCUS_VALUES: {
-                PERSONAL: true,
-                EDUCATIONAL: true,
-                COMMERCIAL: true
-            }
-        },
-        {   
-            SKILL_NAME: "Backend",
-            FOCUS_VALUES: {
-                PERSONAL: true,
-                EDUCATIONAL: true,
+                PERSONAL: false,
+                EDUCATIONAL: false,
                 COMMERCIAL: true
             }
         },
         {   
             SKILL_NAME: "Cloud",
             FOCUS_VALUES: {
-                PERSONAL: false,
+                PERSONAL: true,
                 EDUCATIONAL: false,
                 COMMERCIAL: true
             }
