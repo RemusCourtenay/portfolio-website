@@ -6,8 +6,8 @@ export const resources = {
             FILE_URI: "remus-cv.pdf",
             FILE_NAME: "Remus Courtenay Resume.pdf"
         },
-        SPLASH_BLURB: "Graduate Software Engineer from UoA and certified Terraform Cloud Engineer looking for an entry level position. I’m looking forward to putting into practice the skills and theory I’ve learned and starting my career in Software Engineering.",
-        SKILLS_BLURB: "As a junior software engineer, I bring a fresh perspective, a hunger for learning, and a strong foundation in the fundamentals of software development. With a solid grasp of various programming languages and frameworks, I am eager to apply my skills to real-world projects.\nMy problem-solving abilities, attention to detail, and adaptability make me an asset in tackling complex challenges and delivering efficient solutions. With a strong focus on collaboration and diversity, I am eager to bring my enthusiasm and dedication to help propel your organization towards success.",
+        SPLASH_BLURB: "Software Engineer with two years of experience covering front-end and back-end development, DevOps, cloud infrastructure, and client interaction. Certified UiPath Professional Automation Developer and certified Terraform Cloud Engineer.",
+        SKILLS_BLURB: "As an intermediate software engineer, I have a proven track record in delivering successful C# automation projects that saved costs for NZ businesses and government departments. With my proficiency in a wide range of technologies I'm ready to slot into your development team without extensive training required.\nMy problem-solving abilities, attention to detail, and adaptability make me an asset in tackling complex challenges and delivering efficient solutions. With a strong focus on collaboration and diversity, I am eager to bring my enthusiasm and dedication to help propel your organization towards success.",
         FACE_IMAGE: "assets/remus-face.png"
     },
     SKILLS: [
