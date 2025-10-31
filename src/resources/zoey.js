@@ -20,34 +20,34 @@ export const resources = {
             }
         },
         {   
-            SKILL_NAME: "JavaScript",
+            SKILL_NAME: "Database Connected Backends",
             FOCUS_VALUES: {
                 PERSONAL: false,
+                EDUCATION: true,
+                COMMERCIAL: true
+            }
+        },
+        {   
+            SKILL_NAME: "Videogame Testing and Debugging",
+            FOCUS_VALUES: {
+                PERSONAL: true,
                 EDUCATION: false,
                 COMMERCIAL: false
             }
         },
         {   
-            SKILL_NAME: "Placeholder",
+            SKILL_NAME: "Data Reporting",
             FOCUS_VALUES: {
                 PERSONAL: false,
-                EDUCATION: false,
-                COMMERCIAL: false
+                EDUCATION: true,
+                COMMERCIAL: true
             }
         },
         {   
-            SKILL_NAME: "Placeholder",
+            SKILL_NAME: "Task Automation",
             FOCUS_VALUES: {
-                PERSONAL: false,
-                EDUCATION: false,
-                COMMERCIAL: false
-            }
-        },
-        {   
-            SKILL_NAME: "Java",
-            FOCUS_VALUES: {
-                PERSONAL: false,
-                EDUCATION: false,
+                PERSONAL: true,
+                EDUCATION: true,
                 COMMERCIAL: false
             }
         }
