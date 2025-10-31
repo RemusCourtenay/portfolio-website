@@ -8,7 +8,7 @@ export const resources = {
         },
         SPLASH_BLURB: "I'm a Software Engineering graduate from the University of Canterbury currently temporarily based in the Nelson region, looking for an entry level position to properly kickstart my career. I'm eager to continue to learn and grow my practical skillset, and see my work make a real difference in the world.",
         SKILLS_BLURB: "As a qualified junior software engineer, I have experienced the fundamentals of a wide variety of technologies and strategies to create a strong baseline understanding of the concepts and ways of thinking required to be effective in this field without my skillset becoming rigid. Now, I have the desire to deepen my understanding and flexibility to apply myself to whatever new challenges I face, allowing me to learn rapidly. \nWith my aptitude for problem-solving I wish to help create efficient and elegant solutions that accomodate the wants and needs of the parties involved, understanding them through my receptive and empathetic communication style. I believe I can bring a calm and diverse viewpoint to any team and am eager help build the projects of the future.",
-        FACE_IMAGE: "assets/bee.png"
+        FACE_IMAGE: "assets/blank.png"
     },
     SKILLS: [
         {   
