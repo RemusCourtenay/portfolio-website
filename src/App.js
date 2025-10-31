@@ -3,7 +3,7 @@ import '@aws-amplify/ui-react/styles.css';
 import './App.css';
 
 // Resource Imports
-import { resources } from './resources/zoey';
+import { resources } from './resources/remus';
 import { experiences } from './resources/images'
 
 // App Type Imports

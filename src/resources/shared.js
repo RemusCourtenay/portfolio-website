@@ -1,7 +1,7 @@
 export const techNames = [
     "Amplify",
     "Angular",
-    "Csharp",
+    "CSharp",
     "Docker",
     "Git",
     "Java",
@@ -16,7 +16,13 @@ export const techNames = [
     "MySQL",
     "Firebase",
     "MongoDB",
-    "PowerBI"
+    "PowerBI",
+    "SQLServer",
+    "PostgreSQL",
+    "UiPath",
+    "AWS",
+    "Azure"
+
 ]
 
 export const experienceNames = [
