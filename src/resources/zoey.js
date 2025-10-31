@@ -71,19 +71,19 @@ export const resources = {
             Name: "All"
         },
         {
-            Name: "Kibo",
+            Name: "Permissions",
             ExpandedViewTitle: "Permission Modernization",
             ExpandedViewBodyText: "",
             CircleViewTitle: "Permission Modernization"
         },
         {
-            Name: "AWS",
+            Name: "Council",
             ExpandedViewTitle: "Data Management\nat Tasman Council",
             ExpandedViewBodyText: "",
             CircleViewTitle: "Council Data Management"
         },
         {
-            Name: "Honours",
+            Name: "Reborn",
             ExpandedViewTitle: "Game Testing\nand Debugging",
             ExpandedViewBodyText: "",
             CircleViewTitle: "Reborn \nGame Testing"
