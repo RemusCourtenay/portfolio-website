@@ -34,7 +34,11 @@ export const experienceNames = [
 export const projectNames = [
     "kibo",
     "aws",
-    "honours"
+    "honours",
+    "permissions",
+    "council",
+    "location-database",
+    "reborn"
 ]
 
 export const footerIconNames = [
