@@ -85,7 +85,7 @@ export const resources = {
         {
             Name: "Reborn",
             ExpandedViewTitle: "Game Testing\nand Debugging",
-            ExpandedViewBodyText: "",
+            ExpandedViewBodyText: "Over the years in my spare time, I have become involved in the community at Reborn, Evolved working on and around the passion project fangame ‘Pokemon Reborn’. \nInitially I joined simply as a community member through enjoyment of the game to participate as a fan, but before long I was identified and reached out to with an offer to join the team behind it. Initially this was a position helping with community moderation and management, where I helped to foster a friendly and inclusive environment and grew my communication and mediation skills by working and interacting with a wide variety of people from around the world. I was also involved in the internal testing process of the game, operating in a high trust environment and working to identify and clearly communicate bugs to the developers through targeted playtesting. \nLater in the process, I proved my self-driven learning of the game’s internal codebase and was brought in to collaborate with the development team itself on the debugging process for the polishing process of the public release. This involved working collaboratively with the team to identify and fix the underlying causes of bug submissions from community members, often working around limited documentation. Together, we helped create a rich game experience.",
             CircleViewTitle: "Reborn \nGame Testing"
         }
     ],
