@@ -90,9 +90,6 @@ export const resources = {
         }
     ],
     CONTACT:{
-        facebook: {
-            URL: "eugh"
-        },
         linkedin: {
             URL: "blergh"
         },
@@ -101,6 +98,9 @@ export const resources = {
         },
         gmail: {
             URL: "mailto:zoeystardream@gmail.com" 
+        },
+        facebook: {
+            URL: "eugh"
         }
     }
 }
