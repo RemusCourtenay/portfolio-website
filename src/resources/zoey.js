@@ -91,7 +91,7 @@ export const resources = {
     ],
     CONTACT:{
         linkedin: {
-            URL: "www.linkedin.com/in/zoey-arnold-719368391"
+            URL: "https://www.linkedin.com/in/zoey-arnold-719368391"
         },
         github: {
             URL: "https://github.com/ZoeyStardream"
