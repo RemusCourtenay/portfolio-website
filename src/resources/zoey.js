@@ -91,7 +91,7 @@ export const resources = {
     ],
     CONTACT:{
         linkedin: {
-            URL: "blergh"
+            URL: "www.linkedin.com/in/zoey-arnold-719368391"
         },
         github: {
             URL: "https://github.com/ZoeyStardream"
@@ -100,7 +100,7 @@ export const resources = {
             URL: "mailto:zoeystardream@gmail.com" 
         },
         facebook: {
-            URL: "eugh"
+            URL: "https://www.facebook.com/zoey.arnold.95262/"
         }
     }
 }
