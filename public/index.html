@@ -26,8 +26,24 @@
     -->
     <title>Zoey Arnold's Portfolio</title>
   </head>
-  <body>
+  <body id="body">
     <noscript>You need to enable JavaScript to open this page.</noscript>
+    <script>
+      var w = window.innerWidth;
+      //var w2 = window.outerWidth;
+      var ratio = w/1920;
+      var zoomlevel = Math.min(Math.max(ratio, 0.5), 1.0)
+      document.getElementById('body').style.zoom=zoomlevel;
+
+      // window.onresize = resizeRefresh
+      // function resizeRefresh()
+      // {
+      //   if(window.outerWidth != w2){
+      //     location.reload()
+      //   }
+      // }
+
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
